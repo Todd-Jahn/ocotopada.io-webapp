@@ -547,7 +547,7 @@ const OctopodaMinimal = () => {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-octopada-coral">
+            <h3 className="text-lg font-semibold text-octopoda-coral">
               Octopada.io
             </h3>
             <p className="text-gray-400 text-sm">
