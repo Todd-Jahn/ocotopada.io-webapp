@@ -392,7 +392,7 @@ const OctopodaMinimal = () => {
             >
               {plan.isPopular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-octopada-coral text-white px-4 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-octopoda-coral text-white px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
                   </span>
                 </div>
