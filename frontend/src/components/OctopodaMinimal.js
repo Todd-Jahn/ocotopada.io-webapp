@@ -418,7 +418,7 @@ const OctopodaMinimal = () => {
               <ul className="space-y-3 mb-6">
                 {plan.features.map((feature, j) => (
                   <li key={j} className="flex items-center text-sm">
-                    <CheckCircle className="w-4 h-4 text-octopada-sage mr-3 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-octopoda-sage mr-3 flex-shrink-0" />
                     <span className="text-gray-600">{feature}</span>
                   </li>
                 ))}
