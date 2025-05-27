@@ -584,7 +584,7 @@ const OctopodaMinimal = () => {
                 <a
                   key={i}
                   href={social.href}
-                  className="w-8 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-octopada-coral transition-colors duration-200"
+                  className="w-8 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-octopoda-coral transition-colors duration-200"
                 >
                   {social.icon}
                 </a>
