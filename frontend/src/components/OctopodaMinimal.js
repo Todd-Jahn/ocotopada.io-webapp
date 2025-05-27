@@ -132,7 +132,7 @@ const OctopodaMinimal = () => {
                 Privacy-First
               </span>
               <span className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-octopada-sage" />
+                <CheckCircle className="w-4 h-4 mr-2 text-octopoda-sage" />
                 Personal Growth
               </span>
             </div>
