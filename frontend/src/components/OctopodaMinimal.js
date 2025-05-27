@@ -523,7 +523,7 @@ const OctopodaMinimal = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-octopada-coral text-white px-8 py-3 rounded-lg font-medium hover:bg-coral-600 transition-colors duration-200">
+            <button className="bg-octopoda-coral text-white px-8 py-3 rounded-lg font-medium hover:bg-coral-600 transition-colors duration-200">
               Start Free Trial
             </button>
             <button className="border border-blue-300 text-blue-100 px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
