@@ -427,7 +427,7 @@ const OctopodaMinimal = () => {
               <button
                 className={`w-full py-2 px-4 rounded-lg font-medium transition-colors duration-200 ${
                   plan.isPopular
-                    ? 'bg-octopada-coral text-white hover:bg-coral-600'
+                    ? 'bg-octopoda-coral text-white hover:bg-coral-600'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
