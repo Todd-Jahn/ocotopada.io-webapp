@@ -16,7 +16,9 @@ module.exports = {
         'blue-700': '#1A2E5C',
       },
       fontFamily: {
-        'display': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'sans': ['Noto Sans SC', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Microsoft YaHei', '微软雅黑', 'sans-serif'],
+        'display': ['Noto Sans SC', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Microsoft YaHei', '微软雅黑', 'sans-serif'],
+        'chinese': ['Noto Sans SC', 'Microsoft YaHei', '微软雅黑', 'sans-serif'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
