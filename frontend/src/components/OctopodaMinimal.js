@@ -510,7 +510,7 @@ const OctopodaMinimal = () => {
 
   // Final CTA Section
   const FinalCTASection = () => (
-    <section className="py-16 bg-octopada-primary">
+    <section className="py-16 bg-octopoda-primary">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
