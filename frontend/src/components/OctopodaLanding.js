@@ -18,13 +18,22 @@ import {
   X
 } from "lucide-react";
 
+// Import additional sections
+import { 
+  HowItWorksSection, 
+  SocialProofSection, 
+  PricingSection, 
+  FAQSection, 
+  FinalCTASection 
+} from "./OctopodaLandingPart2";
+import Footer from "./Footer";
+
 const OctopodaLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [heroRef, heroInView] = useInView({ threshold: 0.3, triggerOnce: true });
   const [featuresRef, featuresInView] = useInView({ threshold: 0.2, triggerOnce: true });
   const [kolsRef, kolsInView] = useInView({ threshold: 0.2, triggerOnce: true });
   const [trustRef, trustInView] = useInView({ threshold: 0.3, triggerOnce: true });
-  const [pricingRef, pricingInView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   // Animation variants
   const fadeInUp = {
@@ -533,7 +542,12 @@ const OctopodaLanding = () => {
       <FeaturesSection />
       <KOLSection />
       <TrustSection />
-      {/* More sections will be added in the next file update */}
+      <HowItWorksSection />
+      <SocialProofSection />
+      <PricingSection />
+      <FAQSection />
+      <FinalCTASection />
+      <Footer />
     </div>
   );
 };
