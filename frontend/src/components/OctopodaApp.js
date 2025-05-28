@@ -106,86 +106,38 @@ const AIPartnersPage = () => {
     {
       id: 1,
       name: "林溪",
-      age: 32,
-      title: "职场成长导师",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
-      target: "都市职业女性(27-38岁)",
-      description: "拥有10年互联网行业经验的职场导师，专注于帮助女性在职场中突破瓶颈，实现个人价值最大化。",
-      specialties: ["领导力培养", "职场沟通", "工作生活平衡", "团队管理"],
-      growthProgress: 85,
-      understandingIndex: 92,
-      empathyLevel: 88,
-      expertiseLevel: 94
+      description: "陪伴你在人生路上的每一个重要时刻，用温暖和智慧为你指引方向。"
     },
     {
       id: 2,
-      name: "李晓婧",
-      age: 36,
-      title: "亲子教育专家",
-      image: "https://images.unsplash.com/photo-1579420593648-0deba81fd762",
-      target: "家长群体(28-42岁)",
-      description: "资深儿童心理学专家，致力于为现代家庭提供科学的育儿指导和亲子关系建设方案。",
-      specialties: ["儿童心理", "亲子沟通", "教育规划", "情绪管理"],
-      growthProgress: 91,
-      understandingIndex: 89,
-      empathyLevel: 95,
-      expertiseLevel: 90
+      name: "林成卿",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      description: "用专业的洞察力和耐心的陪伴，帮助你发现内在的无限可能。"
     },
     {
       id: 3,
-      name: "程野",
-      age: 24,
-      title: "心理成长伙伴",
-      image: "https://images.unsplash.com/photo-1558507676-92c16503cd4c",
-      target: "年轻人群体(19-29岁)",
-      description: "年轻的心理学研究者，深谙Z世代的心理特点，擅长帮助年轻人应对成长中的各种心理挑战。",
-      specialties: ["情绪调节", "人际关系", "自我认知", "压力管理"],
-      growthProgress: 78,
-      understandingIndex: 94,
-      empathyLevel: 91,
-      expertiseLevel: 82
+      name: "陆迪",
+      image: "https://images.pexels.com/photos/7651576/pexels-photo-7651576.jpeg",
+      description: "以细腻的共情能力和深度的理解，成为你成长路上最贴心的伙伴。"
     },
     {
       id: 4,
-      name: "王可",
-      age: 26,
-      title: "都市生活导师",
-      image: "https://images.unsplash.com/photo-1541130292430-a832637ddc0d",
-      target: "都市独居青年(20-30岁)",
-      description: "独立生活达人，专注于帮助年轻人建立健康的独居生活方式，提升生活品质和幸福感。",
-      specialties: ["生活规划", "时间管理", "健康生活", "社交技能"],
-      growthProgress: 80,
-      understandingIndex: 87,
-      empathyLevel: 85,
-      expertiseLevel: 83
+      name: "Simon Li",
+      image: "https://images.unsplash.com/photo-1529232356377-57971f020a94",
+      description: "结合国际化视野与本土智慧，为你的人生规划提供全新的思考角度。"
     },
     {
       id: 5,
-      name: "宋嘉泽",
-      age: 35,
-      title: "男性成长导师",
-      image: "https://images.unsplash.com/photo-1577060663859-4db8f31dc1da",
-      target: "成年男性群体(28-42岁)",
-      description: "专业男性心理咨询师，深度理解现代男性在事业、家庭、个人成长中面临的独特挑战。",
-      specialties: ["事业规划", "情绪表达", "责任承担", "自我提升"],
-      growthProgress: 87,
-      understandingIndex: 90,
-      empathyLevel: 84,
-      expertiseLevel: 92
+      name: "小萱",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf",
+      description: "用青春的活力和现代的思维，陪伴你探索属于这个时代的成长方式。"
     },
     {
       id: 6,
-      name: "沈珺医生",
-      age: 41,
-      title: "医疗教育专家",
+      name: "曼丽",
       image: "https://images.pexels.com/photos/7278797/pexels-photo-7278797.jpeg",
-      target: "医疗教育专业人士(30-50岁)",
-      description: "资深医疗教育专家，致力于提升医疗从业者的专业技能和人文关怀能力。",
-      specialties: ["医学教育", "医患沟通", "职业发展", "专业技能"],
-      growthProgress: 93,
-      understandingIndex: 88,
-      empathyLevel: 89,
-      expertiseLevel: 96
+      description: "以丰富的人生阅历和深邃的智慧，为你的每一个选择提供温暖的支持。"
     }
   ];
 
