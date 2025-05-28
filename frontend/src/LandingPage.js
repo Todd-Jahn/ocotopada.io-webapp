@@ -493,8 +493,8 @@ const LandingPage = () => {
                       {characters.map((character) => (
                         <div key={character.id} className="w-full flex-shrink-0 px-2">
                           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-4">
-                            {/* 16:9比例图片容器 */}
-                            <div className="relative aspect-[16/9] mb-4 rounded-lg overflow-hidden">
+                            {/* 10:6比例图片容器 */}
+                            <div className="relative aspect-[10/6] mb-4 rounded-lg overflow-hidden">
                               <img
                                 src={character.avatar}
                                 alt={character.name}
