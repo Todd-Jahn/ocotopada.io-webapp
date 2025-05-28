@@ -30,8 +30,10 @@ const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentCharacterSlide, setCurrentCharacterSlide] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
   const { scrollYProgress } = useScroll();
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
+  const dragControls = useDragControls();
 
   // AI角色数据
   const characters = [
