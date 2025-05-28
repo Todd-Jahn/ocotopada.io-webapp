@@ -601,10 +601,10 @@ const OctopodaApp = () => {
           <Route path="/companion-types" element={<CompanionTypesPage />} />
           <Route path="/growth-diary" element={<GrowthDiaryPage />} />
           <Route path="/subscription" element={<SubscriptionPage />} />
-          <Route path="/community" element={<div className="pt-16 p-20 text-center"><h1>共创社区页面开发中...</h1></div>} />
-          <Route path="/enterprise" element={<div className="pt-16 p-20 text-center"><h1>企业同行页面开发中...</h1></div>} />
-          <Route path="/team-story" element={<div className="pt-16 p-20 text-center"><h1>团队故事页面开发中...</h1></div>} />
-          <Route path="/join-us" element={<div className="pt-16 p-20 text-center"><h1>加入我们页面开发中...</h1></div>} />
+          <Route path="/community" element={<CommunityPage />} />
+          <Route path="/enterprise" element={<EnterprisePage />} />
+          <Route path="/team-story" element={<TeamStoryPage />} />
+          <Route path="/join-us" element={<JoinUsPage />} />
         </Routes>
       </div>
     </BrowserRouter>
