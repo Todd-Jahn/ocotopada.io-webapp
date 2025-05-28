@@ -133,7 +133,7 @@ const AIPartnersPage = () => {
     {
       id: 3,
       name: "曼丽",
-      image: "https://images.unsplash.com/photo-yKER9Qz34Mo?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1634726306646-yKER9Qz34Mo?w=400&h=400&fit=crop&crop=face",
       description: "以丰富的人生阅历和深邃的智慧，为你的每一个选择提供温暖的支持。",
       traits: {
         warmth: 88,
