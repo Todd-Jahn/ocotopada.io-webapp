@@ -350,14 +350,8 @@ const LandingPage = () => {
               ))}
             </nav>
 
-            {/* CTA按钮 */}
-            <motion.button
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="hidden md:block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all"
-            >
-              开始体验
-            </motion.button>
+            {/* CTA按钮 - 已删除 */}
+            <div className="hidden"></div>
 
             {/* 移动端菜单按钮 */}
             <button
