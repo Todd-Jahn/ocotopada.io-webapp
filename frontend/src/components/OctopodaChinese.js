@@ -22,7 +22,13 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  ExternalLink
+  ExternalLink,
+  BookOpen,
+  Target,
+  HelpCircle,
+  Gift,
+  Award,
+  Bot
 } from "lucide-react";
 
 const OctopodaChinese = () => {
