@@ -449,7 +449,7 @@ const LandingPage = () => {
               <span className="text-white">AI伙伴关系</span>
             </h1>
             
-            {/* Character Carousel */}
+            {/* Character Carousel - 完整版 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -457,75 +457,135 @@ const LandingPage = () => {
               className="mb-8"
             >
               {/* 桌面端网格展示 */}
-              <div className="hidden lg:grid lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-                {characters.map((character, index) => (
-                  <motion.div
-                    key={character.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="group cursor-pointer"
-                  >
-                    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
-                      <div className="relative mb-4">
-                        <img
-                          src={character.avatar}
-                          alt={character.name}
-                          className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-white/20 group-hover:border-purple-400/50 transition-all"
-                        />
-                        <div className={`absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r ${character.color} rounded-full border-2 border-white`}></div>
+              <div className="hidden lg:block">
+                <div className="grid grid-cols-5 gap-6 max-w-6xl mx-auto">
+                  {characters.map((character, index) => (
+                    <motion.div
+                      key={character.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="group cursor-pointer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
+                        <div className="relative mb-4">
+                          <img
+                            src={character.avatar}
+                            alt={character.name}
+                            className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-white/20 group-hover:border-purple-400/50 transition-all"
+                          />
+                          <div className={`absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r ${character.color} rounded-full border-2 border-white`}></div>
+                        </div>
+                        
+                        <h3 className="text-lg font-bold text-white text-center mb-1">{character.name}</h3>
+                        <p className="text-sm text-purple-300 text-center mb-2">{character.personality}</p>
+                        <p className="text-xs text-gray-300 text-center leading-relaxed">{character.description}</p>
                       </div>
-                      
-                      <h3 className="text-lg font-bold text-white text-center mb-1">{character.name}</h3>
-                      <p className="text-sm text-purple-300 text-center mb-2">{character.personality}</p>
-                      <p className="text-xs text-gray-300 text-center leading-relaxed">{character.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
-              {/* 移动端和平板轮播 */}
-              <div className="lg:hidden max-w-sm mx-auto">
-                <div className="relative overflow-hidden">
+              {/* 移动端和平板轮播 - 带拖拽功能 */}
+              <div className="lg:hidden relative max-w-sm mx-auto">
+                {/* 导航箭头 */}
+                <button
+                  onClick={prevCharacter}
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                
+                <button
+                  onClick={nextCharacter}
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+
+                {/* 轮播容器 */}
+                <div className="overflow-hidden rounded-2xl">
                   <motion.div
-                    className="flex"
+                    className="flex cursor-grab active:cursor-grabbing"
+                    drag="x"
+                    dragControls={dragControls}
+                    dragConstraints={{ left: 0, right: 0 }}
+                    onDragStart={() => setIsDragging(true)}
+                    onDragEnd={handleDragEnd}
                     animate={{ x: `-${currentCharacterSlide * 100}%` }}
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    style={{ width: `${characters.length * 100}%` }}
                   >
-                    {characters.map((character) => (
-                      <div key={character.id} className="w-full flex-shrink-0 px-4">
-                        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center">
+                    {characters.map((character, index) => (
+                      <motion.div
+                        key={character.id}
+                        className="w-full flex-shrink-0 px-4"
+                        style={{ width: `${100 / characters.length}%` }}
+                      >
+                        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center h-full">
                           <div className="relative mb-4">
                             <img
                               src={character.avatar}
                               alt={character.name}
                               className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-white/20"
+                              draggable={false}
                             />
                             <div className={`absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r ${character.color} rounded-full border-2 border-white`}></div>
                           </div>
                           
                           <h3 className="text-xl font-bold text-white mb-2">{character.name}</h3>
-                          <p className="text-purple-300 mb-3">{character.personality}</p>
+                          <p className="text-purple-300 mb-3 font-semibold">{character.personality}</p>
                           <p className="text-sm text-gray-300 leading-relaxed">{character.description}</p>
                         </div>
-                      </div>
+                      </motion.div>
                     ))}
                   </motion.div>
                 </div>
 
-                {/* 移动端轮播指示器 */}
-                <div className="flex justify-center space-x-2 mt-4">
-                  {characters.map((_, index) => (
+                {/* 指示器 - 增强版 */}
+                <div className="flex justify-center space-x-3 mt-6">
+                  {characters.map((character, index) => (
                     <button
                       key={index}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        currentCharacterSlide === index ? 'bg-purple-400 w-6' : 'bg-gray-600'
+                      className={`transition-all duration-300 ${
+                        currentCharacterSlide === index 
+                          ? 'w-8 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full' 
+                          : 'w-3 h-3 bg-gray-600 rounded-full hover:bg-gray-500'
                       }`}
-                      onClick={() => setCurrentCharacterSlide(index)}
+                      onClick={() => goToCharacter(index)}
                     />
                   ))}
                 </div>
+
+                {/* 角色信息动态更新 */}
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentCharacterSlide}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="text-center mt-4"
+                  >
+                    <p className="text-purple-300 text-sm">
+                      正在展示: <span className="font-semibold text-white">{characters[currentCharacterSlide]?.name}</span>
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
               </div>
+
+              {/* 触摸手势提示 */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 0.5 }}
+                className="lg:hidden text-center mt-4"
+              >
+                <p className="text-gray-400 text-xs">
+                  👆 左右滑动或点击箭头切换AI伙伴
+                </p>
+              </motion.div>
             </motion.div>
 
             <motion.div
