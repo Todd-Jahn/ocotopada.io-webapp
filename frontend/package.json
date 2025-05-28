@@ -2,7 +2,7 @@
   "name": "octopada-io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/octopada-io",
+  "homepage": "https://Todd-Jahn.github.io/octopada-io",
   "dependencies": {
     "axios": "^1.8.4",
     "cra-template": "1.2.0",
