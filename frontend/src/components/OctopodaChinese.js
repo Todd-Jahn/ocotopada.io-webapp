@@ -31,6 +31,8 @@ import {
   Bot
 } from "lucide-react";
 
+import AIKOLCarousel from "./AIKOLCarousel";
+
 const OctopodaChinese = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(-1);
