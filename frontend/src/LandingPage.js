@@ -498,21 +498,12 @@ const LandingPage = () => {
                       {characters.map((character) => (
                         <div key={character.id} className="w-full flex-shrink-0 px-2">
                           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-4">
-                            {/* 4:3比例图片容器，带虚化背景 */}
-                            <div className="relative aspect-[4/3] mb-4 rounded-lg overflow-hidden">
-                              {/* 虚化背景 */}
-                              <div 
-                                className="absolute inset-0 bg-cover bg-center filter blur-md scale-110"
-                                style={{
-                                  backgroundImage: `url(${character.avatar})`,
-                                  opacity: 0.3
-                                }}
-                              ></div>
-                              {/* 主图片 */}
+                            {/* 4:3比例图片容器，完整原图 */}
+                            <div className="relative aspect-[4/3] mb-4 rounded-lg overflow-hidden bg-gray-900/10">
                               <img
                                 src={character.avatar}
                                 alt={character.name}
-                                className="relative z-10 w-full h-full object-contain"
+                                className="w-full h-full object-cover"
                                 draggable={false}
                               />
                             </div>
