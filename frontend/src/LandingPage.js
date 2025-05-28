@@ -42,7 +42,7 @@ const LandingPage = () => {
       name: "千奈",
       personality: "温柔贴心",
       description: "我是你的贴心伙伴，愿意倾听你的每一个心声",
-      avatar: "https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=400&h=600&fit=crop&auto=format",
+      avatar: "https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?auto=format&fit=crop&w=400&q=80",
       color: "from-pink-400 to-rose-500"
     },
     {
@@ -50,7 +50,7 @@ const LandingPage = () => {
       name: "Chantel",
       personality: "睿智理性",
       description: "让我用理性的思维帮你分析问题，找到最佳解决方案",
-      avatar: "https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=400&h=600&fit=crop&auto=format",
+      avatar: "https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?auto=format&fit=crop&w=400&q=80",
       color: "from-blue-400 to-purple-500"
     },
     {
@@ -58,7 +58,7 @@ const LandingPage = () => {
       name: "Koko",
       personality: "活泼可爱",
       description: "生活需要一些甜蜜和惊喜，让我为你带来快乐",
-      avatar: "https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=400&h=600&fit=crop&auto=format",
+      avatar: "https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?auto=format&fit=crop&w=400&q=80",
       color: "from-orange-400 to-pink-500"
     },
     {
@@ -66,7 +66,7 @@ const LandingPage = () => {
       name: "高毅",
       personality: "沉稳内敛",
       description: "在宁静中找到内心的平静，让我陪你冥想人生",
-      avatar: "https://images.unsplash.com/photo-1748423892001-dd352b5f2cac?w=400&h=600&fit=crop&auto=format",
+      avatar: "https://images.unsplash.com/photo-1748423892001-dd352b5f2cac?auto=format&fit=crop&w=400&q=80",
       color: "from-green-400 to-teal-500"
     },
     {
@@ -74,7 +74,7 @@ const LandingPage = () => {
       name: "黎绮",
       personality: "乐观向上",
       description: "每一天都充满可能性，让我和你一起拥抱阳光",
-      avatar: "https://images.unsplash.com/photo-1748436878978-48695c8e14ac?w=400&h=600&fit=crop&auto=format",
+      avatar: "https://images.unsplash.com/photo-1748436878978-48695c8e14ac?auto=format&fit=crop&w=400&q=80",
       color: "from-yellow-400 to-orange-500"
     }
   ];
