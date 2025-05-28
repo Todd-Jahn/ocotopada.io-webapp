@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { Heart, Brain, BookOpen, HelpCircle, MessageCircle, Shield, Star, Check, Menu, X } from 'lucide-react';
+import { motion, useScroll, useTransform, AnimatePresence, PanInfo } from 'framer-motion';
+import { Heart, Brain, BookOpen, HelpCircle, MessageCircle, Shield, Star, Check, Menu, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
