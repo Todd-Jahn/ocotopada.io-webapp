@@ -18,22 +18,22 @@ const LandingPage = () => {
     {
       id: 2,
       name: "千奈",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c2f84653?w=800&h=800&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face"
     },
     {
       id: 3,
       name: "Suki 苏奇",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=800&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face"
     },
     {
       id: 4,
       name: "黎绮",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=800&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1748436878978-48695c8e14ac?w=800&h=800&fit=crop&crop=face"
     },
     {
       id: 5,
       name: "林成卿",
-      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=800&h=800&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1748436826108-f4645552b2ab?w=800&h=800&fit=crop&crop=face"
     }
   ];
 
