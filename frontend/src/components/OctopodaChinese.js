@@ -78,8 +78,8 @@ const OctopodaChinese = () => {
             {[
               { name: '成长陪伴', href: '#features' },
               { name: '我的伙伴', href: '#mentors' },
-              { name: '订阅方案', href: '#pricing' },
-              { name: '共创社区', href: '#community' }
+              { name: '共创社区', href: '#community' },
+              { name: '订阅方案', href: '#pricing' }
             ].map((item) => (
               <a
                 key={item.name}
