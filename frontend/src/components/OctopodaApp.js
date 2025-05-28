@@ -120,7 +120,7 @@ const AIPartnersPage = () => {
     {
       id: 2,
       name: "小萱",
-      image: "/images/avatars/xiaoxuan.jpg",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b000?w=400&h=400&fit=crop&crop=face",
       description: "用青春的活力和现代的思维，陪伴你探索属于这个时代的成长方式。",
       traits: {
         warmth: 90,
