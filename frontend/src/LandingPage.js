@@ -48,16 +48,16 @@ const LandingPage = () => {
     {
       id: 2,
       name: "Chantel",
-      personality: "睿智理性",
-      description: "让我用理性的思维帮你分析问题，找到最佳解决方案",
+      personality: "活泼可爱",
+      description: "生活需要一些甜蜜和惊喜，让我为你带来快乐",
       avatar: "https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?auto=format&fit=crop&w=400&q=80",
       color: "from-blue-400 to-purple-500"
     },
     {
       id: 3,
       name: "Koko",
-      personality: "活泼可爱",
-      description: "生活需要一些甜蜜和惊喜，让我为你带来快乐",
+      personality: "野性性感",
+      description: "我不属于谁，只愿征服那些值得我时间的人",
       avatar: "https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?auto=format&fit=crop&w=400&q=80",
       color: "from-orange-400 to-pink-500"
     },
@@ -72,8 +72,8 @@ const LandingPage = () => {
     {
       id: 5,
       name: "黎绮",
-      personality: "乐观向上",
-      description: "每一天都充满可能性，让我和你一起拥抱阳光",
+      personality: "睿智理性",
+      description: "让我用理性的思维帮你分析问题，找到最佳解决方案",
       avatar: "https://images.unsplash.com/photo-1748436878978-48695c8e14ac?auto=format&fit=crop&w=400&q=80",
       color: "from-yellow-400 to-orange-500"
     }
