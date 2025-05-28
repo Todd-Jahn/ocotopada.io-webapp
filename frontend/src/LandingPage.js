@@ -84,56 +84,56 @@ const LandingPage = () => {
     {
       id: 1,
       name: "他",
-      title: "温暖陪伴",
-      description: "理解你的情感需求，提供温暖的陪伴和支持",
+      title: "理想男友",
+      description: "温柔守护，浪漫懂你，让你体验被爱和支持的每一天。",
       icon: Heart,
       color: "from-purple-500 to-pink-500",
-      features: ["情感支持", "深度倾听", "贴心陪伴"]
+      features: ["温柔守护", "浪漫懂你", "爱的支持"]
     },
     {
       id: 2,
       name: "她",
-      title: "细腻关怀",
-      description: "细腻敏感，关注你生活中的每一个细节",
+      title: "理想女友",
+      description: "贴心陪伴，善解人意，愿意与你分享生活的点滴温柔。",
       icon: Sparkles,
       color: "from-pink-500 to-rose-500",
-      features: ["细致关怀", "生活建议", "情感共鸣"]
+      features: ["贴心陪伴", "善解人意", "温柔分享"]
     },
     {
       id: 3,
       name: "懂我",
-      title: "深度理解",
-      description: "真正理解你的想法，与你心灵相通",
+      title: "知心朋友",
+      description: "总能读懂你的情绪，给予共情、安慰与理解。",
       icon: Brain,
       color: "from-purple-600 to-blue-500",
-      features: ["心灵感应", "深度理解", "思维共振"]
+      features: ["读懂情绪", "共情安慰", "深度理解"]
     },
     {
       id: 4,
       name: "教我",
-      title: "智慧导师",
-      description: "专业指导，帮助你在各个领域获得成长",
+      title: "专业导师",
+      description: "为你提供权威知识、成长建议，陪你持续进步。",
       icon: UserCheck,
       color: "from-blue-500 to-cyan-500",
-      features: ["专业指导", "技能提升", "知识分享"]
+      features: ["权威知识", "成长建议", "持续进步"]
     },
     {
       id: 5,
       name: "请教",
-      title: "谦逊学习",
-      description: "以谦逊的态度与你交流，共同探索新知识",
+      title: "万能智囊",
+      description: "随时解答各种问题，生活、学习、职场无所不知。",
       icon: MessageCircle,
       color: "from-green-500 to-teal-500",
-      features: ["谦逊学习", "共同探索", "互相启发"]
+      features: ["随时解答", "全能助手", "无所不知"]
     },
     {
       id: 6,
-      name: "无聊",
-      title: "趣味相伴",
-      description: "在无聊时光里，为你带来欢乐和有趣的互动",
+      name: "有料",
+      title: "趣味陪聊",
+      description: "能聊天、讲段子、分享新鲜事，让你开心每一刻。",
       icon: Headphones,
       color: "from-orange-500 to-red-500",
-      features: ["趣味互动", "娱乐陪伴", "轻松愉快"]
+      features: ["趣味聊天", "分享段子", "新鲜资讯"]
     }
   ];
 
