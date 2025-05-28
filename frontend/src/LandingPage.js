@@ -384,9 +384,7 @@ const LandingPage = () => {
                   {item.name}
                 </Link>
               ))}
-              <button className="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full">
-                开始体验
-              </button>
+              {/* 移动端CTA按钮已删除 */}
             </div>
           </motion.div>
         )}
