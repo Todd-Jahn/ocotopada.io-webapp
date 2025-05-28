@@ -279,7 +279,7 @@ const LandingPage = () => {
     if (!isDragging) {
       const characterTimer = setInterval(() => {
         setCurrentCharacterSlide((prev) => (prev + 1) % characters.length);
-      }, 5000);
+      }, 8000); // 8秒间隔
       return () => clearInterval(characterTimer);
     }
   }, [isDragging]);
