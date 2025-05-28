@@ -4,8 +4,54 @@ import { Heart, Brain, BookOpen, HelpCircle, MessageCircle, Shield, Star, Check,
 
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const { scrollYProgress } = useScroll();
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
+
+  // Character carousel data
+  const characters = [
+    {
+      id: 1,
+      name: "洛可 LoCo",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800"
+    },
+    {
+      id: 2,
+      name: "千奈",
+      image: "https://images.unsplash.com/photo-1494790108755-2616c2f84653?w=800"
+    },
+    {
+      id: 3,
+      name: "Suki 苏奇",
+      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800"
+    },
+    {
+      id: 4,
+      name: "黎绮",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800"
+    },
+    {
+      id: 5,
+      name: "林成卿",
+      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=800"
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % characters.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + characters.length) % characters.length);
+  };
+
+  const handleDragEnd = (event: any, info: PanInfo) => {
+    if (info.offset.x > 100) {
+      prevSlide();
+    } else if (info.offset.x < -100) {
+      nextSlide();
+    }
+  };
 
   const companionTypes = [
     {
