@@ -536,24 +536,32 @@ const LandingPage = () => {
                         className="w-full flex-shrink-0 px-4"
                         style={{ width: `${100 / characters.length}%` }}
                       >
-                        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center h-full">
-                          <div className="relative mb-4">
+                        <div className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 h-full">
+                          {/* 完整照片框架 */}
+                          <div className="relative h-64">
                             <img
                               src={character.avatar}
                               alt={character.name}
-                              className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-white/20"
+                              className="w-full h-full object-cover"
                               draggable={false}
                             />
+                            {/* 渐变遮罩 */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            
                             {/* 名字显示在左下角 */}
-                            <div className="absolute bottom-1 left-1 bg-black/60 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-tr-lg rounded-bl-xl font-semibold">
-                              {character.name}
+                            <div className="absolute bottom-4 left-4 text-white">
+                              <h3 className="text-xl font-bold mb-1">{character.name}</h3>
+                              <p className="text-purple-300 font-semibold">{character.personality}</p>
                             </div>
-                            <div className={`absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r ${character.color} rounded-full border-2 border-white`}></div>
+                            
+                            {/* 颜色指示器在右上角 */}
+                            <div className={`absolute top-4 right-4 w-5 h-5 bg-gradient-to-r ${character.color} rounded-full border-2 border-white shadow-lg`}></div>
                           </div>
                           
-                          <h3 className="text-xl font-bold text-white mb-2">{character.name}</h3>
-                          <p className="text-purple-300 mb-3 font-semibold">{character.personality}</p>
-                          <p className="text-sm text-gray-300 leading-relaxed">{character.description}</p>
+                          {/* 描述区域 */}
+                          <div className="p-4">
+                            <p className="text-sm text-gray-300 leading-relaxed text-center">{character.description}</p>
+                          </div>
                         </div>
                       </motion.div>
                     ))}
