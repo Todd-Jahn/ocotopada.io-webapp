@@ -270,6 +270,14 @@ const LandingPage = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Character Carousel 自动轮播
+  useEffect(() => {
+    const characterTimer = setInterval(() => {
+      setCurrentCharacterSlide((prev) => (prev + 1) % characters.length);
+    }, 4000);
+    return () => clearInterval(characterTimer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* 固定导航栏 */}
