@@ -45,6 +45,15 @@ const LandingPage = () => {
     setCurrentSlide((prev) => (prev - 1 + characters.length) % characters.length);
   };
 
+  // Auto-advance carousel every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % characters.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [characters.length]);
+
   const handleDragEnd = (event, info) => {
     if (info.offset.x > 100) {
       prevSlide();
