@@ -120,7 +120,7 @@ const AIPartnersPage = () => {
     {
       id: 2,
       name: "小萱",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      image: "/images/avatars/xiaoxuan.jpg",
       description: "用青春的活力和现代的思维，陪伴你探索属于这个时代的成长方式。",
       traits: {
         warmth: 90,
@@ -133,7 +133,7 @@ const AIPartnersPage = () => {
     {
       id: 3,
       name: "曼丽",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      image: "/images/avatars/manli.jpg",
       description: "以丰富的人生阅历和深邃的智慧，为你的每一个选择提供温暖的支持。",
       traits: {
         warmth: 88,
@@ -146,7 +146,7 @@ const AIPartnersPage = () => {
     {
       id: 4,
       name: "陆迪",
-      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a",
+      image: "/images/avatars/ludi.jpg",
       description: "以细腻的共情能力和深度的理解，成为你成长路上最贴心的伙伴。",
       traits: {
         warmth: 87,
@@ -159,7 +159,7 @@ const AIPartnersPage = () => {
     {
       id: 5,
       name: "Simon Li",
-      image: "https://images.unsplash.com/photo-1529232356377-57971f020a94",
+      image: "/images/avatars/simonli.jpg",
       description: "结合国际化视野与本土智慧，为你的人生规划提供全新的思考角度。",
       traits: {
         warmth: 82,
@@ -172,7 +172,7 @@ const AIPartnersPage = () => {
     {
       id: 6,
       name: "林成卿",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      image: "/images/avatars/linchengqing.jpg",
       description: "用专业的洞察力和耐心的陪伴，帮助你发现内在的无限可能。",
       traits: {
         warmth: 84,
