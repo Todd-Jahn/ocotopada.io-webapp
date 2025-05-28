@@ -146,7 +146,7 @@ const AIPartnersPage = () => {
     {
       id: 4,
       name: "陆迪",
-      image: "https://images.unsplash.com/photo-MrHCr0GwUq0?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1634726306646-MrHCr0GwUq0?w=400&h=400&fit=crop&crop=face",
       description: "以细腻的共情能力和深度的理解，成为你成长路上最贴心的伙伴。",
       traits: {
         warmth: 87,
