@@ -39,42 +39,42 @@ const LandingPage = () => {
   const characters = [
     {
       id: 1,
-      name: "小雅",
+      name: "千奈",
       personality: "温柔贴心",
       description: "我是你的贴心伙伴，愿意倾听你的每一个心声",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b169ad8a?w=800&h=800&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-RicGfHP6MTg?w=800&h=800&fit=crop&crop=face",
       color: "from-pink-400 to-rose-500"
     },
     {
       id: 2,
-      name: "小智",
+      name: "Chantel",
       personality: "睿智理性",
       description: "让我用理性的思维帮你分析问题，找到最佳解决方案",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-kJDqiOGrX4k?w=800&h=800&fit=crop&crop=face",
       color: "from-blue-400 to-purple-500"
     },
     {
       id: 3,
-      name: "小萌",
+      name: "Koko",
       personality: "活泼可爱",
       description: "生活需要一些甜蜜和惊喜，让我为你带来快乐",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=800&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-JGpWEZ9AYDs?w=800&h=800&fit=crop&crop=face",
       color: "from-orange-400 to-pink-500"
     },
     {
       id: 4,
-      name: "小禅",
+      name: "高毅",
       personality: "沉稳内敛",
       description: "在宁静中找到内心的平静，让我陪你冥想人生",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=800&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-MrHCr0GwUq0?w=800&h=800&fit=crop&crop=face",
       color: "from-green-400 to-teal-500"
     },
     {
       id: 5,
-      name: "小悦",
+      name: "黎绮",
       personality: "乐观向上",
       description: "每一天都充满可能性，让我和你一起拥抱阳光",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=800&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-V_CgXwfok8E?w=800&h=800&fit=crop&crop=face",
       color: "from-yellow-400 to-orange-500"
     }
   ];
