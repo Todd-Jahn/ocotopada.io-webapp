@@ -476,6 +476,10 @@ const LandingPage = () => {
                             alt={character.name}
                             className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-white/20 group-hover:border-purple-400/50 transition-all"
                           />
+                          {/* 名字显示在左下角 */}
+                          <div className="absolute bottom-0 left-0 bg-black/60 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-tr-lg rounded-bl-xl font-semibold">
+                            {character.name}
+                          </div>
                           <div className={`absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r ${character.color} rounded-full border-2 border-white`}></div>
                         </div>
                         
