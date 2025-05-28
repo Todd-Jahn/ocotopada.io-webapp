@@ -179,31 +179,36 @@ const LandingPage = () => {
       name: "张飞",
       position: "CEO",
       description: "资深AI产品专家，致力于打造有温度的AI伙伴平台",
-      image: "https://images.pexels.com/photos/8728245/pexels-photo-8728245.jpeg"
+      image: "https://images.unsplash.com/photo-1547022145-dfc3f3e1bc03?w=400&h=400&fit=crop&auto=format",
+      chessPiece: "King"
     },
     {
       name: "崎本涵涵",
       position: "COO",
       description: "运营专家，专注用户体验和社区建设",
-      image: "https://images.pexels.com/photos/5475810/pexels-photo-5475810.jpeg"
+      image: "https://images.unsplash.com/photo-1563970290-c009d895b853?w=400&h=400&fit=crop&auto=format",
+      chessPiece: "Queen"
     },
     {
       name: "韩哲",
       position: "CTO",
       description: "技术领导者，AI技术和平台架构的核心负责人",
-      image: "https://images.pexels.com/photos/8728386/pexels-photo-8728386.jpeg"
+      image: "https://images.unsplash.com/photo-1586165368502-1bad197a6461?w=400&h=400&fit=crop&auto=format",
+      chessPiece: "Bishop"
     },
     {
       name: "梦然",
       position: "CCO",
       description: "内容创意总监，负责AI伙伴内容策略和创意指导",
-      image: "https://images.pexels.com/photos/7562468/pexels-photo-7562468.jpeg"
+      image: "https://images.unsplash.com/photo-1560174038-da43ac74f01b?w=400&h=400&fit=crop&auto=format",
+      chessPiece: "Knight"
     },
     {
       name: "徐坤",
       position: "CMO",
       description: "市场营销专家，负责品牌建设和用户增长",
-      image: "https://images.pexels.com/photos/8728283/pexels-photo-8728283.jpeg"
+      image: "https://images.pexels.com/photos/814133/pexels-photo-814133.jpeg?w=400&h=400&fit=crop&auto=compress,format",
+      chessPiece: "Rook"
     }
   ];
 
