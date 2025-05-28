@@ -172,7 +172,7 @@ const AIPartnersPage = () => {
     {
       id: 6,
       name: "林成卿",
-      image: "https://images.unsplash.com/photo-zhjm8LdNawI?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1634726306646-zhjm8LdNawI?w=400&h=400&fit=crop&crop=face",
       description: "用专业的洞察力和耐心的陪伴，帮助你发现内在的无限可能。",
       traits: {
         warmth: 84,
