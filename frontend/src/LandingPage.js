@@ -276,11 +276,37 @@ const LandingPage = () => {
 
   // Character Carousel 自动轮播
   useEffect(() => {
-    const characterTimer = setInterval(() => {
-      setCurrentCharacterSlide((prev) => (prev + 1) % characters.length);
-    }, 4000);
-    return () => clearInterval(characterTimer);
-  }, []);
+    if (!isDragging) {
+      const characterTimer = setInterval(() => {
+        setCurrentCharacterSlide((prev) => (prev + 1) % characters.length);
+      }, 5000);
+      return () => clearInterval(characterTimer);
+    }
+  }, [isDragging]);
+
+  // Character Carousel 导航函数
+  const nextCharacter = () => {
+    setCurrentCharacterSlide((prev) => (prev + 1) % characters.length);
+  };
+
+  const prevCharacter = () => {
+    setCurrentCharacterSlide((prev) => (prev - 1 + characters.length) % characters.length);
+  };
+
+  const goToCharacter = (index) => {
+    setCurrentCharacterSlide(index);
+  };
+
+  // 拖拽结束处理
+  const handleDragEnd = (event, info) => {
+    setIsDragging(false);
+    const threshold = 50;
+    if (info.offset.x > threshold) {
+      prevCharacter();
+    } else if (info.offset.x < -threshold) {
+      nextCharacter();
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
