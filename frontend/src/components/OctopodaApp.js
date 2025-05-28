@@ -108,37 +108,79 @@ const AIPartnersPage = () => {
       id: 1,
       name: "林溪",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
-      description: "陪伴你在人生路上的每一个重要时刻，用温暖和智慧为你指引方向。"
+      description: "陪伴你在人生路上的每一个重要时刻，用温暖和智慧为你指引方向。",
+      traits: {
+        warmth: 85,
+        understanding: 92,
+        playfulness: 78,
+        loyalty: 88,
+        growth: 94
+      }
     },
     {
       id: 2,
-      name: "林成卿",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-      description: "用专业的洞察力和耐心的陪伴，帮助你发现内在的无限可能。"
+      name: "小萱",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      description: "用青春的活力和现代的思维，陪伴你探索属于这个时代的成长方式。",
+      traits: {
+        warmth: 90,
+        understanding: 85,
+        playfulness: 95,
+        loyalty: 82,
+        growth: 88
+      }
     },
     {
       id: 3,
-      name: "陆迪",
-      image: "https://images.pexels.com/photos/7651576/pexels-photo-7651576.jpeg",
-      description: "以细腻的共情能力和深度的理解，成为你成长路上最贴心的伙伴。"
+      name: "曼丽",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      description: "以丰富的人生阅历和深邃的智慧，为你的每一个选择提供温暖的支持。",
+      traits: {
+        warmth: 88,
+        understanding: 90,
+        playfulness: 75,
+        loyalty: 92,
+        growth: 85
+      }
     },
     {
       id: 4,
-      name: "Simon Li",
-      image: "https://images.unsplash.com/photo-1529232356377-57971f020a94",
-      description: "结合国际化视野与本土智慧，为你的人生规划提供全新的思考角度。"
+      name: "陆迪",
+      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a",
+      description: "以细腻的共情能力和深度的理解，成为你成长路上最贴心的伙伴。",
+      traits: {
+        warmth: 87,
+        understanding: 94,
+        playfulness: 80,
+        loyalty: 90,
+        growth: 89
+      }
     },
     {
       id: 5,
-      name: "小萱",
-      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf",
-      description: "用青春的活力和现代的思维，陪伴你探索属于这个时代的成长方式。"
+      name: "Simon Li",
+      image: "https://images.unsplash.com/photo-1529232356377-57971f020a94",
+      description: "结合国际化视野与本土智慧，为你的人生规划提供全新的思考角度。",
+      traits: {
+        warmth: 82,
+        understanding: 88,
+        playfulness: 85,
+        loyalty: 86,
+        growth: 96
+      }
     },
     {
       id: 6,
-      name: "曼丽",
-      image: "https://images.pexels.com/photos/7278797/pexels-photo-7278797.jpeg",
-      description: "以丰富的人生阅历和深邃的智慧，为你的每一个选择提供温暖的支持。"
+      name: "林成卿",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      description: "用专业的洞察力和耐心的陪伴，帮助你发现内在的无限可能。",
+      traits: {
+        warmth: 84,
+        understanding: 91,
+        playfulness: 77,
+        loyalty: 93,
+        growth: 92
+      }
     }
   ];
 
