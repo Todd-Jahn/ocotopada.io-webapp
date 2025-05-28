@@ -336,7 +336,175 @@ const OctopodaChinese = () => {
     </section>
   );
 
-  // 订阅方案
+  // 共创社区区块
+  const CommunitySection = () => (
+    <section id="community" className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            共创成长社区
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            与AI伙伴和真实用户一起，共同创造有温度的成长内容，
+            分享真实人生经历，在互相陪伴中实现蜕变
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {[
+            {
+              icon: <BookOpen className="w-6 h-6" />,
+              title: "成长故事",
+              description: "分享真实的人生故事，记录成长足迹，获得温暖回应",
+              features: ["真实经历分享", "成长进度跟踪", "情感共鸣互动"]
+            },
+            {
+              icon: <Heart className="w-6 h-6" />,
+              title: "陪伴日记",
+              description: "与AI伙伴的深度对话记录，沉淀成长感悟",
+              features: ["深度对话回顾", "成长洞察提炼", "情绪变化追踪"]
+            },
+            {
+              icon: <Users className="w-6 h-6" />,
+              title: "共创剧本",
+              description: "用户与AI协作创造成长场景和解决方案",
+              features: ["场景共同构建", "角色互动设定", "成果分享展示"]
+            },
+            {
+              icon: <Target className="w-6 h-6" />,
+              title: "成长挑战",
+              description: "参与个人和团队成长挑战，激发无限潜能",
+              features: ["挑战任务设定", "团队协作完成", "成果庆祝展示"]
+            },
+            {
+              icon: <HelpCircle className="w-6 h-6" />,
+              title: "互助问答",
+              description: "社区智慧集合，为成长困惑提供温暖解答",
+              features: ["问题发布求助", "专业建议回复", "最佳答案推荐"]
+            },
+            {
+              icon: <Gift className="w-6 h-6" />,
+              title: "资源交换",
+              description: "分享成长资源和工具，传递有价值的经验",
+              features: ["资源免费分享", "工具使用推荐", "经验方法交流"]
+            }
+          ].map((feature, i) => (
+            <div
+              key={i}
+              className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow duration-200"
+            >
+              <div className="text-octopoda-coral mb-4">
+                {feature.icon}
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                {feature.description}
+              </p>
+              <div className="space-y-1">
+                {feature.features.map((item, j) => (
+                  <div key={j} className="flex items-center text-xs text-gray-500">
+                    <CheckCircle className="w-3 h-3 mr-2 text-octopoda-sage" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 社区特色 */}
+        <div className="bg-gradient-to-r from-octopoda-ivory to-blue-50 p-8 rounded-2xl">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                为什么选择我们的共创社区？
+              </h3>
+              <div className="space-y-4">
+                {[
+                  {
+                    icon: <Shield className="w-5 h-5" />,
+                    title: "隐私安全保护",
+                    description: "多层隐私设置，匿名发布选项，让你安心分享"
+                  },
+                  {
+                    icon: <Award className="w-5 h-5" />,
+                    title: "成长激励体系",
+                    description: "积分徽章系统，记录每一步成长，激发持续参与"
+                  },
+                  {
+                    icon: <Bot className="w-5 h-5" />,
+                    title: "AI智能协助",
+                    description: "AI内容审核，智能推荐匹配，提供个性化体验"
+                  },
+                  {
+                    icon: <Heart className="w-5 h-5" />,
+                    title: "温暖社区氛围",
+                    description: "真诚共情文化，互相支持陪伴，共同成长前行"
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start">
+                    <div className="text-octopoda-coral mr-3 mt-1">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div className="text-4xl mb-4">🌟</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-4">
+                  立即加入社区
+                </h4>
+                <p className="text-gray-600 mb-6">
+                  成为共创社区的一员，开始你的成长陪伴之旅
+                </p>
+                <div className="space-y-3">
+                  <button className="w-full bg-octopoda-coral text-white py-3 rounded-lg font-medium hover:bg-coral-600 transition-colors duration-200">
+                    免费加入社区
+                  </button>
+                  <button className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200">
+                    先看看社区
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 社区数据展示 */}
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {[
+            { number: "10,000+", label: "活跃用户", icon: "👥" },
+            { number: "50,000+", label: "成长故事", icon: "📖" },
+            { number: "500+", label: "AI导师", icon: "🤖" },
+            { number: "95%", label: "用户满意度", icon: "⭐" }
+          ].map((stat, i) => (
+            <div key={i} className="bg-white p-4 rounded-xl border border-gray-100">
+              <div className="text-2xl mb-2">{stat.icon}</div>
+              <div className="text-2xl font-bold text-octopoda-primary mb-1">
+                {stat.number}
+              </div>
+              <div className="text-sm text-gray-600">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
   const PricingSection = () => (
     <section id="pricing" className="py-16 bg-gray-50">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
