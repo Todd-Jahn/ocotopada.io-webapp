@@ -45,7 +45,7 @@ const LandingPage = () => {
     setCurrentSlide((prev) => (prev - 1 + characters.length) % characters.length);
   };
 
-  const handleDragEnd = (event: any, info: PanInfo) => {
+  const handleDragEnd = (event, info) => {
     if (info.offset.x > 100) {
       prevSlide();
     } else if (info.offset.x < -100) {
