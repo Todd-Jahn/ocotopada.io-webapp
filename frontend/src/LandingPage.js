@@ -411,7 +411,7 @@ const LandingPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
                 重新定义
               </span>
@@ -419,15 +419,84 @@ const LandingPage = () => {
               <span className="text-white">AI伙伴关系</span>
             </h1>
             
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
+            {/* Character Carousel */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="mb-8"
             >
-              Octopada.io 为你打造有温度的AI伙伴，<br />
-              不只是聊天，更是真正的陪伴、理解与成长
-            </motion.p>
+              {/* 桌面端网格展示 */}
+              <div className="hidden lg:grid lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+                {characters.map((character, index) => (
+                  <motion.div
+                    key={character.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="group cursor-pointer"
+                  >
+                    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+                      <div className="relative mb-4">
+                        <img
+                          src={character.avatar}
+                          alt={character.name}
+                          className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-white/20 group-hover:border-purple-400/50 transition-all"
+                        />
+                        <div className={`absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r ${character.color} rounded-full border-2 border-white`}></div>
+                      </div>
+                      
+                      <h3 className="text-lg font-bold text-white text-center mb-1">{character.name}</h3>
+                      <p className="text-sm text-purple-300 text-center mb-2">{character.personality}</p>
+                      <p className="text-xs text-gray-300 text-center leading-relaxed">{character.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* 移动端和平板轮播 */}
+              <div className="lg:hidden max-w-sm mx-auto">
+                <div className="relative overflow-hidden">
+                  <motion.div
+                    className="flex"
+                    animate={{ x: `-${currentCharacterSlide * 100}%` }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  >
+                    {characters.map((character) => (
+                      <div key={character.id} className="w-full flex-shrink-0 px-4">
+                        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center">
+                          <div className="relative mb-4">
+                            <img
+                              src={character.avatar}
+                              alt={character.name}
+                              className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-white/20"
+                            />
+                            <div className={`absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r ${character.color} rounded-full border-2 border-white`}></div>
+                          </div>
+                          
+                          <h3 className="text-xl font-bold text-white mb-2">{character.name}</h3>
+                          <p className="text-purple-300 mb-3">{character.personality}</p>
+                          <p className="text-sm text-gray-300 leading-relaxed">{character.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </motion.div>
+                </div>
+
+                {/* 移动端轮播指示器 */}
+                <div className="flex justify-center space-x-2 mt-4">
+                  {characters.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        currentCharacterSlide === index ? 'bg-purple-400 w-6' : 'bg-gray-600'
+                      }`}
+                      onClick={() => setCurrentCharacterSlide(index)}
+                    />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
