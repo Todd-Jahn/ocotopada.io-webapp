@@ -159,7 +159,7 @@ const AIPartnersPage = () => {
     {
       id: 5,
       name: "Simon Li",
-      image: "https://images.unsplash.com/photo-1634726306646-tI-WPY6GDJs?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1634726306646-tI-WPY6GDJs?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
       description: "结合国际化视野与本土智慧，为你的人生规划提供全新的思考角度。",
       traits: {
         warmth: 82,
