@@ -321,17 +321,17 @@ const LandingPage = () => {
         style={{ opacity: headerOpacity }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-16 md:h-16">
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-2"
             >
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-white" />
+              <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <Sparkles className="w-3 h-3 md:w-5 md:h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Octopada.io</span>
+              <span className="text-lg md:text-xl font-bold text-white">Octopada.io</span>
             </motion.div>
 
             {/* 桌面端导航 */}
