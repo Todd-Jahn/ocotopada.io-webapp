@@ -187,40 +187,8 @@ const AIPartnersPage = () => {
           {/* 右侧：详细信息 */}
           <div className="space-y-6">
             <div>
-              <div className="flex items-center gap-3 mb-2">
-                <h4 className="text-2xl font-bold text-gray-900">{currentKOL.title}</h4>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                  {currentKOL.age}岁
-                </span>
-              </div>
-              <p className="text-lg text-gray-600 mb-4">{currentKOL.target}</p>
-              <p className="text-gray-700 leading-relaxed">{currentKOL.description}</p>
-            </div>
-
-            {/* 能力展示 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h5 className="text-lg font-semibold text-gray-900 mb-4">成长能力评估</h5>
-              <div className="space-y-3">
-                <SimpleProgressBar label="成长进度" value={currentKOL.growthProgress} color="green" icon={TrendingUp} />
-                <SimpleProgressBar label="懂你指数" value={currentKOL.understandingIndex} color="blue" icon={Brain} />
-                <SimpleProgressBar label="共情能力" value={currentKOL.empathyLevel} color="pink" icon={Heart} />
-                <SimpleProgressBar label="专业知识" value={currentKOL.expertiseLevel} color="purple" icon={Users} />
-              </div>
-            </div>
-
-            {/* 专业特长 */}
-            <div>
-              <h5 className="text-lg font-semibold text-gray-900 mb-3">专业特长</h5>
-              <div className="flex flex-wrap gap-2">
-                {currentKOL.specialties.map((specialty, index) => (
-                  <span
-                    key={index}
-                    className="bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 px-4 py-2 rounded-lg text-sm font-medium border border-blue-200"
-                  >
-                    {specialty}
-                  </span>
-                ))}
-              </div>
+              <h4 className="text-2xl font-bold text-gray-900 mb-4">{currentKOL.name}</h4>
+              <p className="text-lg text-gray-700 leading-relaxed">{currentKOL.description}</p>
             </div>
 
             <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 px-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
