@@ -188,33 +188,39 @@ const AIPartnersPage = () => {
 
   return (
     <div className="pt-16 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+      <div className="container mx-auto px-6 py-12">
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            每个人都值得拥有懂你的AI成长伙伴
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            陪伴你的每一次蜕变　见证每一个成长瞬间
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">AI成长伙伴</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            选择你的专属AI伙伴，开启个性化的成长陪伴之旅
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          {/* 左侧：人物展示 */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-              <img
-                src={currentKOL.image}
-                alt={currentKOL.name}
-                className="w-full h-96 object-cover hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <div className="absolute bottom-6 left-6">
-                <h3 className="text-2xl font-bold text-white mb-1">{currentKOL.name}</h3>
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* 左侧：AI伙伴展示 */}
+          <div className="space-y-8">
+            {/* 图片和基本信息 */}
+            <div className="relative">
+              <div className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src={currentKOL.image}
+                  alt={currentKOL.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* 名字显示在图片上 */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-lg">
+                  <h3 className="text-2xl font-bold text-gray-900 text-center">
+                    {currentKOL.name}
+                  </h3>
+                </div>
               </div>
             </div>
 
-            {/* 指示器 */}
-            <div className="flex justify-center mt-6 space-x-2">
+            {/* 导航指示器 */}
+            <div className="flex justify-center space-x-3">
               {aiKOLs.map((_, index) => (
                 <button
                   key={index}
@@ -227,14 +233,29 @@ const AIPartnersPage = () => {
             </div>
           </div>
 
-          {/* 右侧：详细信息 */}
-          <div className="space-y-6">
+          {/* 右侧：详细信息和雷达图 */}
+          <div className="space-y-8">
+            {/* 基本描述 */}
             <div>
               <h4 className="text-2xl font-bold text-gray-900 mb-4">{currentKOL.name}</h4>
-              <p className="text-lg text-gray-700 leading-relaxed">{currentKOL.description}</p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">{currentKOL.description}</p>
             </div>
 
-            <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 px-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+            {/* 五边形雷达图 */}
+            <div className="bg-white rounded-3xl p-8 shadow-lg">
+              <h5 className="text-xl font-semibold text-gray-900 mb-6 text-center">个性特质分析</h5>
+              <div className="flex justify-center">
+                <RadarChart 
+                  name={currentKOL.name}
+                  traits={currentKOL.traits}
+                  size={280}
+                  className="mx-auto"
+                />
+              </div>
+            </div>
+
+            {/* 选择按钮 */}
+            <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 px-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               选择 {currentKOL.name} 作为我的成长伙伴
             </button>
           </div>
