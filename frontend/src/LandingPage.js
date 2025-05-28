@@ -396,7 +396,7 @@ const LandingPage = () => {
       </motion.header>
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
         {/* 背景图片 */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -432,13 +432,13 @@ const LandingPage = () => {
         </div>
 
         {/* 主要内容 */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-8 md:mt-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8">
+            <h1 className="text-2xl md:text-6xl lg:text-7xl font-bold text-white mb-8">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
                 重新定义
               </span>
