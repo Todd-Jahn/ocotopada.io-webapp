@@ -30,6 +30,9 @@ import {
   UserPlus
 } from "lucide-react";
 
+// 导入其他页面组件
+import { CommunityPage, EnterprisePage, TeamStoryPage, JoinUsPage } from "./AdditionalPages";
+
 // 导航组件
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -93,6 +96,7 @@ const Navigation = () => {
       </div>
     </nav>
   );
+};
 };
 
 // AI伙伴页面（首页）
