@@ -13,7 +13,7 @@ const LandingPage = () => {
     {
       id: 1,
       name: "洛可 LoCo",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face"
     },
     {
       id: 2,
