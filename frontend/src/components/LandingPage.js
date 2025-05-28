@@ -327,6 +327,145 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Character Carousel */}
+      <section className="py-20 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              遇见你的AI伙伴
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              每位AI伙伴都有独特的个性和故事，滑动查看更多
+            </p>
+          </motion.div>
+
+          {/* Desktop Carousel */}
+          <div className="hidden md:block relative">
+            <div className="grid grid-cols-5 gap-6">
+              {characters.map((character, index) => (
+                <motion.div
+                  key={character.id}
+                  className="relative group cursor-pointer"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05, y: -10 }}
+                  onClick={() => setCurrentSlide(index)}
+                >
+                  <div className="relative h-80 rounded-3xl overflow-hidden">
+                    <img 
+                      src={character.image}
+                      alt={character.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <h3 className="text-white font-bold text-lg text-shadow">{character.name}</h3>
+                    </div>
+                    <div className="absolute inset-0 bg-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile Carousel */}
+          <div className="md:hidden relative">
+            <div className="relative h-96 rounded-3xl overflow-hidden">
+              <motion.div
+                className="flex h-full"
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.1}
+                onDragEnd={handleDragEnd}
+                animate={{ x: `-${currentSlide * 100}%` }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              >
+                {characters.map((character, index) => (
+                  <motion.div
+                    key={character.id}
+                    className="relative flex-shrink-0 w-full h-full"
+                  >
+                    <img 
+                      src={character.image}
+                      alt={character.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6">
+                      <h3 className="text-white font-bold text-2xl text-shadow">{character.name}</h3>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {characters.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === currentSlide 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500' 
+                      : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Character Info */}
+          <motion.div 
+            className="text-center mt-12"
+            key={currentSlide}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="max-w-2xl mx-auto backdrop-blur-sm bg-white/5 border border-white/10 rounded-3xl p-8">
+              <h3 className="text-3xl font-bold text-white mb-4">{characters[currentSlide].name}</h3>
+              <p className="text-white/80 text-lg leading-relaxed">
+                {currentSlide === 0 && "温暖阳光的男性伙伴，擅长倾听和鼓励，陪伴你度过人生的每个重要时刻"}
+              {currentSlide === 1 && "温柔体贴的女性伙伴，善解人意，用细腻的情感为你带来心灵的慰藉"}
+              {currentSlide === 2 && "活泼开朗的伙伴，充满创意和想象力，让每次对话都充满惊喜"}
+              {currentSlide === 3 && "优雅知性的伙伴，拥有丰富的人生阅历，为你提供智慧的建议"}
+              {currentSlide === 4 && "成熟稳重的伙伴，具备专业的知识背景，助力你的成长和发展"}
+              </p>
+              <motion.button 
+                className="mt-6 px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                开始对话
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Companion Types Matrix */}
       <section id="伴侣类型" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
