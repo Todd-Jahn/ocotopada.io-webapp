@@ -145,7 +145,7 @@ const LandingPage = () => {
       description: "与顶级MCN机构深度合作，共同打造优质AI内容生态",
       icon: Building,
       benefits: ["专业内容策划", "流量资源整合", "商业变现支持"],
-      image: "https://images.pexels.com/photos/5475816/pexels-photo-5475816.jpeg"
+      image: "https://images.unsplash.com/photo-1618556450991-2f1af64e8191?w=400&h=300&fit=crop&auto=format"
     },
     {
       type: "达人",
@@ -153,7 +153,7 @@ const LandingPage = () => {
       description: "邀请优秀创作者加入，用真实经验丰富AI伙伴内容",
       icon: Star,
       benefits: ["创作者扶持", "内容共创", "收益分成"],
-      image: "https://images.pexels.com/photos/5475761/pexels-photo-5475761.jpeg"
+      image: "https://images.pexels.com/photos/5475810/pexels-photo-5475810.jpeg?w=400&h=300&fit=crop&auto=compress,format"
     },
     {
       type: "PGC",
@@ -161,7 +161,7 @@ const LandingPage = () => {
       description: "专业团队制作高质量内容，提升用户体验价值",
       icon: Briefcase,
       benefits: ["专业制作", "内容质量", "体验升级"],
-      image: "https://images.unsplash.com/photo-1598015132635-131afe3ba07f"
+      image: "https://images.pexels.com/photos/8512209/pexels-photo-8512209.jpeg?w=400&h=300&fit=crop&auto=compress,format"
     },
     {
       type: "品牌",
@@ -169,7 +169,7 @@ const LandingPage = () => {
       description: "与知名品牌联合，创新AI伙伴营销新模式",
       icon: Award,
       benefits: ["品牌联名", "营销创新", "价值共创"],
-      image: "https://images.pexels.com/photos/8728284/pexels-photo-8728284.jpeg"
+      image: "https://images.pexels.com/photos/7789851/pexels-photo-7789851.jpeg?w=400&h=300&fit=crop&auto=compress,format"
     }
   ];
 
