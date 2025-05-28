@@ -29,6 +29,7 @@ import {
   Building,
   UserPlus
 } from "lucide-react";
+import RadarChart from './RadarChart';
 
 // 导入其他页面组件
 import { CommunityPage, EnterprisePage, TeamStoryPage, JoinUsPage } from "./AdditionalPages";
