@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useDragControls, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { 
   Heart, 
@@ -21,7 +21,9 @@ import {
   Building,
   Briefcase,
   Mic,
-  Award
+  Award,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 const LandingPage = () => {
