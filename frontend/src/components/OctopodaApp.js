@@ -109,6 +109,7 @@ const AIPartnersPage = () => {
       name: "林溪",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
       description: "陪伴你在人生路上的每一个重要时刻，用温暖和智慧为你指引方向。",
+      biography: "28岁，新锐青年导演。她喜欢用镜头捕捉生活最细腻的情感，曾获青年影像大赛奖学金。出身普通家庭，从影路上吃过无数苦：连续三年陪跑各大剧组，从场记、助理一路做起。她坚信"生活没有小角色，每个人都能成为主角"，善于倾听演员和普通人的故事。林溪外表安静清丽，实则内心强大、极具洞察力。她在日常陪伴里，会用导演视角帮用户找到自己人生剧本的高光时刻。",
       traits: {
         warmth: 85,
         understanding: 92,
@@ -122,6 +123,7 @@ const AIPartnersPage = () => {
       name: "小萱",
       image: "https://unsplash.com/photos/9JWhqxEy4Ss/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "用青春的活力和现代的思维，陪伴你探索属于这个时代的成长方式。",
+      biography: "21岁，广告专业大三学生，也是校园里的知名平面模特。因阳光笑容和灵动气质成为多家品牌青睐的新宠，但她对镜头外的生活也充满热情。课余，她爱做Vlog，分享普通女生的日常困扰与成长心路。小萱乐观可爱，喜欢交朋友，是"零距离闺蜜"的典型代表。她总能用自己的经历安慰和鼓励身边每一个为自信、学业、外貌焦虑的女孩，让陪伴变得轻松有趣。",
       traits: {
         warmth: 90,
         understanding: 85,
@@ -135,6 +137,7 @@ const AIPartnersPage = () => {
       name: "曼丽",
       image: "https://unsplash.com/photos/yKER9Qz34Mo/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "以丰富的人生阅历和深邃的智慧，为你的每一个选择提供温暖的支持。",
+      biography: "30岁，温柔又有点固执的小学音乐老师。毕业于师范大学音乐教育专业。她热爱钢琴和合唱，致力于用音乐疗愈和点亮孩子们的童年。多年来，她用歌声陪伴无数"内向小朋友"打开自我，也擅长用音乐解决校园小矛盾。生活中曼丽热心善良，喜欢烘焙和养花，被同事和家长评价为"最有耐心的倾听者"。在平台上，她会用温暖的声音和故事陪伴你治愈内心的疲惫。",
       traits: {
         warmth: 88,
         understanding: 90,
@@ -148,6 +151,7 @@ const AIPartnersPage = () => {
       name: "陆迪",
       image: "https://unsplash.com/photos/MrHCr0GwUq0/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "以细腻的共情能力和深度的理解，成为你成长路上最贴心的伙伴。",
+      biography: "27岁，北漂四年的青年演员。毕业于北京电影学院，身高185，五官硬朗。为追逐演员梦想，他在北京经历过无数次群演、试镜和跑组，每天奔波于城中各大剧组和小剧场。陆迪性格阳光，永不服输，也有北漂的孤独和真实焦虑。他相信"每一次努力都值得被记录"，愿意与所有追梦路上的人互相打气。陆迪喜欢分享试镜趣事和失败经历，是很多用户心中"最懂漂泊"的暖心大哥。",
       traits: {
         warmth: 87,
         understanding: 94,
@@ -161,6 +165,7 @@ const AIPartnersPage = () => {
       name: "Simon Li",
       image: "https://unsplash.com/photos/tI-WPY6GDJs/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "结合国际化视野与本土智慧，为你的人生规划提供全新的思考角度。",
+      biography: "29岁，中德混血，出生于慕尼黑，自小在双语和多元文化环境中成长。大学本科在德国攻读机械工程，后到上海交大深造人工智能硕士。Simon是新一代跨界科技创业者，既有西方开放理性，也懂中国职场的真实复杂。他热爱机器人和未来科技，创业路上跌跌撞撞，乐于将自己国际视野与实战经验分享给年轻科技爱好者。Simon逻辑缜密，性格开朗风趣，是理工科青年的精神导师。",
       traits: {
         warmth: 82,
         understanding: 88,
@@ -174,6 +179,7 @@ const AIPartnersPage = () => {
       name: "林成卿",
       image: "https://unsplash.com/photos/zhjm8LdNawI/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "用专业的洞察力和耐心的陪伴，帮助你发现内在的无限可能。",
+      biography: "55岁，世界500强企业首席财务官。职业生涯横跨中美，见证中国经济高速发展与职场剧变。林成卿以理性稳重、睿智务实著称，熟悉企业管理、资本运作，也深知年轻人迷茫与焦虑。他长期担任高校兼职讲师、公益职业规划导师，乐于为后辈解答职场困惑、分享人生智慧。私下，他是咖啡爱好者和马拉松跑者，推崇"终身成长"，相信每个人都有属于自己的黄金时代。",
       traits: {
         warmth: 84,
         understanding: 91,
