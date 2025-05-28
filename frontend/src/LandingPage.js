@@ -460,12 +460,12 @@ const LandingPage = () => {
                       className="group cursor-pointer"
                     >
                       <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-purple-400/30 transition-all duration-300 p-3">
-                        {/* 10:6比例图片容器 */}
-                        <div className="relative aspect-[10/6] mb-3 rounded-lg overflow-hidden">
+                        {/* 4:3比例图片容器 */}
+                        <div className="relative aspect-[4/3] mb-3 rounded-lg overflow-hidden bg-gray-900/20">
                           <img
                             src={character.avatar}
                             alt={character.name}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                           />
                         </div>
                         
