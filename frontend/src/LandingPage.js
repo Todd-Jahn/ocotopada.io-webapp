@@ -617,10 +617,10 @@ const LandingPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              六种AI伙伴，<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">理解你的每一面</span>
+              选择你的<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">专属AI伙伴</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              每种AI伙伴都有独特的性格和专长，满足你不同情境下的陪伴需求
+              每一种陪伴，都是独特的你
             </p>
           </motion.div>
 
