@@ -332,6 +332,7 @@ const LandingPage = () => {
                 <Sparkles className="w-3 h-3 md:w-5 md:h-5 text-white" />
               </div>
               <span className="text-lg md:text-xl font-bold text-white">Octopada.io</span>
+              <span className="text-xs md:text-sm text-gray-400 font-normal">（测试中）</span>
             </motion.div>
 
             {/* 桌面端导航 */}
