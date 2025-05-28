@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Octopada.io - AI伙伴平台
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌟 重新定义AI伙伴关系的创新平台
 
-## Available Scripts
+## ✨ 功能特点
 
-In the project directory, you can run:
+- 🤖 **6种AI伙伴类型**: 他、她、懂我、教我、请教、有料
+- 💫 **专属AI角色**: 千奈、Chantel、Koko、高毅、黎绮
+- 🎨 **现代化UI**: Glass-morphism设计，流畅动画
+- 📱 **完美响应式**: 支持所有设备尺寸
+- ⚡ **高性能**: React 19 + TailwindCSS + Framer Motion
 
-### `npm start`
+## 🚀 技术栈
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **前端**: React 19, TailwindCSS, Framer Motion
+- **图标**: Lucide React
+- **动画**: Framer Motion
+- **构建**: Create React App
+- **部署**: Vercel
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 本地开发
 
-### `npm test`
+```bash
+# 安装依赖
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 启动开发服务器
+npm start
 
-### `npm run build`
+# 构建生产版本
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌐 部署到Vercel
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+项目已配置好自动部署，推送到main分支即可自动构建和部署。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📝 许可证
 
-### `npm run eject`
+© 2024 Octopada.io - 保留所有权利
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🔥 **体验下一代AI伙伴关系** - 每一种陪伴，都是独特的你
