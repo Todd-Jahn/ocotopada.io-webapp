@@ -111,83 +111,49 @@ const OctopodaChinese = () => {
   const HeroSection = () => (
     <section className="pt-24 pb-16 bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* 左侧 - 内容 */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                每个人都值得拥有
-                <span className="block text-octopoda-coral">
-                  懂你的AI成长伙伴
-                </span>
-              </h1>
-              
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg">
-                不是陪聊，不是娱乐，是与你共创真实人生的高保真虚拟导师。
-                陪伴你的每一次蜕变，见证每一个成长瞬间。
-              </p>
-            </div>
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            每个人都值得拥有
+            <span className="block text-octopoda-coral">
+              懂你的AI成长伙伴
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+            不是陪聊，不是娱乐，是与你共创真实人生的高保真虚拟导师。
+            陪伴你的每一次蜕变，见证每一个成长瞬间。
+          </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-octopoda-coral text-white px-8 py-3 rounded-lg font-medium hover:bg-coral-600 transition-colors duration-200 flex items-center justify-center">
-                开始我的成长陪伴
-                <ArrowRight className="ml-2" size={18} />
-              </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <button className="bg-octopoda-coral text-white px-8 py-3 rounded-lg font-medium hover:bg-coral-600 transition-colors duration-200 flex items-center justify-center">
+              开始我的成长陪伴
+              <ArrowRight className="ml-2" size={18} />
+            </button>
 
-              <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center">
-                <Play className="mr-2" size={18} />
-                观看真实案例
-              </button>
-            </div>
-
-            <div className="flex flex-wrap gap-6 text-sm text-gray-500">
-              <span className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-octopoda-sage" />
-                高保真AI互动
-              </span>
-              <span className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-octopoda-sage" />
-                隐私安全保护
-              </span>
-              <span className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-octopoda-sage" />
-                真实成长陪伴
-              </span>
-            </div>
+            <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center">
+              <Play className="mr-2" size={18} />
+              观看真实案例
+            </button>
           </div>
 
-          {/* 右侧 - 高保真AI陪伴导师 */}
-          <div className="relative">
-            <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 lg:p-12">
-              <img 
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb"
-                alt="AI成长伙伴"
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
-              
-              {/* 浮动元素显示AI互动状态 */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-3 max-w-xs">
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-xs font-medium text-gray-600">AI导师在线</span>
-                </div>
-                <p className="text-sm text-gray-700">
-                  "我理解你的职场困惑，让我们一起制定专属的成长计划"
-                </p>
-              </div>
-
-              <div className="absolute -bottom-4 -left-4 bg-octopoda-coral text-white rounded-lg shadow-lg p-3">
-                <div className="text-xs font-medium mb-1">成长进度</div>
-                <div className="flex items-center space-x-2">
-                  <div className="bg-white/20 rounded-full h-2 w-16">
-                    <div className="bg-white rounded-full h-2 w-12"></div>
-                  </div>
-                  <span className="text-xs">75%</span>
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+            <span className="flex items-center">
+              <CheckCircle className="w-4 h-4 mr-2 text-octopoda-sage" />
+              高保真AI互动
+            </span>
+            <span className="flex items-center">
+              <CheckCircle className="w-4 h-4 mr-2 text-octopoda-sage" />
+              隐私安全保护
+            </span>
+            <span className="flex items-center">
+              <CheckCircle className="w-4 h-4 mr-2 text-octopoda-sage" />
+              真实成长陪伴
+            </span>
           </div>
         </div>
+
+        {/* AI伙伴轮播展示 */}
+        <AIKOLCarousel />
       </div>
     </section>
   );
