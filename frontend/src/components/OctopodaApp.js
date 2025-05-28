@@ -97,7 +97,6 @@ const Navigation = () => {
     </nav>
   );
 };
-};
 
 // AI伙伴页面（首页）
 const AIPartnersPage = () => {
