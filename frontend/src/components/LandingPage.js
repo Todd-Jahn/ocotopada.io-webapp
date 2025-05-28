@@ -13,27 +13,27 @@ const LandingPage = () => {
     {
       id: 1,
       name: "洛可 LoCo",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800"
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
     },
     {
       id: 2,
       name: "千奈",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c2f84653?w=800"
+      image: "https://images.unsplash.com/photo-1494790108755-2616c2f84653"
     },
     {
       id: 3,
       name: "Suki 苏奇",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800"
+      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9"
     },
     {
       id: 4,
       name: "黎绮",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800"
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb"
     },
     {
       id: 5,
       name: "林成卿",
-      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=800"
+      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79"
     }
   ];
 
