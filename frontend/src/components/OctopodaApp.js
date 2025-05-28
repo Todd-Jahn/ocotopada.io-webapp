@@ -143,22 +143,6 @@ const AIPartnersPage = () => {
 
   const currentKOL = aiKOLs[currentIndex];
 
-  const SimpleProgressBar = ({ label, value, color, icon: Icon }) => (
-    <div className="flex items-center gap-3 mb-3">
-      <div className="flex items-center gap-2 w-20">
-        <Icon size={16} className={`text-${color}-500`} />
-        <span className="text-sm font-medium text-gray-700 text-nowrap">{label}</span>
-      </div>
-      <div className="flex-1 bg-gray-200 rounded-full h-2">
-        <div
-          className={`h-2 rounded-full bg-gradient-to-r from-${color}-400 to-${color}-600`}
-          style={{ width: `${value}%` }}
-        />
-      </div>
-      <span className="text-sm font-medium text-gray-600 w-10 text-right">{value}%</span>
-    </div>
-  );
-
   return (
     <div className="pt-16 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
