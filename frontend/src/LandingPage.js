@@ -42,7 +42,7 @@ const LandingPage = () => {
       name: "千奈",
       personality: "温柔贴心",
       description: "我是你的贴心伙伴，愿意倾听你的每一个心声",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b169ad8a?w=400&h=600&fit=crop",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=600&fit=crop",
       color: "from-pink-400 to-rose-500"
     },
     {
@@ -74,7 +74,7 @@ const LandingPage = () => {
       name: "黎绮",
       personality: "乐观向上",
       description: "每一天都充满可能性，让我和你一起拥抱阳光",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=600&fit=crop",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b169ad8a?w=400&h=600&fit=crop",
       color: "from-yellow-400 to-orange-500"
     }
   ];
