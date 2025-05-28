@@ -120,7 +120,7 @@ const AIPartnersPage = () => {
     {
       id: 2,
       name: "小萱",
-      image: "https://images.unsplash.com/photo-1634726306646-9JWhqxEy4Ss?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "https://unsplash.com/photos/9JWhqxEy4Ss/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "用青春的活力和现代的思维，陪伴你探索属于这个时代的成长方式。",
       traits: {
         warmth: 90,
@@ -133,7 +133,7 @@ const AIPartnersPage = () => {
     {
       id: 3,
       name: "曼丽",
-      image: "https://images.unsplash.com/photo-1634726306646-yKER9Qz34Mo?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "https://unsplash.com/photos/yKER9Qz34Mo/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "以丰富的人生阅历和深邃的智慧，为你的每一个选择提供温暖的支持。",
       traits: {
         warmth: 88,
@@ -146,7 +146,7 @@ const AIPartnersPage = () => {
     {
       id: 4,
       name: "陆迪",
-      image: "https://images.unsplash.com/photo-1634726306646-MrHCr0GwUq0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "https://unsplash.com/photos/MrHCr0GwUq0/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "以细腻的共情能力和深度的理解，成为你成长路上最贴心的伙伴。",
       traits: {
         warmth: 87,
@@ -159,7 +159,7 @@ const AIPartnersPage = () => {
     {
       id: 5,
       name: "Simon Li",
-      image: "https://images.unsplash.com/photo-1634726306646-tI-WPY6GDJs?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "https://unsplash.com/photos/tI-WPY6GDJs/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "结合国际化视野与本土智慧，为你的人生规划提供全新的思考角度。",
       traits: {
         warmth: 82,
@@ -172,7 +172,7 @@ const AIPartnersPage = () => {
     {
       id: 6,
       name: "林成卿",
-      image: "https://images.unsplash.com/photo-1634726306646-zhjm8LdNawI?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "https://unsplash.com/photos/zhjm8LdNawI/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0Nzg0MDA5fA&force=true&w=400",
       description: "用专业的洞察力和耐心的陪伴，帮助你发现内在的无限可能。",
       traits: {
         warmth: 84,
