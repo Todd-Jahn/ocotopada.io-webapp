@@ -202,12 +202,11 @@ const AIPartnersPage = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          {/* 左侧：AI伙伴展示 */}
-          <div className="space-y-8">
-            {/* 图片和基本信息 */}
+        <div className="grid lg:grid-cols-3 gap-8 items-start max-w-7xl mx-auto">
+          {/* 左侧：AI伙伴头像（垂直肖像比例） */}
+          <div className="lg:col-span-1 space-y-6">
             <div className="relative">
-              <div className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src={currentKOL.image}
                   alt={currentKOL.name}
@@ -230,28 +229,32 @@ const AIPartnersPage = () => {
             </div>
           </div>
 
-          {/* 右侧：详细信息和雷达图 */}
-          <div className="space-y-8">
-            {/* 基本描述 */}
+          {/* 中间：五边形雷达图 */}
+          <div className="lg:col-span-1 flex justify-center">
+            <div className="w-full max-w-sm">
+              <h5 className="text-xl font-semibold text-gray-900 mb-6 text-center">个性特质分析</h5>
+              <RadarChart 
+                name={currentKOL.name}
+                traits={currentKOL.traits}
+                size={280}
+                className="mx-auto"
+              />
+            </div>
+          </div>
+
+          {/* 右侧：详细信息 */}
+          <div className="lg:col-span-1 space-y-6">
             <div>
               <h4 className="text-2xl font-bold text-gray-900 mb-4">{currentKOL.name}</h4>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">{currentKOL.description}</p>
-            </div>
-
-            {/* 五边形雷达图 */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg">
-              <h5 className="text-xl font-semibold text-gray-900 mb-6 text-center">个性特质分析</h5>
-              <div className="flex justify-center">
-                <RadarChart 
-                  name={currentKOL.name}
-                  traits={currentKOL.traits}
-                  size={280}
-                  className="mx-auto"
-                />
+              
+              {/* 人物小传 */}
+              <div className="mb-6">
+                <h5 className="text-lg font-semibold text-gray-900 mb-3">人物小传</h5>
+                <p className="text-gray-600 leading-relaxed text-sm">{currentKOL.biography}</p>
               </div>
             </div>
 
-            {/* 选择按钮 */}
             <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 px-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               选择 {currentKOL.name} 作为我的成长伙伴
             </button>
