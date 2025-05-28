@@ -208,15 +208,6 @@ const AIPartnersPage = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              
-              {/* 名字显示在图片上 */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-lg">
-                  <h3 className="text-2xl font-bold text-gray-900 text-center">
-                    {currentKOL.name}
-                  </h3>
-                </div>
-              </div>
             </div>
 
             {/* 导航指示器 */}
