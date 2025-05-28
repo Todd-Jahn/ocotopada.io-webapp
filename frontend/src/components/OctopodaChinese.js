@@ -797,6 +797,7 @@ const OctopodaChinese = () => {
       <HeroSection />
       <FeaturesSection />
       <MentorSection />
+      <CommunitySection />
       <PricingSection />
       <FAQSection />
       <FinalCTASection />
