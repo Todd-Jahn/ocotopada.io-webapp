@@ -610,13 +610,7 @@ const LandingPage = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-purple-500/25 transition-all transform hover:scale-105 flex items-center space-x-2">
-                <Play className="w-5 h-5" />
-                <span>立即开始</span>
-              </button>
-              <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400 hover:text-white transition-all">
-                了解更多
-              </button>
+              {/* CTA按钮已删除 */}
             </motion.div>
 
             {/* 特色标签 */}
