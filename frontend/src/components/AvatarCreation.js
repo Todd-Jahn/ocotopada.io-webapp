@@ -14,20 +14,20 @@ import {
 } from 'lucide-react';
 import { AppContext } from '../App';
 
-// Avatar gallery images
+// Avatar gallery images - Updated from user's gallery
 const avatarGallery = [
-  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6',
-  'https://images.unsplash.com/photo-1509868918748-a554ad25f858',
-  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e',
-  'https://images.pexels.com/photos/32261581/pexels-photo-32261581.jpeg',
-  'https://images.pexels.com/photos/32262682/pexels-photo-32262682.jpeg',
-  'https://images.unsplash.com/photo-1576558656222-ba66febe3dec',
-  'https://images.unsplash.com/photo-1657128344786-360c3f8e57e5',
+  'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg',
+  'https://images.pexels.com/photos/32225457/pexels-photo-32225457.jpeg',
   'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7',
-  'https://images.pexels.com/photos/32225469/pexels-photo-32225469.jpeg',
+  'https://images.unsplash.com/photo-1556157382-97eda2d62296',
+  'https://images.unsplash.com/photo-1507679799987-c73779587ccf',
+  'https://images.pexels.com/photos/32225449/pexels-photo-32225449.jpeg',
   'https://images.unsplash.com/photo-1507522682902-781c2e75716b',
   'https://images.pexels.com/photos/30404720/pexels-photo-30404720.jpeg',
-  'https://images.pexels.com/photos/30404726/pexels-photo-30404726.jpeg'
+  'https://images.pexels.com/photos/30404725/pexels-photo-30404725.jpeg',
+  'https://images.unsplash.com/photo-1576558656222-ba66febe3dec',
+  'https://images.unsplash.com/photo-1657128344786-360c3f8e57e5',
+  'https://images.pexels.com/photos/10599803/pexels-photo-10599803.jpeg'
 ];
 
 const AvatarCreation = () => {
