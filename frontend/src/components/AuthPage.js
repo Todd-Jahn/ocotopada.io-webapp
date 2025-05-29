@@ -71,7 +71,7 @@ const AuthPage = () => {
             <span className="text-2xl">🐙</span>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Octopada.io</h1>
-          <p className="text-purple-300">Your AI companion awaits</p>
+          <p className="text-purple-300">您的AI伙伴在等待</p>
         </div>
 
         {/* Auth Form */}
