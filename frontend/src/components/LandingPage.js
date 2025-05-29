@@ -9,32 +9,32 @@ const LandingPage = () => {
   const { scrollYProgress } = useScroll();
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
 
-  // Character carousel data with real avatar images
+  // Character carousel data with yesterday's specified images
   const characters = [
     {
       id: 1,
-      name: "Sarah Chen",
-      image: "https://images.unsplash.com/photo-1509868918748-a554ad25f858"
+      name: "洛可 LoCo",
+      image: "https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face"
     },
     {
       id: 2,
-      name: "Marcus Johnson",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+      name: "千奈",
+      image: "https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face"
     },
     {
       id: 3,
-      name: "Elena Rodriguez",
-      image: "https://images.pexels.com/photos/32261581/pexels-photo-32261581.jpeg"
+      name: "Suki 苏奇",
+      image: "https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face"
     },
     {
       id: 4,
-      name: "David Kim",
-      image: "https://images.pexels.com/photos/32262682/pexels-photo-32262682.jpeg"
+      name: "黎绮",
+      image: "https://images.unsplash.com/photo-1748436878978-48695c8e14ac?w=800&h=800&fit=crop&crop=face"
     },
     {
       id: 5,
-      name: "Lisa Wang",
-      image: "https://images.unsplash.com/photo-1576558656222-ba66febe3dec"
+      name: "林成卿",
+      image: "https://images.unsplash.com/photo-1748436826108-f4645552b2ab?w=800&h=800&fit=crop&crop=face"
     }
   ];
 
