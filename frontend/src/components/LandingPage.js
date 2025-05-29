@@ -197,12 +197,14 @@ const LandingPage = () => {
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <motion.div 
-              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-              whileHover={{ scale: 1.05 }}
-            >
-              Octopada.io
-            </motion.div>
+            <Link to="/">
+              <motion.div 
+                className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+              >
+                Octopada.io
+              </motion.div>
+            </Link>
             
             <nav className="hidden md:flex space-x-8">
               {['功能特色', '伴侣类型', '定价方案', '关于我们'].map((item) => (
