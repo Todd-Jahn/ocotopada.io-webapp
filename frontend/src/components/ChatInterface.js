@@ -189,7 +189,10 @@ const ChatInterface = () => {
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
                   <span className="text-sm">🐙</span>
                 </div>
-                <h1 className="text-xl font-bold">选择您的AI伙伴</h1>
+                <h1 className="text-xl font-bold">Octopada.io</h1>
+              </Link>
+              <Link to="/dashboard" className="text-purple-300 hover:text-white">
+                <ArrowLeft className="h-6 w-6" />
               </Link>
             </div>
           </div>
