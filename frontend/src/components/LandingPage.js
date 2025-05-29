@@ -464,11 +464,11 @@ const LandingPage = () => {
             <div className="max-w-2xl mx-auto backdrop-blur-sm bg-white/5 border border-white/10 rounded-3xl p-8">
               <h3 className="text-3xl font-bold text-white mb-4">{characters[currentSlide].name}</h3>
               <p className="text-white/80 text-lg leading-relaxed">
-                {currentSlide === 0 && "Warm and empathetic career mentor, specializing in leadership development and professional growth strategies"}
-                {currentSlide === 1 && "Mindful wellness guide focused on mental health, stress management, and emotional well-being"}
-                {currentSlide === 2 && "Creative catalyst inspiring innovation in artistic endeavors and personal creative projects"}
-                {currentSlide === 3 && "Technology innovator helping with digital transformation and startup strategies"}
-                {currentSlide === 4 && "Life coach supporting personal development, goal achievement, and work-life balance"}
+                {currentSlide === 0 && "温暖阳光的男性伙伴，擅长倾听和鼓励，陪伴你度过人生的每个重要时刻"}
+                {currentSlide === 1 && "温柔体贴的女性伙伴，善解人意，用细腻的情感为你带来心灵的慰藉"}
+                {currentSlide === 2 && "活泼开朗的伙伴，充满创意和想象力，让每次对话都充满惊喜"}
+                {currentSlide === 3 && "优雅知性的伙伴，拥有丰富的人生阅历，为你提供智慧的建议"}
+                {currentSlide === 4 && "成熟稳重的伙伴，具备专业的知识背景，助力你的成长和发展"}
               </p>
               <Link to="/auth">
                 <motion.button 
