@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
-import { Eye, EyeOff, Mail, Lock, User, Smartphone } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Smartphone, ArrowLeft } from 'lucide-react';
 import { AppContext } from '../App';
+import { Link } from 'react-router-dom';
 
 const AuthPage = () => {
   const { setUser } = useContext(AppContext);
@@ -59,6 +60,11 @@ const AuthPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+      {/* Return Button */}
+      <Link to="/" className="absolute top-6 left-6 text-purple-300 hover:text-white transition-colors">
+        <ArrowLeft className="h-6 w-6" />
+      </Link>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -83,7 +89,7 @@ const AuthPage = () => {
                 isLogin ? 'bg-purple-500 text-white' : 'text-purple-300 hover:text-white'
               }`}
             >
-              Sign In
+              登录
             </button>
             <button
               onClick={() => setIsLogin(false)}
@@ -91,7 +97,7 @@ const AuthPage = () => {
                 !isLogin ? 'bg-purple-500 text-white' : 'text-purple-300 hover:text-white'
               }`}
             >
-              Sign Up
+              注册
             </button>
           </div>
 
@@ -102,7 +108,7 @@ const AuthPage = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Full Name"
+                  placeholder="姓名"
                   value={formData.name}
                   onChange={handleInputChange}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-purple-300 focus:outline-none focus:border-purple-400"
@@ -116,7 +122,7 @@ const AuthPage = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="Email Address"
+                placeholder="邮箱地址"
                 value={formData.email}
                 onChange={handleInputChange}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-purple-300 focus:outline-none focus:border-purple-400"
@@ -130,7 +136,7 @@ const AuthPage = () => {
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number (Optional)"
+                  placeholder="手机号码（可选）"
                   value={formData.phone}
                   onChange={handleInputChange}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-purple-300 focus:outline-none focus:border-purple-400"
@@ -143,7 +149,7 @@ const AuthPage = () => {
               <input
                 type={showPassword ? 'text' : 'password'}
                 name="password"
-                placeholder="Password"
+                placeholder="密码"
                 value={formData.password}
                 onChange={handleInputChange}
                 className="w-full pl-10 pr-12 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-purple-300 focus:outline-none focus:border-purple-400"
@@ -168,10 +174,10 @@ const AuthPage = () => {
               {loading ? (
                 <div className="flex items-center justify-center">
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                  {isLogin ? 'Signing In...' : 'Creating Account...'}
+                  {isLogin ? '登录中...' : '创建账户中...'}
                 </div>
               ) : (
-                isLogin ? 'Sign In' : 'Create Account'
+                isLogin ? '登录' : '创建账户'
               )}
             </motion.button>
           </form>
@@ -183,12 +189,12 @@ const AuthPage = () => {
                 <div className="w-full border-t border-white/20"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-transparent text-purple-300">Or continue with</span>
+                <span className="px-2 bg-transparent text-purple-300">或者使用</span>
               </div>
             </div>
 
             <div className="mt-4 grid grid-cols-3 gap-3">
-              {['Google', 'WeChat', 'Apple'].map((provider) => (
+              {['谷歌', '微信', '苹果'].map((provider) => (
                 <button
                   key={provider}
                   onClick={() => handleSocialLogin(provider)}
@@ -203,7 +209,7 @@ const AuthPage = () => {
           {isLogin && (
             <div className="mt-4 text-center">
               <a href="#" className="text-purple-300 hover:text-white text-sm">
-                Forgot your password?
+                忘记密码？
               </a>
             </div>
           )}
@@ -211,10 +217,10 @@ const AuthPage = () => {
 
         {/* Terms */}
         <p className="text-center text-purple-300 text-sm mt-6">
-          By continuing, you agree to our{' '}
-          <a href="#" className="text-purple-400 hover:underline">Terms of Service</a>{' '}
-          and{' '}
-          <a href="#" className="text-purple-400 hover:underline">Privacy Policy</a>
+          继续即表示您同意我们的{' '}
+          <a href="#" className="text-purple-400 hover:underline">服务条款</a>{' '}
+          和{' '}
+          <a href="#" className="text-purple-400 hover:underline">隐私政策</a>
         </p>
       </motion.div>
     </div>
