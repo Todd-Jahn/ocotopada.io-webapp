@@ -32,53 +32,53 @@ const ChatInterface = () => {
   const companions = [
     {
       id: 1,
-      name: 'Sarah Chen',
-      type: 'Career Mentor',
-      avatar: 'https://images.unsplash.com/photo-1509868918748-a554ad25f858',
+      name: '洛可 LoCo',
+      type: '职业导师',
+      avatar: 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg',
       status: 'online',
-      description: 'Helping professionals navigate career growth and leadership challenges',
-      expertise: ['Leadership', 'Tech Career', 'Work-Life Balance'],
-      personality: 'Supportive, analytical, and encouraging'
+      description: '温暖阳光的伙伴，专注于职业发展和专业成长策略',
+      expertise: ['领导力', '技术职业', '工作生活平衡'],
+      personality: '阳光、专业、鼓励'
     },
     {
       id: 2,
-      name: 'Marcus Johnson',
-      type: 'Wellness Guide',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e',
+      name: '千奈',
+      type: '健康向导',
+      avatar: 'https://images.pexels.com/photos/32225457/pexels-photo-32225457.jpeg',
       status: 'online',
-      description: 'Mindfulness coach focused on mental wellness and stress management',
-      expertise: ['Mindfulness', 'Stress Management', 'Fitness'],
-      personality: 'Calm, wise, and empathetic'
+      description: '温柔体贴的伙伴，专注于心理健康、压力管理和情感健康',
+      expertise: ['正念', '压力管理', '健身'],
+      personality: '冷静、智慧、富有同情心'
     },
     {
       id: 3,
-      name: 'Elena Rodriguez',
-      type: 'Creative Catalyst',
-      avatar: 'https://images.pexels.com/photos/32261581/pexels-photo-32261581.jpeg',
+      name: 'Suki 苏奇',
+      type: '创意催化剂',
+      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7',
       status: 'online',
-      description: 'Inspiring creativity and innovation in personal and professional projects',
-      expertise: ['Art Direction', 'Innovation', 'Design Thinking'],
-      personality: 'Energetic, inspiring, and visionary'
+      description: '活泼开朗的伙伴，激发个人和专业项目的创造力和创新',
+      expertise: ['艺术指导', '创新', '设计思维'],
+      personality: '充满活力、鼓舞人心、有远见'
     },
     {
       id: 4,
-      name: 'David Kim',
-      type: 'Tech Innovator',
-      avatar: 'https://images.pexels.com/photos/32262682/pexels-photo-32262682.jpeg',
+      name: '黎绮',
+      type: '科技创新者',
+      avatar: 'https://images.unsplash.com/photo-1556157382-97eda2d62296',
       status: 'online',
-      description: 'Technology expert helping with digital transformation and innovation',
-      expertise: ['AI & ML', 'Startup Strategy', 'Product Development'],
-      personality: 'Analytical, forward-thinking, and practical'
+      description: '优雅知性的伙伴，帮助数字化转型和创新的技术专家',
+      expertise: ['AI与机器学习', '创业策略', '产品开发'],
+      personality: '分析性、前瞻性、实用'
     },
     {
       id: 5,
-      name: 'Lisa Wang',
-      type: 'Life Coach',
-      avatar: 'https://images.unsplash.com/photo-1576558656222-ba66febe3dec',
+      name: '林成卿',
+      type: '生活教练',
+      avatar: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf',
       status: 'online',
-      description: 'Personal development coach for life balance and goal achievement',
-      expertise: ['Goal Setting', 'Personal Growth', 'Relationship Building'],
-      personality: 'Warm, motivational, and insightful'
+      description: '成熟稳重的伙伴，支持生活平衡和目标实现的个人发展教练',
+      expertise: ['目标设定', '个人成长', '关系建设'],
+      personality: '温暖、积极、有洞察力'
     }
   ];
 
