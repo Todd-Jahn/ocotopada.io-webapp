@@ -33,8 +33,8 @@ const AuthPage = () => {
       // Mock user data
       const userData = {
         id: '1',
-        name: formData.name || formData.email.split('@')[0],
-        email: formData.email,
+        name: formData.name || formData.email.split('@')[0] || 'New User',
+        email: formData.email || 'user@octopada.io',
         avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e',
         subscription: 'free',
         hasCustomAvatar: false
