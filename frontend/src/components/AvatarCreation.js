@@ -122,15 +122,20 @@ const AvatarCreation = () => {
               <h1 className="text-xl font-bold">创建您的头像</h1>
             </Link>
             
-            <div className="flex items-center space-x-2">
-              {[1, 2, 3, 4].map((stepNumber) => (
-                <div
-                  key={stepNumber}
-                  className={`w-3 h-3 rounded-full ${
-                    step >= stepNumber ? 'bg-purple-400' : 'bg-white/20'
-                  }`}
-                />
-              ))}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                {[1, 2, 3, 4].map((stepNumber) => (
+                  <div
+                    key={stepNumber}
+                    className={`w-3 h-3 rounded-full ${
+                      step >= stepNumber ? 'bg-purple-400' : 'bg-white/20'
+                    }`}
+                  />
+                ))}
+              </div>
+              <Link to="/dashboard" className="text-purple-300 hover:text-white">
+                <ArrowLeft className="h-5 w-5" />
+              </Link>
             </div>
           </div>
         </div>
