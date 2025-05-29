@@ -197,8 +197,8 @@ const ChatInterface = () => {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Select an AI Companion</h2>
-            <p className="text-purple-300">Choose who you'd like to have a conversation with today</p>
+            <h2 className="text-3xl font-bold text-white mb-4">选择您的AI伙伴</h2>
+            <p className="text-purple-300">选择您今天想要对话的伙伴</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
