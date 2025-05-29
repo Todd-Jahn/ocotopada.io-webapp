@@ -185,12 +185,12 @@ const ChatInterface = () => {
         <header className="bg-white/10 backdrop-blur-lg border-b border-white/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <Link to="/dashboard" className="text-purple-300 hover:text-white mr-4">
-                  <ArrowLeft className="h-6 w-6" />
-                </Link>
-                <h1 className="text-xl font-bold text-white">Choose Your AI Companion</h1>
-              </div>
+              <Link to="/" className="flex items-center space-x-3 text-purple-300 hover:text-white transition-colors">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+                  <span className="text-sm">🐙</span>
+                </div>
+                <h1 className="text-xl font-bold">选择您的AI伙伴</h1>
+              </Link>
             </div>
           </div>
         </header>
