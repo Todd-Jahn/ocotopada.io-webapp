@@ -275,7 +275,7 @@ const PaymentPage = ({ success, cancel }) => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            Unlock the Full <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">AI Experience</span>
+            解锁完整的 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">AI体验</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -283,7 +283,7 @@ const PaymentPage = ({ success, cancel }) => {
             transition={{ delay: 0.2 }}
             className="text-xl text-purple-300 max-w-3xl mx-auto"
           >
-            Get unlimited access to all AI companions, advanced features, and personalized experiences
+            获得对所有AI伙伴、高级功能和个性化体验的无限访问权限
           </motion.p>
         </div>
 
