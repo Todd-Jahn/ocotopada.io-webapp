@@ -205,7 +205,7 @@ const LandingPage = () => {
             </motion.div>
             
             <nav className="hidden md:flex space-x-8">
-              {['Features', 'Companions', 'Pricing', 'About'].map((item) => (
+              {['功能特色', '伴侣类型', '定价方案', '关于我们'].map((item) => (
                 <motion.a 
                   key={item}
                   href={`#${item}`}
