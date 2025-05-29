@@ -260,7 +260,7 @@ const PaymentPage = ({ success, cancel }) => {
               <Link to="/dashboard" className="text-purple-300 hover:text-white mr-4">
                 <ArrowLeft className="h-6 w-6" />
               </Link>
-              <h1 className="text-xl font-bold text-white">Upgrade to Premium</h1>
+              <h1 className="text-xl font-bold text-white">升级至高级版</h1>
             </div>
             <Crown className="h-6 w-6 text-purple-400" />
           </div>
