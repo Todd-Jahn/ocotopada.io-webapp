@@ -147,8 +147,8 @@ const AvatarCreation = () => {
               exit={{ opacity: 0, y: -20 }}
               className="text-center"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">How would you like to create your avatar?</h2>
-              <p className="text-purple-300 mb-12">Choose the method that works best for you</p>
+              <h2 className="text-3xl font-bold text-white mb-4">您想如何创建头像？</h2>
+              <p className="text-purple-300 mb-12">选择最适合您的方法</p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Gallery Selection */}
@@ -161,8 +161,8 @@ const AvatarCreation = () => {
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center mb-6">
                     <Camera className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Choose from Gallery</h3>
-                  <p className="text-purple-300">Select from our curated collection of beautiful, diverse avatars</p>
+                  <h3 className="text-xl font-bold text-white mb-4">从图库选择</h3>
+                  <p className="text-purple-300">从我们精选的美丽、多样化头像库中选择</p>
                 </motion.div>
 
                 {/* Photo Upload */}
@@ -175,8 +175,8 @@ const AvatarCreation = () => {
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center mb-6">
                     <Upload className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Upload Your Photo</h3>
-                  <p className="text-purple-300">Transform your photo into a stylized avatar using AI</p>
+                  <h3 className="text-xl font-bold text-white mb-4">上传您的照片</h3>
+                  <p className="text-purple-300">使用AI将您的照片转换为风格化头像</p>
                 </motion.div>
 
                 {/* AI Generation */}
@@ -189,8 +189,8 @@ const AvatarCreation = () => {
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-emerald-400 to-teal-400 rounded-2xl flex items-center justify-center mb-6">
                     <Sparkles className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">AI Generated</h3>
-                  <p className="text-purple-300">Create unique avatars based on your preferences</p>
+                  <h3 className="text-xl font-bold text-white mb-4">AI生成</h3>
+                  <p className="text-purple-300">基于您的偏好创建独特头像</p>
                 </motion.div>
               </div>
             </motion.div>
