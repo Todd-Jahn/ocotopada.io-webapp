@@ -66,54 +66,54 @@ const LandingPage = () => {
   const companionTypes = [
     {
       id: 1,
-      title: "Life Coach",
-      subtitle: "Personal Development",
-      description: "Empathetic companion focused on helping you achieve your personal and professional goals",
+      title: "生活教练",
+      subtitle: "个人发展",
+      description: "富有同理心的伙伴，专注于帮助您实现个人和职业目标",
       icon: Heart,
       color: "from-blue-500 to-purple-600",
       image: "https://images.unsplash.com/photo-1523531099245-31a49f4527bb"
     },
     {
       id: 2,
-      title: "Career Mentor",
-      subtitle: "Professional Growth",
-      description: "Strategic advisor for your career development, leadership skills, and workplace challenges",
+      title: "职业导师",
+      subtitle: "专业成长",
+      description: "为您的职业发展、领导技能和职场挑战提供战略建议",
       icon: Brain,
       color: "from-pink-500 to-rose-600",
       image: "https://images.pexels.com/photos/30475855/pexels-photo-30475855.jpeg"
     },
     {
       id: 3,
-      title: "Wellness Guide",
-      subtitle: "Mental Health Support",
-      description: "Compassionate companion specializing in mindfulness, stress management, and emotional well-being",
+      title: "健康向导",
+      subtitle: "心理健康支持",
+      description: "专注于正念、压力管理和情感健康的富有同情心的伙伴",
       icon: Heart,
       color: "from-emerald-500 to-teal-600",
       image: "https://images.pexels.com/photos/7278845/pexels-photo-7278845.jpeg"
     },
     {
       id: 4,
-      title: "Creative Catalyst",
-      subtitle: "Innovation Partner",
-      description: "Inspiring companion for creative projects, artistic endeavors, and innovative thinking",
+      title: "创意催化剂",
+      subtitle: "创新伙伴",
+      description: "激发创意项目、艺术创作和创新思维的灵感伙伴",
       icon: BookOpen,
       color: "from-amber-500 to-orange-600",
       image: "https://images.pexels.com/photos/5896422/pexels-photo-5896422.jpeg"
     },
     {
       id: 5,
-      title: "Tech Innovator",
-      subtitle: "Technology Expert",
-      description: "Forward-thinking companion for digital transformation, AI insights, and tech career guidance",
+      title: "科技创新者",
+      subtitle: "技术专家",
+      description: "前瞻性伙伴，专注于数字化转型、AI洞察和技术职业指导",
       icon: HelpCircle,
       color: "from-indigo-500 to-blue-600",
       image: "https://images.pexels.com/photos/5475793/pexels-photo-5475793.jpeg"
     },
     {
       id: 6,
-      title: "Family Advisor",
-      subtitle: "Relationship Support",
-      description: "Understanding companion for family dynamics, relationship building, and parenting challenges",
+      title: "家庭顾问",
+      subtitle: "关系支持",
+      description: "理解家庭动态、关系建设和育儿挑战的贴心伙伴",
       icon: MessageCircle,
       color: "from-violet-500 to-purple-600",
       image: "https://images.unsplash.com/photo-1560250163-17506787d971"
@@ -122,68 +122,68 @@ const LandingPage = () => {
 
   const features = [
     {
-      title: "Personalized 1-on-1 Interactions",
-      description: "Each AI companion has a unique personality and growth story, providing truly personalized communication experiences",
+      title: "个性化一对一互动",
+      description: "每个AI伙伴都有独特的个性和成长故事，提供真正个性化的交流体验",
       icon: Heart
     },
     {
-      title: "Growth Diary Tracking",
-      description: "Track your development journey as AI companions adjust their approach based on your progress",
+      title: "成长日记追踪",
+      description: "追踪您的发展历程，AI伙伴会根据您的进展调整他们的方法",
       icon: BookOpen
     },
     {
-      title: "Co-Creation Stories",
-      description: "Collaborate with AI companions to create unique storylines, influencing each other's growth trajectories",
+      title: "共创故事",
+      description: "与AI伙伴合作创造独特的故事情节，相互影响彼此的成长轨迹",
       icon: Star
     },
     {
-      title: "Multi-Channel Access",
-      description: "Connect with your AI companions anytime, anywhere through mobile, desktop, and tablet devices",
+      title: "多渠道访问",
+      description: "通过手机、桌面和平板设备随时随地与您的AI伙伴连接",
       icon: MessageCircle
     }
   ];
 
   const testimonials = [
     {
-      name: "Alex Johnson",
-      role: "Young Professional",
-      content: "Through my Career Mentor, I gained valuable insights for professional development. My work now has clearer direction and purpose.",
+      name: "张晓明",
+      role: "年轻职场人",
+      content: "通过我的职业导师，我获得了宝贵的职业发展见解。我的工作现在有了更清晰的方向和目标。",
       avatar: "https://images.pexels.com/photos/9089256/pexels-photo-9089256.jpeg"
     },
     {
-      name: "Maria Santos",
-      role: "Entrepreneur",
-      content: "My Tech Innovator companion helped me navigate startup challenges. It's like having a professional consultant available 24/7.",
+      name: "李婉儿",
+      role: "创业者",
+      content: "我的科技创新者伙伴帮助我应对创业挑战。就像有一个专业顾问24/7可用。",
       avatar: "https://images.pexels.com/photos/9089256/pexels-photo-9089256.jpeg"
     },
     {
-      name: "Jennifer Chen",
-      role: "Creative Professional",
-      content: "My Wellness Guide truly understands my emotional needs and provided incredible psychological support during challenging times.",
+      name: "王美华",
+      role: "创意专业人士",
+      content: "我的健康向导真正理解我的情感需求，在困难时期为我提供了不可思议的心理支持。",
       avatar: "https://images.pexels.com/photos/9089256/pexels-photo-9089256.jpeg"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
+      name: "入门版",
       price: "19.99",
-      period: "month",
-      features: ["1 AI Companion", "Basic conversation features", "Limited daily messages", "Standard response speed"],
+      period: "月",
+      features: ["1个AI伙伴", "基础对话功能", "每日消息限制", "标准响应速度"],
       popular: false
     },
     {
-      name: "Professional",
+      name: "专业版",
       price: "49.99",
-      period: "month",
-      features: ["3 AI Companions", "Advanced conversation features", "Unlimited messages", "Priority response", "Growth diary", "Emotional analysis"],
+      period: "月",
+      features: ["3个AI伙伴", "高级对话功能", "无限消息", "优先响应", "成长日记", "情感分析"],
       popular: true
     },
     {
-      name: "Premium",
+      name: "高级版",
       price: "99.99",
-      period: "month",
-      features: ["All 6 AI Companions", "All premium features", "Priority customer support", "Custom personalization", "Co-creation stories", "Advanced analytics"],
+      period: "月",
+      features: ["全部6个AI伙伴", "所有高级功能", "优先客户支持", "个性化定制", "共创故事", "高级分析"],
       popular: false
     }
   ];
@@ -231,7 +231,7 @@ const LandingPage = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Get Started
+                立即开始
               </motion.button>
             </Link>
           </div>
@@ -279,10 +279,10 @@ const LandingPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Redefining
+                重新定义
                 <br />
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Companionship
+                  AI伙伴关系
                 </span>
               </motion.h1>
               
@@ -292,9 +292,9 @@ const LandingPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                More than just chatbots - discover AI companions that truly understand and grow with you.
+                不仅仅是聊天机器人 - 发现真正理解并与您共同成长的AI伙伴。
                 <br />
-                Six unique companion types designed to meet every aspect of your personal development journey.
+                六种独特的伙伴类型，满足您个人发展旅程的每个方面。
               </motion.p>
               
               <motion.div 
@@ -309,7 +309,7 @@ const LandingPage = () => {
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Start Free Trial
+                    开始免费试用
                   </motion.button>
                 </Link>
                 <motion.button 
@@ -317,7 +317,7 @@ const LandingPage = () => {
                   whileHover={{ scale: 1.05, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Learn More
+                  了解更多
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -331,7 +331,7 @@ const LandingPage = () => {
               <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm bg-white/5 border border-white/10 p-8">
                 <motion.img 
                   src="https://images.pexels.com/photos/8728386/pexels-photo-8728386.jpeg"
-                  alt="AI Companionship Technology"
+                  alt="AI伙伴技术"
                   className="w-full h-96 object-cover rounded-2xl"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.5 }}
@@ -354,10 +354,10 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Meet Your AI Companions
+              遇见您的AI伙伴
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Each AI companion has a unique personality and story. Swipe to explore more
+              每个AI伙伴都有独特的个性和故事。滑动探索更多
             </p>
           </motion.div>
 
@@ -476,7 +476,7 @@ const LandingPage = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Start Conversation
+                  开始对话
                 </motion.button>
               </Link>
             </div>
@@ -485,7 +485,7 @@ const LandingPage = () => {
       </section>
 
       {/* Companion Types Matrix */}
-      <section id="Companions" className="py-20 px-6">
+      <section id="伴侣类型" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -495,10 +495,10 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Six Companion Types
+              六种伙伴类型
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Each with unique personalities and expertise areas, providing the most personalized companionship experience
+              每种都有独特的个性和专业领域，提供最个性化的伙伴体验
             </p>
           </motion.div>
 
@@ -540,7 +540,7 @@ const LandingPage = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      Start Conversation
+                      开始对话
                     </motion.button>
                   </Link>
                 </div>
@@ -551,7 +551,7 @@ const LandingPage = () => {
       </section>
 
       {/* Features Section */}
-      <section id="Features" className="py-20 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
+      <section id="功能特色" className="py-20 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -561,10 +561,10 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Why Choose Octopada
+              为什么选择Octopada
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              More than simple conversations - we're your true growth partners
+              不仅仅是简单的对话 - 我们是您真正的成长伙伴
             </p>
           </motion.div>
 
@@ -604,7 +604,7 @@ const LandingPage = () => {
               <div className="relative rounded-3xl overflow-hidden">
                 <img 
                   src="https://images.pexels.com/photos/7233189/pexels-photo-7233189.jpeg"
-                  alt="Digital Privacy Security"
+                  alt="数字隐私安全"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/70 to-transparent"></div>
@@ -620,21 +620,21 @@ const LandingPage = () => {
               <div className="space-y-6">
                 <div className="flex items-center space-x-3">
                   <Shield className="w-8 h-8 text-purple-400" />
-                  <h2 className="text-4xl font-bold text-white">Privacy & Security</h2>
+                  <h2 className="text-4xl font-bold text-white">隐私与安全</h2>
                 </div>
                 
                 <p className="text-xl text-white/80 leading-relaxed">
-                  We understand the importance of privacy. All conversations are end-to-end encrypted,
-                  and your personal information is never shared with third parties.
+                  我们深知隐私的重要性。所有对话都采用端到端加密，
+                  您的个人信息绝不会与第三方共享。
                 </p>
 
                 <div className="space-y-4">
                   {[
-                    'End-to-end encryption protection',
-                    'Local data storage',
-                    'Anonymized processing',
-                    'Regular security audits',
-                    'Complete user data control'
+                    '端到端加密保护',
+                    '本地数据存储',
+                    '匿名化处理',
+                    '定期安全审计',
+                    '完全用户数据控制'
                   ].map((item, index) => (
                     <motion.div 
                       key={index}
@@ -666,10 +666,10 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Real User Stories
+              真实用户故事
             </h2>
             <p className="text-xl text-white/70">
-              Listen to their growth stories with AI companions
+              聆听他们与AI伙伴的成长故事
             </p>
           </motion.div>
 
@@ -708,7 +708,7 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing */}
-      <section id="Pricing" className="py-20 px-6">
+      <section id="定价方案" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -718,10 +718,10 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Choose Your Plan
+              选择您的方案
             </h2>
             <p className="text-xl text-white/70">
-              Different needs, different companionship experiences
+              不同需求，不同的伙伴体验
             </p>
           </motion.div>
 
@@ -729,7 +729,7 @@ const LandingPage = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                className={`relative backdrop-blur-sm border rounded-3xl p-8 ${
+                className={`relative backdrop-blur-sm border rounded-3xl p-6 ${
                   plan.popular 
                     ? 'bg-gradient-to-b from-purple-500/20 to-pink-500/20 border-purple-400/50 scale-105' 
                     : 'bg-white/5 border-white/10'
@@ -742,30 +742,30 @@ const LandingPage = () => {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold rounded-full">
-                    Most Popular
+                    最受欢迎
                   </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">${plan.price}</span>
-                    <span className="text-white/60 ml-2">/{plan.period}</span>
+                    <span className="text-3xl font-bold text-white">¥{plan.price}</span>
+                    <span className="text-white/60 ml-1 text-sm">/{plan.period}</span>
                   </div>
                 </div>
 
-                <div className="space-y-4 mb-8">
+                <div className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-white/80">{feature}</span>
+                      <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span className="text-white/80 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 <Link to="/auth">
                   <motion.button 
-                    className={`w-full py-4 rounded-xl font-semibold transition-all ${
+                    className={`w-full py-3 rounded-xl font-semibold transition-all ${
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-xl hover:shadow-purple-500/25'
                         : 'border-2 border-white/20 text-white hover:bg-white/10'
@@ -773,7 +773,7 @@ const LandingPage = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Choose Plan
+                    选择方案
                   </motion.button>
                 </Link>
               </motion.div>
@@ -792,10 +792,10 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              Start Your AI Companionship Journey
+              开始您的AI伙伴之旅
             </h2>
             <p className="text-xl text-white/80 mb-10 leading-relaxed">
-              No more loneliness, no more confusion. Let AI companions be part of every moment of your growth.
+              不再孤单，不再迷茫。让AI伙伴成为您成长的每一刻的一部分。
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -805,7 +805,7 @@ const LandingPage = () => {
                   whileHover={{ scale: 1.05, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Start Free Trial Now
+                  立即开始免费试用
                 </motion.button>
               </Link>
               <motion.button 
@@ -813,7 +813,7 @@ const LandingPage = () => {
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Schedule Demo
+                预约演示
               </motion.button>
             </div>
           </motion.div>
@@ -829,14 +829,14 @@ const LandingPage = () => {
                 Octopada.io
               </div>
               <p className="text-white/60 leading-relaxed">
-                Redefining AI companionship, providing truly meaningful virtual partnerships for your growth.
+                重新定义AI伙伴关系，为您的成长提供真正有意义的虚拟伙伴关系。
               </p>
             </div>
             
             <div>
-              <h4 className="text-white font-semibold mb-4">Product</h4>
+              <h4 className="text-white font-semibold mb-4">产品</h4>
               <div className="space-y-2">
-                {['Features', 'Companions', 'Pricing', 'User Guide'].map(item => (
+                {['功能特色', '伙伴类型', '定价方案', '使用指南'].map(item => (
                   <a key={item} href="#" className="block text-white/60 hover:text-white transition-colors">
                     {item}
                   </a>
@@ -845,9 +845,9 @@ const LandingPage = () => {
             </div>
             
             <div>
-              <h4 className="text-white font-semibold mb-4">Support</h4>
+              <h4 className="text-white font-semibold mb-4">支持</h4>
               <div className="space-y-2">
-                {['Help Center', 'Contact Us', 'User Feedback', 'Technical Support'].map(item => (
+                {['帮助中心', '联系我们', '用户反馈', '技术支持'].map(item => (
                   <a key={item} href="#" className="block text-white/60 hover:text-white transition-colors">
                     {item}
                   </a>
@@ -856,9 +856,9 @@ const LandingPage = () => {
             </div>
             
             <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
+              <h4 className="text-white font-semibold mb-4">法律</h4>
               <div className="space-y-2">
-                {['Privacy Policy', 'Terms of Service', 'User Agreement', 'Security Policy'].map(item => (
+                {['隐私政策', '服务条款', '用户协议', '安全政策'].map(item => (
                   <a key={item} href="#" className="block text-white/60 hover:text-white transition-colors">
                     {item}
                   </a>
@@ -869,7 +869,7 @@ const LandingPage = () => {
           
           <div className="pt-8 border-t border-white/10 text-center">
             <p className="text-white/60">
-              © 2024 Octopada.io. All rights reserved.
+              © 2024 Octopada.io. 保留所有权利。
             </p>
           </div>
         </div>
