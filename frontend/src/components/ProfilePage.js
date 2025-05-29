@@ -68,14 +68,17 @@ const ProfilePage = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
                 <span className="text-sm">🐙</span>
               </div>
-              <h1 className="text-xl font-bold">个人资料与设置</h1>
+              <h1 className="text-xl font-bold">Octopada.io</h1>
             </Link>
-            <button
-              onClick={logout}
-              className="text-purple-300 hover:text-white px-4 py-2 border border-purple-300 rounded-lg"
-            >
-              退出
-            </button>
+            <div className="flex items-center space-x-4">
+              <span className="text-purple-300 text-sm">个人资料与设置</span>
+              <button
+                onClick={logout}
+                className="text-purple-300 hover:text-white px-4 py-2 border border-purple-300 rounded-lg"
+              >
+                退出
+              </button>
+            </div>
           </div>
         </div>
       </header>
