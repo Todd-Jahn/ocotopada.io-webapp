@@ -247,14 +247,14 @@ const LandingPage = () => {
               exit={{ opacity: 0, y: -20 }}
             >
               <div className="px-6 py-4 space-y-4">
-                {['Features', 'Companions', 'Pricing', 'About'].map((item) => (
+                {['功能特色', '伴侣类型', '定价方案', '关于我们'].map((item) => (
                   <a key={item} href={`#${item}`} className="block text-white/80 hover:text-white transition-colors">
                     {item}
                   </a>
                 ))}
                 <Link to="/auth">
                   <button className="w-full px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold">
-                    Get Started
+                    立即开始
                   </button>
                 </Link>
               </div>
