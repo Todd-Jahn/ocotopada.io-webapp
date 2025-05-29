@@ -311,19 +311,19 @@ const PaymentPage = ({ success, cancel }) => {
                 </div>
               )}
 
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <div className="text-4xl font-bold text-white mb-2">
-                  ${plan.price}
-                  {plan.originalPrice && (
-                    <span className="text-lg text-purple-300 line-through ml-2">
-                      ${plan.originalPrice}
-                    </span>
-                  )}
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-3">{plan.name}</h3>
+                <div className="flex items-baseline justify-center space-x-1">
+                  <span className="text-2xl font-bold text-white">¥{plan.price}</span>
+                  <span className="text-white/60 text-sm">/{plan.period}</span>
                 </div>
-                <p className="text-purple-300">
-                  {plan.period === 'lifetime' ? 'One-time payment' : `per ${plan.period}`}
-                </p>
+                {plan.originalPrice && (
+                  <div className="text-center mt-1">
+                    <span className="text-sm text-purple-300 line-through">
+                      ¥{plan.originalPrice}
+                    </span>
+                  </div>
+                )}
               </div>
 
               <ul className="space-y-4 mb-8">
