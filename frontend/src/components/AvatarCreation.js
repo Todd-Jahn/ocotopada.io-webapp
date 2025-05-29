@@ -119,7 +119,7 @@ const AvatarCreation = () => {
               <Link to="/dashboard" className="text-purple-300 hover:text-white mr-4">
                 <ArrowLeft className="h-6 w-6" />
               </Link>
-              <h1 className="text-xl font-bold text-white">Create Your Avatar</h1>
+              <h1 className="text-xl font-bold text-white">创建您的头像</h1>
             </div>
             
             <div className="flex items-center space-x-2">
