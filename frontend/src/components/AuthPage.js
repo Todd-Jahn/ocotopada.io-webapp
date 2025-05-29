@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
-import { Eye, EyeOff, Mail, Lock, User, Smartphone, ArrowLeft } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Smartphone } from 'lucide-react';
 import { AppContext } from '../App';
 import { Link } from 'react-router-dom';
 
@@ -36,7 +36,7 @@ const AuthPage = () => {
         id: '1',
         name: formData.name || formData.email.split('@')[0] || 'New User',
         email: formData.email || 'user@octopada.io',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e',
+        avatar: 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg',
         subscription: 'free',
         hasCustomAvatar: false
       };
@@ -60,9 +60,12 @@ const AuthPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      {/* Return Button */}
-      <Link to="/" className="absolute top-6 left-6 text-purple-300 hover:text-white transition-colors">
-        <ArrowLeft className="h-6 w-6" />
+      {/* Octopada Logo - Top Left */}
+      <Link to="/" className="absolute top-6 left-6 flex items-center space-x-2 text-purple-300 hover:text-white transition-colors">
+        <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+          <span className="text-sm">🐙</span>
+        </div>
+        <span className="text-lg font-bold">Octopada.io</span>
       </Link>
 
       <motion.div

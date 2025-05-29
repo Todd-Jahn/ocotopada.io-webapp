@@ -21,14 +21,14 @@ const Dashboard = () => {
   const [companions, setCompanions] = useState([]);
 
   useEffect(() => {
-    // Mock data for recent chats and companions
+    // Mock data for recent chats and companions using new gallery images
     setRecentChats([
       {
         id: 1,
         companion: '洛可 LoCo',
         lastMessage: '对您的职业目标有了很好的见解！继续努力前进。',
         timestamp: '2分钟前',
-        avatar: 'https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face',
+        avatar: 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg',
         unread: 2
       },
       {
@@ -36,7 +36,7 @@ const Dashboard = () => {
         companion: '千奈',
         lastMessage: '记得练习我们讨论过的正念技巧。',
         timestamp: '1小时前',
-        avatar: 'https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face',
+        avatar: 'https://images.pexels.com/photos/32225457/pexels-photo-32225457.jpeg',
         unread: 0
       },
       {
@@ -44,7 +44,7 @@ const Dashboard = () => {
         companion: 'Suki 苏奇',
         lastMessage: '您的创意项目进展得很顺利！',
         timestamp: '3小时前',
-        avatar: 'https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face',
+        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7',
         unread: 1
       }
     ]);
@@ -54,7 +54,7 @@ const Dashboard = () => {
         id: 1,
         name: '洛可 LoCo',
         type: '职业导师',
-        avatar: 'https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face',
+        avatar: 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg',
         rating: 4.9,
         specialties: ['领导力', '技术职业', '工作生活平衡']
       },
@@ -62,7 +62,7 @@ const Dashboard = () => {
         id: 2,
         name: '千奈',
         type: '健康向导',
-        avatar: 'https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face',
+        avatar: 'https://images.pexels.com/photos/32225457/pexels-photo-32225457.jpeg',
         rating: 4.8,
         specialties: ['正念', '压力管理', '健身']
       },
@@ -70,7 +70,7 @@ const Dashboard = () => {
         id: 3,
         name: 'Suki 苏奇',
         type: '创意催化剂',
-        avatar: 'https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face',
+        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7',
         rating: 4.9,
         specialties: ['艺术指导', '创新', '设计思维']
       }
@@ -83,12 +83,12 @@ const Dashboard = () => {
       <header className="bg-white/10 backdrop-blur-lg border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center mr-3">
+            <Link to="/" className="flex items-center space-x-3 text-purple-300 hover:text-white transition-colors">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
                 <span className="text-sm">🐙</span>
               </div>
-              <h1 className="text-xl font-bold text-white">Octopada.io</h1>
-            </div>
+              <h1 className="text-xl font-bold">Octopada.io</h1>
+            </Link>
 
             <div className="flex items-center space-x-4">
               <div className="relative">
@@ -107,7 +107,7 @@ const Dashboard = () => {
 
               <div className="flex items-center space-x-3">
                 <img
-                  src={user?.avatar || 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e'}
+                  src={user?.avatar || 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg'}
                   alt={user?.name}
                   className="w-8 h-8 rounded-full object-cover"
                 />
