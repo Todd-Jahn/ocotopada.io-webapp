@@ -260,9 +260,12 @@ const PaymentPage = ({ success, cancel }) => {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
                 <span className="text-sm">🐙</span>
               </div>
-              <h1 className="text-xl font-bold">升级至高级版</h1>
+              <h1 className="text-xl font-bold">Octopada.io</h1>
             </Link>
-            <Crown className="h-6 w-6 text-purple-400" />
+            <div className="flex items-center space-x-2 text-purple-300">
+              <span className="text-sm">升级至高级版</span>
+              <Crown className="h-6 w-6" />
+            </div>
           </div>
         </div>
       </header>
