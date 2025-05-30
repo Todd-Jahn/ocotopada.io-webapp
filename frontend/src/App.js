@@ -11,6 +11,7 @@ import PaymentPage from './components/PaymentPage';
 import ChatInterface from './components/ChatInterface';
 import ProfilePage from './components/ProfilePage';
 import LoadingScreen from './components/LoadingScreen';
+import TeamStoryPage from './components/TeamStoryPage';
 
 // Context for global state
 export const AppContext = React.createContext();
