@@ -525,6 +525,7 @@ const LandingPage = () => {
                 {currentSlide === 6 && "智慧导师，擅长解答各种问题，为你的学习和成长提供专业指导"}
                 {currentSlide === 7 && "生活伙伴，陪伴你度过日常的点点滴滴，分享生活中的喜怒哀乐"}
                 {currentSlide === 8 && "国际化伙伴，具备多元文化背景，为你打开更广阔的视野"}
+                {currentSlide === 9 && "充满活力的伙伴，带来积极正能量，与你分享生活的美好瞬间"}
               </p>
               <Link to="/auth">
                 <motion.button 
