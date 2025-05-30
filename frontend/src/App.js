@@ -74,6 +74,10 @@ function App() {
               path="/auth" 
               element={user ? <Navigate to="/dashboard" /> : <AuthPage />} 
             />
+            <Route 
+              path="/team-story" 
+              element={<TeamStoryPage />} 
+            />
             
             {/* Protected Routes */}
             <Route 
