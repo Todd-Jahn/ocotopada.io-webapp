@@ -389,22 +389,6 @@ const LandingPage = () => {
       {/* Character Carousel - Now First Section */}
       <section id="character-carousel" className="pt-32 pb-16 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              重新定义
-              <br />
-              AI伙伴
-            </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              每个AI伙伴都有独特的个性和故事。滑动探索更多
-            </p>
-          </motion.div>
-
           {/* Desktop Carousel */}
           <div className="hidden md:block relative">
             <div className="grid grid-cols-5 gap-6">
