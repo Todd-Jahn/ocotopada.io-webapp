@@ -287,7 +287,7 @@ const LandingPage = () => {
             
             <nav className="hidden md:flex space-x-6">
               {[
-                { name: '最佳伴侣', id: '最佳伙伴' },
+                { name: '最佳伴侣', id: 'character-carousel' },
                 { name: '选择类型', id: '选择类型' },
                 { name: '共创同行', id: '共创同行' },
                 { name: 'MetaCommune', id: 'MetaCommune' },
