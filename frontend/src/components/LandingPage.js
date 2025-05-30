@@ -28,7 +28,7 @@ const LandingPage = () => {
     },
     {
       id: 4,
-      name: "黎绮",
+      name: "陆迪",
       image: "https://i.postimg.cc/XvKgq5gS/Ludi.jpg"
     },
     {
@@ -55,6 +55,11 @@ const LandingPage = () => {
       id: 9,
       name: "Chloe",
       image: "https://i.postimg.cc/90HbQB6h/E-n-VIP8-W6-J0-En-JC5p8hm8.png"
+    },
+    {
+      id: 10,
+      name: "Vibranos",
+      image: "https://i.postimg.cc/k4bwCHhs/Vibranos.jpg"
     }
   ];
 
