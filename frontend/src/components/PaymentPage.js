@@ -409,23 +409,23 @@ const PaymentPage = ({ success, cancel }) => {
           {[
             {
               icon: <Zap className="h-8 w-8" />,
-              title: 'Unlimited Access',
-              description: 'Chat with all AI companions without limits'
+              title: '无限访问',
+              description: '与所有AI伙伴无限制聊天'
             },
             {
               icon: <Star className="h-8 w-8" />,
-              title: 'Premium Features',
-              description: 'Advanced AI models and capabilities'
+              title: '高级功能',
+              description: '先进的AI模型和能力'
             },
             {
               icon: <Shield className="h-8 w-8" />,
-              title: 'Priority Support',
-              description: '24/7 dedicated customer support'
+              title: '优先支持',
+              description: '24/7专属客户支持'
             },
             {
               icon: <Users className="h-8 w-8" />,
-              title: 'Exclusive Content',
-              description: 'Access to premium companions and features'
+              title: '独家内容',
+              description: '访问高级伙伴和功能'
             }
           ].map((feature, index) => (
             <motion.div
