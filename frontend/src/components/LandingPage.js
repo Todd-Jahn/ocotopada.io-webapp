@@ -396,21 +396,6 @@ const LandingPage = () => {
       </motion.header>
 
       {/* Character Carousel */}
-      <section id="最佳伴侣" className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-
-
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Character Carousel */}
       <section className="py-20 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto">
           <motion.div 
