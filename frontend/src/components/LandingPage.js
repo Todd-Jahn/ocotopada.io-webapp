@@ -423,9 +423,7 @@ const LandingPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              不仅仅是聊天机器人 - 发现真正理解并与您共同成长的AI伙伴。
-              <br />
-              六种独特的伙伴类型，满足您个人发展旅程的每个方面。
+
             </motion.p>
 
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
