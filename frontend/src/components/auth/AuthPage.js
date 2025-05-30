@@ -78,8 +78,12 @@ const AuthPage = () => {
       >
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 mx-auto bg-gradient-to-r from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center mb-4">
-            <span className="text-2xl">🐙</span>
+          <div className="w-16 h-16 mx-auto rounded-2xl overflow-hidden mb-4">
+            <img 
+              src="https://i.postimg.cc/JyGjXXrb/Image-from-Gamma-App.jpg" 
+              alt="Octopada.io Logo"
+              className="w-full h-full object-cover"
+            />
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Octopada.io</h1>
           <p className="text-purple-300">您的AI伙伴在等待</p>
