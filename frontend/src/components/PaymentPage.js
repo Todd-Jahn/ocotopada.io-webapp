@@ -308,7 +308,7 @@ const PaymentPage = ({ success, cancel }) => {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
+                    最受欢迎
                   </div>
                 </div>
               )}
