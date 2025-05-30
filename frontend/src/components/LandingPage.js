@@ -127,16 +127,10 @@ const LandingPage = () => {
     }
   ];
 
-  // Voice playing functionality
+  // Voice playing functionality with proper voice selection
   const playCharacterVoice = async (character) => {
     try {
       // Stop current audio if playing
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
-      
-      // Stop any existing speech synthesis
       if (window.speechSynthesis && window.speechSynthesis.speaking) {
         window.speechSynthesis.cancel();
       }
@@ -145,16 +139,71 @@ const LandingPage = () => {
       
       // Use Web Speech API for text-to-speech
       if ('speechSynthesis' in window) {
+        // Wait for voices to be loaded
+        const getVoices = () => {
+          return new Promise((resolve) => {
+            let voices = window.speechSynthesis.getVoices();
+            if (voices.length) {
+              resolve(voices);
+            } else {
+              window.speechSynthesis.onvoiceschanged = () => {
+                voices = window.speechSynthesis.getVoices();
+                resolve(voices);
+              };
+            }
+          });
+        };
+
+        const voices = await getVoices();
         const utterance = new SpeechSynthesisUtterance(character.voiceText);
         
-        // Apply character-specific voice configuration
+        // Find appropriate voice based on character
+        let selectedVoice = null;
+        
         if (character.voice.includes('en-US')) {
+          // For English characters, find female English voice
+          selectedVoice = voices.find(voice => 
+            voice.lang.includes('en-US') && 
+            (voice.name.includes('Female') || voice.name.includes('Aria') || voice.name.includes('Zira'))
+          ) || voices.find(voice => voice.lang.includes('en-US'));
           utterance.lang = 'en-US';
         } else {
+          // For Chinese characters, find appropriate Chinese voice
+          const isMaleCharacter = character.id === 4 || character.id === 5 || character.id === 8; // 陆迪, 林成卿, 乔安
+          
+          if (isMaleCharacter) {
+            // Find male Chinese voice
+            selectedVoice = voices.find(voice => 
+              voice.lang.includes('zh-CN') && 
+              (voice.name.includes('Male') || voice.name.includes('Yunxi') || voice.name.includes('Yunye'))
+            ) || voices.find(voice => 
+              voice.lang.includes('zh-CN') && voice.name.includes('Male')
+            );
+          } else {
+            // Find female Chinese voice
+            selectedVoice = voices.find(voice => 
+              voice.lang.includes('zh-CN') && 
+              (voice.name.includes('Female') || voice.name.includes('Xiaoxiao') || voice.name.includes('Xiaoyi'))
+            ) || voices.find(voice => 
+              voice.lang.includes('zh-CN') && 
+              !voice.name.includes('Male')
+            );
+          }
+          
+          // Fallback to any Chinese voice
+          if (!selectedVoice) {
+            selectedVoice = voices.find(voice => voice.lang.includes('zh-CN'));
+          }
+          
           utterance.lang = 'zh-CN';
         }
         
-        // Set personalized voice parameters from character config
+        // Set the selected voice
+        if (selectedVoice) {
+          utterance.voice = selectedVoice;
+        }
+        
+        // Apply character-specific voice configuration
         utterance.rate = character.voiceConfig.rate;
         utterance.pitch = character.voiceConfig.pitch;
         utterance.volume = character.voiceConfig.volume;
@@ -164,16 +213,17 @@ const LandingPage = () => {
           setPlayingAudio(null);
         };
         
-        utterance.onerror = () => {
-          console.error('Speech synthesis error');
+        utterance.onerror = (event) => {
+          console.error('Speech synthesis error:', event);
           setPlayingAudio(null);
         };
         
-        // Start speaking
-        window.speechSynthesis.speak(utterance);
-        
-        // Store reference for cleanup
-        audioRef.current = { stop: () => window.speechSynthesis.cancel() };
+        // Small delay to ensure proper state reset
+        setTimeout(() => {
+          if (window.speechSynthesis) {
+            window.speechSynthesis.speak(utterance);
+          }
+        }, 100);
         
       } else {
         // Fallback: create a simple audio notification sound for unsupported browsers
@@ -204,10 +254,6 @@ const LandingPage = () => {
   const stopCurrentAudio = () => {
     if (window.speechSynthesis && window.speechSynthesis.speaking) {
       window.speechSynthesis.cancel();
-    }
-    if (audioRef.current && audioRef.current.stop) {
-      audioRef.current.stop();
-      audioRef.current = null;
     }
     setPlayingAudio(null);
   };
