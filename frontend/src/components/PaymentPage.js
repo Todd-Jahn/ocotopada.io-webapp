@@ -352,7 +352,7 @@ const PaymentPage = ({ success, cancel }) => {
 
         {/* Payment Methods */}
         <div className="max-w-2xl mx-auto mb-12">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Choose Payment Method</h3>
+          <h3 className="text-2xl font-bold text-white text-center mb-8">选择支付方式</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {paymentMethods.map((method) => (
               <motion.div
