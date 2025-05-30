@@ -83,20 +83,22 @@ const Dashboard = () => {
       <header className="bg-white/10 backdrop-blur-lg border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link to="/" className="flex items-center space-x-3 text-purple-300 hover:text-white transition-colors">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-                <span className="text-sm">🐙</span>
-              </div>
-              <h1 className="text-xl font-bold">Octopada.io</h1>
+            <Link to="/" className="flex items-center space-x-3 text-purple-300 hover:text-white transition-colors flex-shrink-0">
+              <img 
+                src="https://i.postimg.cc/JyGjXXrb/Image-from-Gamma-App.jpg" 
+                alt="Octopada.io Logo"
+                className="w-8 h-8 rounded-lg object-cover"
+              />
+              <h1 className="text-xl font-bold hidden sm:block">Octopada.io</h1>
             </Link>
 
-            <div className="flex items-center space-x-4">
-              <div className="relative">
+            <div className="flex items-center space-x-2 sm:space-x-4 flex-1 justify-end">
+              <div className="relative hidden md:block">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-purple-300" />
                 <input
                   type="text"
                   placeholder="搜索伙伴..."
-                  className="pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-purple-400 w-64"
+                  className="pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-purple-400 w-48 lg:w-64"
                 />
               </div>
               
@@ -105,16 +107,16 @@ const Dashboard = () => {
                 <span className="absolute top-0 right-0 w-2 h-2 bg-pink-500 rounded-full"></span>
               </button>
 
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2 sm:space-x-3">
                 <img
                   src={user?.avatar || 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg'}
                   alt={user?.name}
                   className="w-8 h-8 rounded-full object-cover"
                 />
-                <span className="text-white font-medium">{user?.name}</span>
+                <span className="text-white font-medium hidden sm:block">{user?.name}</span>
                 <button
                   onClick={logout}
-                  className="text-purple-300 hover:text-white text-sm"
+                  className="text-purple-300 hover:text-white text-sm hidden sm:block"
                 >
                   退出
                 </button>
