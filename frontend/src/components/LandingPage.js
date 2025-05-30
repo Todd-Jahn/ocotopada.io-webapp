@@ -585,6 +585,91 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* 重新定义AI伙伴 Section */}
+      <section id="最佳伙伴" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h1 
+              className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              重新定义
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                AI伙伴
+              </span>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-xl text-white/80 mb-16 leading-relaxed max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              不仅仅是聊天机器人 - 发现真正理解并与您共同成长的AI伙伴。
+              <br />
+              六种独特的伙伴类型，满足您个人发展旅程的每个方面。
+            </motion.p>
+
+            <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {whyChooseFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start space-x-6 text-left"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 + index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-white/70 leading-relaxed">{feature.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center mt-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              viewport={{ once: true }}
+            >
+              <Link to="/auth">
+                <motion.button 
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold rounded-full hover:shadow-xl hover:shadow-purple-500/25 transition-all"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  开始免费试用
+                </motion.button>
+              </Link>
+              <motion.button 
+                className="px-8 py-4 border-2 border-white/20 text-white text-lg font-semibold rounded-full hover:bg-white/10 transition-all"
+                whileHover={{ scale: 1.05, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                了解更多
+              </motion.button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* 共创同行 Section */}
       <section id="共创同行" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
