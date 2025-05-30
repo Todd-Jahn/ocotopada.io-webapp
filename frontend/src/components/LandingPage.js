@@ -395,7 +395,7 @@ const LandingPage = () => {
         </AnimatePresence>
       </motion.header>
 
-      {/* Why Choose Octopada Section - Replacing Hero */}
+      {/* Character Carousel */}
       <section id="最佳伴侣" className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div 
