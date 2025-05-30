@@ -416,7 +416,7 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto">
           {/* Desktop Carousel */}
           <div className="hidden md:block relative">
-            <div className="grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-9 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-10 gap-4">
               {characters.map((character, index) => (
                 <motion.div
                   key={character.id}
