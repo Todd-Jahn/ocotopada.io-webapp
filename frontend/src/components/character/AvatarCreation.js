@@ -12,7 +12,7 @@ import {
   Share2,
   Edit
 } from 'lucide-react';
-import { AppContext } from '../App';
+import { AppContext } from '../../App';
 
 // Avatar gallery images - Updated from user's gallery
 const avatarGallery = [
