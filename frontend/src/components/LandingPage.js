@@ -315,7 +315,7 @@ const LandingPage = () => {
                 { name: '最佳伴侣', id: 'character-carousel' },
                 { name: '选择类型', id: '选择类型' },
                 { name: '共创同行', id: '共创同行' },
-                { name: 'MetaCommune', id: 'MetaCommune' },
+                { name: 'HubZone', id: 'HubZone' },
                 { name: '订阅计划', id: '订阅计划' },
                 { name: '团队故事', path: '/team-story' }
               ].map((item) => (
