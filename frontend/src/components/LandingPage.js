@@ -958,10 +958,10 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              选择您的方案
+              解锁完整的 AI体验
             </h2>
             <p className="text-xl text-white/70">
-              不同需求，不同的伙伴体验
+              获得对所有AI伙伴、高级功能和个性化体验的无限访问权限
             </p>
           </motion.div>
 
