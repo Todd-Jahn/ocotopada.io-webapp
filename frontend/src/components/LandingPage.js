@@ -275,6 +275,22 @@ const LandingPage = () => {
     return () => clearInterval(interval);
   }, [characters.length]);
 
+  // Debug function to log available voices (can be removed in production)
+  useEffect(() => {
+    if ('speechSynthesis' in window) {
+      const logVoices = () => {
+        const voices = window.speechSynthesis.getVoices();
+        console.log('Available voices:', voices.map(v => ({ name: v.name, lang: v.lang })));
+      };
+      
+      if (window.speechSynthesis.getVoices().length) {
+        logVoices();
+      } else {
+        window.speechSynthesis.onvoiceschanged = logVoices;
+      }
+    }
+  }, []);
+
   // Cleanup audio on component unmount
   useEffect(() => {
     return () => {
