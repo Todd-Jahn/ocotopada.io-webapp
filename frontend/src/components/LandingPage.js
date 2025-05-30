@@ -214,6 +214,13 @@ const LandingPage = () => {
     return () => clearInterval(interval);
   }, [characters.length]);
 
+  // Cleanup audio on component unmount
+  useEffect(() => {
+    return () => {
+      stopCurrentAudio();
+    };
+  }, []);
+
   const handleDragEnd = (event, info) => {
     if (info.offset.x > 100) {
       prevSlide();
