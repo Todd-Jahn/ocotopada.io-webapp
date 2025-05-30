@@ -128,12 +128,28 @@ const LandingPage = () => {
     }
   ];
 
+  // Initialize speech synthesis on first user interaction
+  const initializeSpeech = () => {
+    if ('speechSynthesis' in window && !speechReady) {
+      // Create a dummy utterance to initialize the speech engine
+      const utterance = new SpeechSynthesisUtterance('');
+      utterance.volume = 0;
+      window.speechSynthesis.speak(utterance);
+      setSpeechReady(true);
+    }
+  };
+
   // Voice playing functionality with proper voice selection
   const playCharacterVoice = async (character) => {
     try {
+      // Initialize speech on first click
+      initializeSpeech();
+      
       // Stop current audio if playing
       if (window.speechSynthesis && window.speechSynthesis.speaking) {
         window.speechSynthesis.cancel();
+        // Wait a bit for cancellation to complete
+        await new Promise(resolve => setTimeout(resolve, 50));
       }
       
       setPlayingAudio(character.id);
@@ -202,6 +218,7 @@ const LandingPage = () => {
         // Set the selected voice
         if (selectedVoice) {
           utterance.voice = selectedVoice;
+          console.log(`Selected voice for ${character.name}:`, selectedVoice.name);
         }
         
         // Apply character-specific voice configuration
@@ -219,12 +236,8 @@ const LandingPage = () => {
           setPlayingAudio(null);
         };
         
-        // Small delay to ensure proper state reset
-        setTimeout(() => {
-          if (window.speechSynthesis) {
-            window.speechSynthesis.speak(utterance);
-          }
-        }, 100);
+        // Start speaking immediately without delay
+        window.speechSynthesis.speak(utterance);
         
       } else {
         // Fallback: create a simple audio notification sound for unsupported browsers
