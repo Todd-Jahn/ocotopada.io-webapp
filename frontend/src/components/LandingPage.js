@@ -166,24 +166,24 @@ const LandingPage = () => {
 
   const pricingPlans = [
     {
-      name: "入门版",
-      price: "19.99",
-      period: "月",
-      features: ["1个AI伙伴", "基础对话功能", "每日消息限制", "标准响应速度"],
+      name: "体验版",
+      price: "0",
+      period: "永久免费",
+      features: ["基础AI伙伴体验", "每日3次对话", "标准回复速度", "基础个性化"],
       popular: false
     },
     {
-      name: "专业版",
-      price: "49.99",
+      name: "成长版",
+      price: "29",
       period: "月",
-      features: ["3个AI伙伴", "高级对话功能", "无限消息", "优先响应", "成长日记", "情感分析"],
+      features: ["无限AI对话", "个性化深度交流", "优先回复速度", "情感记忆功能", "专属成长报告", "多场景切换"],
       popular: true
     },
     {
-      name: "高级版",
-      price: "99.99",
+      name: "专业版",
+      price: "99",
       period: "月",
-      features: ["全部6个AI伙伴", "所有高级功能", "优先客户支持", "个性化定制", "共创故事", "高级分析"],
+      features: ["全部成长版功能", "6位AI伙伴同时在线", "专业心理分析", "定制化人格塑造", "VIP客服支持", "数据导出功能"],
       popular: false
     }
   ];
