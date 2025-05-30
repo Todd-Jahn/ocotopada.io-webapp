@@ -281,7 +281,7 @@ const LandingPage = () => {
                 className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
                 whileHover={{ scale: 1.05 }}
               >
-                Octopada.io
+                🤖 Octopada.io AI Platform 🤖
               </motion.div>
             </Link>
             
