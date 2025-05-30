@@ -527,7 +527,10 @@ const LandingPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -10 }}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => {
+                    setCurrentSlide(index);
+                    playCharacterVoice(character);
+                  }}
                 >
                   <div className="relative h-80 rounded-3xl overflow-hidden">
                     <img 
@@ -536,8 +539,17 @@ const LandingPage = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    
+                    {/* Voice playing indicator */}
+                    {playingAudio === character.id && (
+                      <div className="absolute top-4 right-4 bg-purple-500/90 backdrop-blur-sm rounded-full p-2">
+                        <Volume2 className="w-5 h-5 text-white animate-pulse" />
+                      </div>
+                    )}
+                    
                     <div className="absolute bottom-4 left-4">
                       <h3 className="text-white font-bold text-lg text-shadow">{character.name}</h3>
+                      <p className="text-white/80 text-sm mt-1">点击听语音介绍</p>
                     </div>
                     <div className="absolute inset-0 bg-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
