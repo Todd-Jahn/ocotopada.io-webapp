@@ -13,7 +13,7 @@ import {
   Clock,
   Calendar
 } from 'lucide-react';
-import { AppContext } from '../App';
+import { AppContext } from '../../App';
 
 const Dashboard = () => {
   const { user, logout } = useContext(AppContext);
