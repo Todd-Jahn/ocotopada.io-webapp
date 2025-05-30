@@ -789,7 +789,7 @@ const LandingPage = () => {
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold text-white">虚拟社区生态</h3>
                 <p className="text-xl text-white/80 leading-relaxed">
-                  MetaCommune是我们打造的虚拟社区平台，在这里用户可以与AI伙伴以及其他用户互动，
+                  HubZone是我们打造的虚拟社区平台，在这里用户可以与AI伙伴以及其他用户互动，
                   分享成长经历，参与主题活动，创造属于整个社区的共同回忆。
                 </p>
                 <div className="space-y-4">
