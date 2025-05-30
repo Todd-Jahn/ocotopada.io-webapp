@@ -13,7 +13,7 @@ import {
   Shield,
   Users
 } from 'lucide-react';
-import { AppContext } from '../App';
+import { AppContext } from '../../App';
 
 const PaymentPage = ({ success, cancel }) => {
   const { user, setUser } = useContext(AppContext);
