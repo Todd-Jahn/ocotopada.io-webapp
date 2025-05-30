@@ -9,7 +9,7 @@ const LandingPage = () => {
   const { scrollYProgress } = useScroll();
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
 
-  // Character carousel data with yesterday's specified images
+  // Character carousel data with updated images
   const characters = [
     {
       id: 1,
@@ -29,12 +29,32 @@ const LandingPage = () => {
     {
       id: 4,
       name: "黎绮",
-      image: "https://images.unsplash.com/photo-1748436878978-48695c8e14ac?w=800&h=800&fit=crop&crop=face"
+      image: "https://i.postimg.cc/XvKgq5gS/Ludi.jpg"
     },
     {
       id: 5,
       name: "林成卿",
-      image: "https://images.unsplash.com/photo-1748436826108-f4645552b2ab?w=800&h=800&fit=crop&crop=face"
+      image: "https://i.postimg.cc/nrxb7By4/4.png"
+    },
+    {
+      id: 6,
+      name: "悦心",
+      image: "https://i.postimg.cc/bY0jPVn3/2.png"
+    },
+    {
+      id: 7,
+      name: "思瑶",
+      image: "https://i.postimg.cc/CLmTBZm8/4.png"
+    },
+    {
+      id: 8,
+      name: "乔安",
+      image: "https://i.postimg.cc/P5VjcLDH/2.jpg"
+    },
+    {
+      id: 9,
+      name: "Chloe",
+      image: "https://i.postimg.cc/90HbQB6h/E-n-VIP8-W6-J0-En-JC5p8hm8.png"
     }
   ];
 
