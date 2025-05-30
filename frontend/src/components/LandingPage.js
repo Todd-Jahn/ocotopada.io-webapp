@@ -257,26 +257,26 @@ const LandingPage = () => {
         className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/20 border-b border-white/10"
         style={{ opacity: headerOpacity }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-                <span className="text-sm">🐙</span>
+              <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+                <span className="text-xs">🐙</span>
               </div>
               <motion.div 
-                className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
+                className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
                 whileHover={{ scale: 1.05 }}
               >
                 Octopada.io
               </motion.div>
             </Link>
             
-            <nav className="hidden md:flex space-x-8">
-              {['功能特色', '伴侣类型', '定价方案', '关于我们'].map((item) => (
+            <nav className="hidden md:flex space-x-6">
+              {['功能特色', '伴侣类型', '订阅计划', '关于我们'].map((item) => (
                 <motion.a 
                   key={item}
                   href={`#${item}`}
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-white/80 hover:text-white transition-colors text-sm"
                   whileHover={{ y: -2 }}
                 >
                   {item}
@@ -289,12 +289,12 @@ const LandingPage = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               whileTap={{ scale: 0.95 }}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </motion.button>
 
             <Link to="/auth">
               <motion.button 
-                className="hidden md:block px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all"
+                className="hidden md:block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all text-sm"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
