@@ -66,54 +66,54 @@ const LandingPage = () => {
   const companionTypes = [
     {
       id: 1,
-      title: "生活教练",
-      subtitle: "个人发展",
-      description: "富有同理心的伙伴，专注于帮助您实现个人和职业目标",
+      title: "他",
+      subtitle: "温暖陪伴",
+      description: "阳光男性伙伴，倾听理解，陪伴成长每一步",
       icon: Heart,
       color: "from-blue-500 to-purple-600",
       image: "https://images.unsplash.com/photo-1523531099245-31a49f4527bb"
     },
     {
       id: 2,
-      title: "职业导师",
-      subtitle: "专业成长",
-      description: "为您的职业发展、领导技能和职场挑战提供战略建议",
+      title: "她",
+      subtitle: "细腻温柔",
+      description: "贴心女性伙伴，善解人意，用爱化解所有困扰",
       icon: Brain,
       color: "from-pink-500 to-rose-600",
       image: "https://images.pexels.com/photos/30475855/pexels-photo-30475855.jpeg"
     },
     {
       id: 3,
-      title: "健康向导",
-      subtitle: "心理健康支持",
-      description: "专注于正念、压力管理和情感健康的富有同情心的伙伴",
+      title: "懂我",
+      subtitle: "心有灵犀",
+      description: "真正理解你的内心世界，与你心灵相通的智慧伙伴",
       icon: Heart,
       color: "from-emerald-500 to-teal-600",
       image: "https://images.pexels.com/photos/7278845/pexels-photo-7278845.jpeg"
     },
     {
       id: 4,
-      title: "创意催化剂",
-      subtitle: "创新伙伴",
-      description: "激发创意项目、艺术创作和创新思维的灵感伙伴",
+      title: "有趣",
+      subtitle: "生活调味",
+      description: "幽默风趣的生活伙伴，为平淡日常增添无限乐趣",
       icon: BookOpen,
       color: "from-amber-500 to-orange-600",
       image: "https://images.pexels.com/photos/5896422/pexels-photo-5896422.jpeg"
     },
     {
       id: 5,
-      title: "科技创新者",
-      subtitle: "技术专家",
-      description: "前瞻性伙伴，专注于数字化转型、AI洞察和技术职业指导",
+      title: "有料",
+      subtitle: "知识渊博",
+      description: "博学多才的智慧伙伴，与你分享知识的无穷魅力",
       icon: HelpCircle,
       color: "from-indigo-500 to-blue-600",
       image: "https://images.pexels.com/photos/5475793/pexels-photo-5475793.jpeg"
     },
     {
       id: 6,
-      title: "家庭顾问",
-      subtitle: "关系支持",
-      description: "理解家庭动态、关系建设和育儿挑战的贴心伙伴",
+      title: "有料",
+      subtitle: "专业指导",
+      description: "专业领域的资深伙伴，助你在事业路上稳步前行",
       icon: MessageCircle,
       color: "from-violet-500 to-purple-600",
       image: "https://images.unsplash.com/photo-1560250163-17506787d971"
