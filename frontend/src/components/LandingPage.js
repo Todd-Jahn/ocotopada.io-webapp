@@ -387,7 +387,7 @@ const LandingPage = () => {
       </motion.header>
 
       {/* Character Carousel - Now First Section */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
+      <section id="character-carousel" className="pt-32 pb-16 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
