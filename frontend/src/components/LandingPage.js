@@ -573,7 +573,8 @@ const LandingPage = () => {
                 {characters.map((character, index) => (
                   <motion.div
                     key={character.id}
-                    className="relative flex-shrink-0 w-full h-full"
+                    className="relative flex-shrink-0 w-full h-full cursor-pointer"
+                    onClick={() => playCharacterVoice(character)}
                   >
                     <img 
                       src={character.image}
@@ -581,8 +582,17 @@ const LandingPage = () => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    
+                    {/* Voice playing indicator */}
+                    {playingAudio === character.id && (
+                      <div className="absolute top-6 right-6 bg-purple-500/90 backdrop-blur-sm rounded-full p-3">
+                        <Volume2 className="w-6 h-6 text-white animate-pulse" />
+                      </div>
+                    )}
+                    
                     <div className="absolute bottom-6 left-6">
                       <h3 className="text-white font-bold text-2xl text-shadow">{character.name}</h3>
+                      <p className="text-white/80 text-base mt-2">点击听语音介绍</p>
                     </div>
                   </motion.div>
                 ))}
