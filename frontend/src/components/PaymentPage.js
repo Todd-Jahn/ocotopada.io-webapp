@@ -400,7 +400,7 @@ const PaymentPage = ({ success, cancel }) => {
           </motion.button>
 
           <p className="text-purple-300 text-sm mt-4">
-            Secure payment powered by Stripe. Cancel anytime.
+            安全支付由 Stripe 提供支持。随时可取消。
           </p>
         </div>
 
