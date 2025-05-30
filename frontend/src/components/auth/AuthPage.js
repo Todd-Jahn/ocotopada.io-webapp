@@ -62,9 +62,11 @@ const AuthPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       {/* Octopada Logo - Top Left */}
       <Link to="/" className="absolute top-6 left-6 flex items-center space-x-2 text-purple-300 hover:text-white transition-colors">
-        <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-          <span className="text-sm">🐙</span>
-        </div>
+        <img 
+          src="https://i.postimg.cc/JyGjXXrb/Image-from-Gamma-App.jpg" 
+          alt="Octopada.io Logo"
+          className="w-8 h-8 rounded-lg object-cover"
+        />
         <span className="text-lg font-bold">Octopada.io</span>
       </Link>
 
