@@ -19,7 +19,7 @@ const PaymentPage = ({ success, cancel }) => {
   const { user, setUser } = useContext(AppContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const [selectedPlan, setSelectedPlan] = useState('monthly');
+  const [selectedPlan, setSelectedPlan] = useState('growth');
   const [loading, setLoading] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState('stripe');
 
