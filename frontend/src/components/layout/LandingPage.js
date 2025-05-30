@@ -499,9 +499,11 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-                <span className="text-xs">⭐</span>
-              </div>
+              <img 
+                src="https://i.postimg.cc/JyGjXXrb/Image-from-Gamma-App.jpg" 
+                alt="Octopada.io Logo"
+                className="w-6 h-6 rounded-lg object-cover"
+              />
               <motion.div 
                 className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
                 whileHover={{ scale: 1.05 }}
