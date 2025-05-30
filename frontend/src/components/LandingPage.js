@@ -106,7 +106,7 @@ const LandingPage = () => {
       features: ["恋爱日常", "甜蜜提醒", "情绪打气"],
       icon: Heart,
       color: "from-blue-500 to-purple-600",
-      image: "https://images.pexels.com/photos/29901613/pexels-photo-29901613.jpeg"
+      image: "https://images.unsplash.com/photo-1605106702734-205df224ecce"
     },
     {
       id: 2,
@@ -117,7 +117,7 @@ const LandingPage = () => {
       features: ["撒娇提醒", "闺蜜话题", "生活点滴共写"],
       icon: Heart,
       color: "from-pink-500 to-rose-600",
-      image: "https://images.unsplash.com/photo-1605106702734-205df224ecce"
+      image: "https://images.unsplash.com/photo-1605106925746-22f723ca945b"
     },
     {
       id: 3,
@@ -128,7 +128,7 @@ const LandingPage = () => {
       features: ["情绪识别", "心情日记", "匿名树洞"],
       icon: Heart,
       color: "from-emerald-500 to-teal-600",
-      image: "https://images.unsplash.com/photo-1605106925746-22f723ca945b"
+      image: "https://images.unsplash.com/photo-1605106702842-01a887a31122"
     },
     {
       id: 4,
@@ -139,7 +139,7 @@ const LandingPage = () => {
       features: ["学业问答", "职业建议", "专栏订阅"],
       icon: BookOpen,
       color: "from-amber-500 to-orange-600",
-      image: "https://images.unsplash.com/photo-1605106702842-01a887a31122"
+      image: "https://images.pexels.com/photos/16053029/pexels-photo-16053029.jpeg"
     },
     {
       id: 5,
@@ -150,7 +150,7 @@ const LandingPage = () => {
       features: ["即时答疑", "冷知识分享", "生活百科"],
       icon: HelpCircle,
       color: "from-indigo-500 to-blue-600",
-      image: "https://images.pexels.com/photos/16053029/pexels-photo-16053029.jpeg"
+      image: "https://images.unsplash.com/photo-1486546910464-ec8e45c4a137"
     },
     {
       id: 6,
@@ -161,7 +161,7 @@ const LandingPage = () => {
       features: ["小游戏", "段子互动", "趣味推荐"],
       icon: MessageCircle,
       color: "from-violet-500 to-purple-600",
-      image: "https://images.unsplash.com/photo-1486546910464-ec8e45c4a137"
+      image: "https://images.unsplash.com/photo-1611605645802-c21be743c321"
     }
   ];
 
