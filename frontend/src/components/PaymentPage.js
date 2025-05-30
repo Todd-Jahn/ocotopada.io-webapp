@@ -394,7 +394,7 @@ const PaymentPage = ({ success, cancel }) => {
             ) : (
               <>
                 <Crown className="h-6 w-6 mr-3 inline" />
-                Upgrade to Premium
+                升级至高级版
               </>
             )}
           </motion.button>
