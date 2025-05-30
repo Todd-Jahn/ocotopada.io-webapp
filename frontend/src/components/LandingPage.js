@@ -395,6 +395,55 @@ const LandingPage = () => {
         </AnimatePresence>
       </motion.header>
 
+      {/* Simple Hero Section */}
+      <section className="pt-32 pb-16 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Octopada.io
+            </span>
+          </motion.h1>
+          
+          <motion.p 
+            className="text-xl text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            AI伙伴平台 - 让每个人都能拥有理解自己的虚拟伙伴
+          </motion.p>
+
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link to="/auth">
+              <motion.button 
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-semibold rounded-full hover:shadow-xl hover:shadow-purple-500/25 transition-all"
+                whileHover={{ scale: 1.05, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                立即开始
+              </motion.button>
+            </Link>
+            <motion.button 
+              className="px-8 py-4 border-2 border-white/20 text-white text-lg font-semibold rounded-full hover:bg-white/10 transition-all"
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              了解更多
+            </motion.button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Character Carousel */}
       <section className="py-20 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto">
