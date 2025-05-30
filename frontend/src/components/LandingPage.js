@@ -136,44 +136,47 @@ const LandingPage = () => {
         audioRef.current = null;
       }
       
+      // Stop any existing speech synthesis
+      if (window.speechSynthesis && window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+      }
+      
       setPlayingAudio(character.id);
       
       // Use Web Speech API for text-to-speech
       if ('speechSynthesis' in window) {
         const utterance = new SpeechSynthesisUtterance(character.voiceText);
         
-        // Set voice properties based on character
+        // Apply character-specific voice configuration
         if (character.voice.includes('en-US')) {
           utterance.lang = 'en-US';
-          utterance.rate = 0.9;
         } else {
           utterance.lang = 'zh-CN';
-          utterance.rate = 0.8;
         }
         
-        utterance.pitch = 1.0;
-        utterance.volume = 0.8;
+        // Set personalized voice parameters from character config
+        utterance.rate = character.voiceConfig.rate;
+        utterance.pitch = character.voiceConfig.pitch;
+        utterance.volume = character.voiceConfig.volume;
         
-        // Handle voice end
+        // Handle voice end - let it play naturally to completion
         utterance.onend = () => {
           setPlayingAudio(null);
         };
         
         utterance.onerror = () => {
+          console.error('Speech synthesis error');
           setPlayingAudio(null);
         };
         
-        // Limit to 3 seconds - stop after 3 seconds
-        setTimeout(() => {
-          if (window.speechSynthesis.speaking) {
-            window.speechSynthesis.cancel();
-            setPlayingAudio(null);
-          }
-        }, 3000);
-        
+        // Start speaking
         window.speechSynthesis.speak(utterance);
+        
+        // Store reference for cleanup
+        audioRef.current = { stop: () => window.speechSynthesis.cancel() };
+        
       } else {
-        // Fallback: create a simple audio notification sound
+        // Fallback: create a simple audio notification sound for unsupported browsers
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
         const oscillator = audioContext.createOscillator();
         const gainNode = audioContext.createGain();
@@ -181,14 +184,16 @@ const LandingPage = () => {
         oscillator.connect(gainNode);
         gainNode.connect(audioContext.destination);
         
-        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+        // Different frequencies for different characters
+        const frequency = 600 + (character.id * 50);
+        oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
         gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1);
         
         oscillator.start(audioContext.currentTime);
-        oscillator.stop(audioContext.currentTime + 0.5);
+        oscillator.stop(audioContext.currentTime + 1);
         
-        setTimeout(() => setPlayingAudio(null), 500);
+        setTimeout(() => setPlayingAudio(null), 1000);
       }
     } catch (error) {
       console.error('Error playing voice:', error);
@@ -200,8 +205,8 @@ const LandingPage = () => {
     if (window.speechSynthesis && window.speechSynthesis.speaking) {
       window.speechSynthesis.cancel();
     }
-    if (audioRef.current) {
-      audioRef.current.pause();
+    if (audioRef.current && audioRef.current.stop) {
+      audioRef.current.stop();
       audioRef.current = null;
     }
     setPlayingAudio(null);
