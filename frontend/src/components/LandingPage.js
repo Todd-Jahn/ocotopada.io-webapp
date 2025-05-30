@@ -7,6 +7,7 @@ const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [playingAudio, setPlayingAudio] = useState(null);
+  const [speechReady, setSpeechReady] = useState(false);
   const audioRef = useRef(null);
   const { scrollYProgress } = useScroll();
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
