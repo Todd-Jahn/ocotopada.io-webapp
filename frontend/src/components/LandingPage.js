@@ -201,6 +201,10 @@ const LandingPage = () => {
     setCurrentSlide((prev) => (prev - 1 + characters.length) % characters.length);
   };
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % characters.length);
+  };
+
   // Auto-advance carousel every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
