@@ -38,6 +38,68 @@ const LandingPage = () => {
     }
   ];
 
+  // 团队成员数据
+  const teamMembers = [
+    {
+      name: "张飞",
+      role: "CEO",
+      description: "资深AI产品专家，致力于重新定义人机交互体验",
+      image: "https://images.unsplash.com/photo-1611195974226-a6a9be9dd763"
+    },
+    {
+      name: "崎本涵涵",
+      role: "COO",
+      description: "运营战略大师，构建用户价值生态系统",
+      image: "https://images.unsplash.com/photo-1563970290-c009d895b853"
+    },
+    {
+      name: "李思源",
+      role: "CTO",
+      description: "技术架构师，打造下一代AI对话引擎",
+      image: "https://images.unsplash.com/photo-1586165368502-1bad197a6461"
+    },
+    {
+      name: "王美琪",
+      role: "CPO",
+      description: "产品创新负责人，设计触动人心的交互体验",
+      image: "https://images.pexels.com/photos/1679618/pexels-photo-1679618.jpeg"
+    },
+    {
+      name: "陈志豪",
+      role: "CMO",
+      description: "品牌营销专家，传递AI伙伴的温暖价值",
+      image: "https://images.pexels.com/photos/814133/pexels-photo-814133.jpeg"
+    }
+  ];
+
+  // 共创同行数据
+  const partnerships = [
+    {
+      title: "MCN机构合作",
+      description: "携手顶级MCN机构，打造AI+内容创作新生态",
+      icon: "🎬",
+      color: "from-purple-500 to-blue-500"
+    },
+    {
+      title: "达人创作者",
+      description: "赋能内容创作者，用AI伙伴激发无限创意灵感",
+      icon: "⭐",
+      color: "from-pink-500 to-purple-500"
+    },
+    {
+      title: "PGC专业内容",
+      description: "与专业内容团队合作，提供高质量AI交互内容",
+      icon: "📚",
+      color: "from-emerald-500 to-cyan-500"
+    },
+    {
+      title: "品牌合作",
+      description: "联合知名品牌，探索AI伙伴在商业场景的无限可能",
+      icon: "🚀",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % characters.length);
   };
