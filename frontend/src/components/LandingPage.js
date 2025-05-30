@@ -235,47 +235,48 @@ const LandingPage = () => {
     }
   ];
 
-  // Updated pricing plans with aligned buttons and extra features for 体验版
+  // Updated pricing plans to match the new design
   const pricingPlans = [
     {
-      name: "体验版",
-      price: "0",
-      period: "永久免费",
+      name: "Premium Monthly",
+      price: "19.99",
+      period: "month",
       features: [
-        "基础AI伙伴体验", 
-        "每日3次对话", 
-        "标准回复速度", 
-        "基础个性化",
-        "社区功能访问",
-        "基础情感分析"
+        "Unlimited conversations",
+        "All AI companions", 
+        "Custom avatar creation", 
+        "Priority support",
+        "Advanced features",
+        "Data export"
       ],
       popular: false
     },
     {
-      name: "成长版",
-      price: "29",
-      period: "月",
+      name: "Premium Yearly",
+      price: "199.99",
+      period: "year",
+      originalPrice: "239.88",
       features: [
-        "无限AI对话", 
-        "个性化深度交流", 
-        "优先回复速度", 
-        "情感记忆功能", 
-        "专属成长报告", 
-        "多场景切换"
+        "Everything in Monthly",
+        "2 months free", 
+        "Early access to new features", 
+        "Exclusive companion models", 
+        "Custom integration support", 
+        "White-label options"
       ],
       popular: true
     },
     {
-      name: "专业版",
-      price: "99",
-      period: "月",
+      name: "Lifetime Access",
+      price: "499.99",
+      period: "lifetime",
       features: [
-        "全部成长版功能", 
-        "6位AI伙伴同时在线", 
-        "专业心理分析", 
-        "定制化人格塑造", 
-        "VIP客服支持", 
-        "数据导出功能"
+        "Everything included forever",
+        "No recurring payments", 
+        "Lifetime updates", 
+        "VIP support", 
+        "Beta feature access", 
+        "Commercial usage rights"
       ],
       popular: false
     }
