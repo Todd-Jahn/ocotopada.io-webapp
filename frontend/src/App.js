@@ -3,15 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import './App.css';
 
 // Import Components
-import LandingPage from './components/LandingPage';
-import AuthPage from './components/AuthPage';
-import Dashboard from './components/Dashboard';
-import AvatarCreation from './components/AvatarCreation';
-import PaymentPage from './components/PaymentPage';
-import ChatInterface from './components/ChatInterface';
-import ProfilePage from './components/ProfilePage';
+import LandingPage from './components/layout/LandingPage';
+import AuthPage from './components/auth/AuthPage';
+import Dashboard from './components/profile/Dashboard';
+import AvatarCreation from './components/character/AvatarCreation';
+import PaymentPage from './components/payment/PaymentPage';
+import ChatInterface from './components/chat/ChatInterface';
+import ProfilePage from './components/profile/ProfilePage';
 import LoadingScreen from './components/LoadingScreen';
-import TeamStoryPage from './components/TeamStoryPage';
+import TeamStoryPage from './components/layout/TeamStoryPage';
 
 // Context for global state
 export const AppContext = React.createContext();
