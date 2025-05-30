@@ -396,7 +396,9 @@ const LandingPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              🤖 遇见您的AI伙伴 🤖
+              重新定义
+              <br />
+              AI伙伴
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               每个AI伙伴都有独特的个性和故事。滑动探索更多
