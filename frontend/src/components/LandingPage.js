@@ -824,7 +824,7 @@ const LandingPage = () => {
             >
               <div className="relative rounded-3xl overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
+                  src="https://i.postimg.cc/VvBy37bh/Octopada-Hub-Zone-Introduction.png"
                   alt="虚拟社区"
                   className="w-full h-96 object-cover"
                 />
