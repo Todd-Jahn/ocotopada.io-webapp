@@ -10,7 +10,7 @@ import AvatarCreation from './components/character/AvatarCreation';
 import PaymentPage from './components/payment/PaymentPage';
 import ChatInterface from './components/chat/ChatInterface';
 import ProfilePage from './components/profile/ProfilePage';
-import LoadingScreen from './components/LoadingScreen';
+import LoadingScreen from './components/common/LoadingScreen';
 import TeamStoryPage from './components/layout/TeamStoryPage';
 
 // Context for global state
