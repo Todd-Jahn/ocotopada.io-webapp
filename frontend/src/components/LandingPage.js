@@ -58,7 +58,7 @@ const LandingPage = () => {
     },
     {
       id: 10,
-      name: "Vibranos",
+      name: "宛宁 Ely",
       image: "https://i.postimg.cc/k4bwCHhs/Vibranos.jpg"
     }
   ];
