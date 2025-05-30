@@ -17,71 +17,81 @@ const LandingPage = () => {
       id: 1,
       name: "洛可 LoCo",
       image: "https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face",
-      voiceText: "你好！我是洛可，一个温暖阳光的AI伙伴，很高兴认识你！",
-      voice: "zh-CN-YunyeNeural"
+      voiceText: "你好！我是洛可，一个温暖阳光的女孩儿，很高兴认识你！",
+      voice: "zh-CN-XiaoxiaoNeural",
+      voiceConfig: { rate: 0.9, pitch: 1.1, volume: 0.8 } // 温暖女声
     },
     {
       id: 2,
       name: "千奈",
       image: "https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face",
       voiceText: "嗨，我是千奈，愿意成为你温柔体贴的AI伙伴～",
-      voice: "zh-CN-XiaoxiaoNeural"
+      voice: "zh-CN-XiaoyiNeural",
+      voiceConfig: { rate: 0.8, pitch: 1.2, volume: 0.75 } // 温柔可爱女声
     },
     {
       id: 3,
       name: "Suki 苏奇",
       image: "https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face",
       voiceText: "Hi！我是Suki苏奇，活泼开朗就是我的标签！",
-      voice: "zh-CN-XiaoyiNeural"
+      voice: "zh-CN-XiaoshuangNeural",
+      voiceConfig: { rate: 1.1, pitch: 1.3, volume: 0.85 } // 活泼开朗女声
     },
     {
       id: 4,
       name: "陆迪",
       image: "https://i.postimg.cc/XvKgq5gS/Ludi.jpg",
       voiceText: "您好，我是陆迪，优雅知性的AI助手，期待与您的深度交流。",
-      voice: "zh-CN-XiaohanNeural"
+      voice: "zh-CN-YunxiNeural",
+      voiceConfig: { rate: 0.7, pitch: 0.8, volume: 0.9 } // 雄厚男声
     },
     {
       id: 5,
       name: "林成卿",
       image: "https://i.postimg.cc/nrxb7By4/4.png",
       voiceText: "你好，我是林成卿，成熟稳重是我的特点，让我们一起成长吧。",
-      voice: "zh-CN-YunxiNeural"
+      voice: "zh-CN-YunyeNeural",
+      voiceConfig: { rate: 0.8, pitch: 0.9, volume: 0.9 } // 坚定有力男声
     },
     {
       id: 6,
       name: "悦心",
       image: "https://i.postimg.cc/bY0jPVn3/2.png",
       voiceText: "嗨～我是悦心，专业的心灵治愈师，愿意倾听你的心声。",
-      voice: "zh-CN-XiaoxuanNeural"
+      voice: "zh-CN-XiaohanNeural",
+      voiceConfig: { rate: 0.85, pitch: 1.0, volume: 0.8 } // 成熟专业女声
     },
     {
       id: 7,
       name: "思瑶",
       image: "https://i.postimg.cc/CLmTBZm8/4.png",
       voiceText: "你好，我是思瑶，智慧导师，让我们一起探索知识的海洋。",
-      voice: "zh-CN-XiaoruiNeural"
+      voice: "zh-CN-XiaoxuanNeural",
+      voiceConfig: { rate: 0.95, pitch: 1.15, volume: 0.85 } // 热情洋溢女声
     },
     {
       id: 8,
       name: "乔安",
       image: "https://i.postimg.cc/P5VjcLDH/2.jpg",
       voiceText: "Hi，我是乔安，你的贴心生活伙伴，随时为你服务！",
-      voice: "zh-CN-XiaomengNeural"
+      voice: "zh-CN-YunjianNeural",
+      voiceConfig: { rate: 0.75, pitch: 0.85, volume: 0.85 } // 冷静智慧男声
     },
     {
       id: 9,
       name: "Chloe",
       image: "https://i.postimg.cc/90HbQB6h/E-n-VIP8-W6-J0-En-JC5p8hm8.png",
       voiceText: "Hello! I'm Chloe, your international AI companion. Nice to meet you!",
-      voice: "en-US-AriaNeural"
+      voice: "en-US-AriaNeural",
+      voiceConfig: { rate: 1.0, pitch: 1.1, volume: 0.8 } // 美式活力女声
     },
     {
       id: 10,
       name: "宛宁 Ely",
       image: "https://i.postimg.cc/k4bwCHhs/Vibranos.jpg",
       voiceText: "嗨！我是宛宁Ely，充满活力的AI伙伴，让我们一起开心聊天吧！",
-      voice: "zh-CN-XiaoshuangNeural"
+      voice: "zh-CN-XiaomengNeural",
+      voiceConfig: { rate: 0.9, pitch: 1.25, volume: 0.75 } // 温柔细语女声
     }
   ];
 
