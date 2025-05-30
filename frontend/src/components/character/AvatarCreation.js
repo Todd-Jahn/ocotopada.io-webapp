@@ -116,9 +116,11 @@ const AvatarCreation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-3 text-purple-300 hover:text-white transition-colors">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-                <span className="text-sm">🐙</span>
-              </div>
+              <img 
+                src="https://i.postimg.cc/JyGjXXrb/Image-from-Gamma-App.jpg" 
+                alt="Octopada.io Logo"
+                className="w-8 h-8 rounded-lg object-cover"
+              />
               <h1 className="text-xl font-bold">Octopada.io</h1>
             </Link>
             
