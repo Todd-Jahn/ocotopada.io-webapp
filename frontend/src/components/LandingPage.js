@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence, PanInfo } from 'framer-motion';
 import { Heart, Brain, BookOpen, HelpCircle, MessageCircle, Shield, Star, Check, Menu, X, ChevronLeft, ChevronRight, Users, Zap, Crown, Building, GraduationCap, Palette, Target, Volume2, VolumeX } from 'lucide-react';
 import { Link } from 'react-router-dom';
