@@ -761,8 +761,8 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* MetaCommune Section */}
-      <section id="MetaCommune" className="py-20 px-6 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
+      {/* HubZone Section */}
+      <section id="HubZone" className="py-20 px-6 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -772,7 +772,7 @@ const LandingPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              MetaCommune
+              HubZone
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               构建虚拟社区，让AI伙伴与用户共同创造更丰富的交互体验和成长环境
