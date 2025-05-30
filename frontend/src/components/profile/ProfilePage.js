@@ -17,7 +17,7 @@ import {
   Mail,
   Phone
 } from 'lucide-react';
-import { AppContext } from '../App';
+import { AppContext } from '../../App';
 
 const ProfilePage = () => {
   const { user, setUser, logout } = useContext(AppContext);
