@@ -16,7 +16,7 @@ import {
   Mic,
   MicOff
 } from 'lucide-react';
-import { AppContext } from '../App';
+import { AppContext } from '../../App';
 
 const ChatInterface = () => {
   const { user } = useContext(AppContext);
