@@ -408,6 +408,15 @@ const ChatInterface = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">选择您的AI伙伴</h2>
             <p className="text-purple-300">选择您今天想要对话的伙伴</p>
+            <div className="mt-4">
+              <Link 
+                to="/dashboard"
+                className="inline-flex items-center space-x-2 text-purple-300 hover:text-white transition-colors text-sm"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>返回控制台</span>
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
