@@ -818,7 +818,7 @@ const LandingPage = () => {
                   </div>
                   
                   <div className="mt-auto">
-                    <Link to="/auth">
+                    <Link to={`/relationship/${encodeURIComponent(companion.title)}`}>
                       <motion.button 
                         className="w-full h-12 px-4 bg-gradient-to-r from-purple-500/80 to-pink-500/80 text-white font-semibold rounded-xl hover:from-purple-500 hover:to-pink-500 transition-all flex items-center justify-center text-center"
                         whileHover={{ scale: 1.02 }}
