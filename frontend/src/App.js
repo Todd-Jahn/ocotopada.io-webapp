@@ -16,6 +16,7 @@ import RelationshipPage from './components/relationship/RelationshipPage';
 import CharacterCreator from './components/character/CharacterCreator';
 import SubscriptionManager from './components/subscription/SubscriptionManager';
 import MultiModalChat from './components/chat/MultiModalChat';
+import FeatureDemo from './components/demo/FeatureDemo';
 
 // Context for global state
 export const AppContext = React.createContext();
