@@ -60,15 +60,24 @@ const AuthPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      {/* Octopada Logo - Top Left */}
-      <Link to="/" className="absolute top-6 left-6 flex items-center space-x-2 text-purple-300 hover:text-white transition-colors">
+      {/* Enhanced Back Button - Top Left */}
+      <Link 
+        to="/" 
+        className="fixed top-6 left-6 z-50 flex items-center space-x-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-4 py-2 text-purple-300 hover:text-white hover:bg-white/20 transition-all duration-300 group"
+      >
+        <ArrowLeft className="w-5 h-5 group-hover:transform group-hover:-translate-x-1 transition-transform duration-300" />
+        <span className="text-sm font-medium">返回首页</span>
+      </Link>
+
+      {/* Octopada Logo - Top Center for branding */}
+      <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-40 flex items-center space-x-2 text-purple-300">
         <img 
           src="https://i.postimg.cc/JyGjXXrb/Image-from-Gamma-App.jpg" 
           alt="Octopada.io Logo"
           className="w-8 h-8 rounded-lg object-cover"
         />
         <span className="text-lg font-bold">Octopada.io</span>
-      </Link>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
