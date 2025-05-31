@@ -527,7 +527,7 @@ async def get_chat_history(
         raise HTTPException(status_code=404, detail="Relationship not found")
     
     messages = await db.messages.find({"relationship_id": relationship_id}).sort("timestamp", -1).skip(skip).limit(limit).to_list(limit)
-    return list(reversed(messages))
+    return serialize_doc(list(reversed(messages)))
 
 # User Stats API
 @app.get("/api/user/stats")
