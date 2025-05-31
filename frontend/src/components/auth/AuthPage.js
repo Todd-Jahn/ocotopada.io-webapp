@@ -100,6 +100,18 @@ const AuthPage = () => {
 
         {/* Auth Form */}
         <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+          {/* Quick action buttons */}
+          <div className="flex justify-between items-center mb-6">
+            <Link 
+              to="/" 
+              className="flex items-center space-x-1 text-purple-300 hover:text-white transition-colors text-sm group"
+            >
+              <Home className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              <span>返回主页</span>
+            </Link>
+            <span className="text-purple-300 text-sm">已有账户？快速登录</span>
+          </div>
+
           <div className="flex mb-6">
             <button
               onClick={() => setIsLogin(true)}
