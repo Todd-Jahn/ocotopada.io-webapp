@@ -285,7 +285,12 @@ def test_send_message():
         "chat_mode": "simple"
     }
     
+    # Try with params first (query parameters)
     response = make_request("post", f"/chat/{test_data['relationship_id']}/message", params=params, auth=True)
+    
+    # If that fails, try with JSON body
+    if response.status_code != 200:
+        response = make_request("post", f"/chat/{test_data['relationship_id']}/message", data=params, auth=True)
     
     if response.status_code == 200 and "ai_response" in response.json():
         log_test_result("Send Message", True, response)
