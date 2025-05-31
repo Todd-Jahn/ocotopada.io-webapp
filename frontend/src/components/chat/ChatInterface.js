@@ -455,7 +455,7 @@ const ChatInterface = () => {
                     whileTap={{ scale: 0.95 }}
                     className="w-full py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold"
                   >
-                    Start Conversation
+                    开始对话
                   </motion.button>
                 </div>
               </motion.div>
