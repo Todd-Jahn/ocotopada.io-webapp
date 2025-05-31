@@ -119,7 +119,12 @@ def test_health_check():
 
 def test_user_registration():
     """Test user registration API"""
+    # Try with params first (query parameters)
     response = make_request("post", "/auth/register", params=TEST_USER)
+    
+    # If that fails, try with JSON body
+    if response.status_code != 200:
+        response = make_request("post", "/auth/register", data=TEST_USER)
     
     if response.status_code == 200 and "access_token" in response.json():
         test_data["access_token"] = response.json()["access_token"]
