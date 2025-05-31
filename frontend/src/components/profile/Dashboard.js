@@ -21,14 +21,14 @@ const Dashboard = () => {
   const [companions, setCompanions] = useState([]);
 
   useEffect(() => {
-    // Mock data for recent chats and companions using new gallery images
+    // Mock data for recent chats and companions using carousel character data
     setRecentChats([
       {
         id: 1,
         companion: '洛可 LoCo',
         lastMessage: '对您的职业目标有了很好的见解！继续努力前进。',
         timestamp: '2分钟前',
-        avatar: 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg',
+        avatar: 'https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face',
         unread: 2
       },
       {
@@ -36,7 +36,7 @@ const Dashboard = () => {
         companion: '千奈',
         lastMessage: '记得练习我们讨论过的正念技巧。',
         timestamp: '1小时前',
-        avatar: 'https://images.pexels.com/photos/32225457/pexels-photo-32225457.jpeg',
+        avatar: 'https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face',
         unread: 0
       },
       {
@@ -44,7 +44,39 @@ const Dashboard = () => {
         companion: 'Suki 苏奇',
         lastMessage: '您的创意项目进展得很顺利！',
         timestamp: '3小时前',
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7',
+        avatar: 'https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face',
+        unread: 1
+      },
+      {
+        id: 4,
+        companion: '陆迪',
+        lastMessage: '基于我们的分析，建议您考虑这个投资策略，风险控制很重要。',
+        timestamp: '5小时前',
+        avatar: 'https://i.postimg.cc/XvKgq5gS/Ludi.jpg',
+        unread: 0
+      },
+      {
+        id: 5,
+        companion: '林成卿',
+        lastMessage: '今天的学习成果很不错，记得整理笔记并制定明天的计划。',
+        timestamp: '昨天',
+        avatar: 'https://i.postimg.cc/nrxb7By4/4.png',
+        unread: 3
+      },
+      {
+        id: 6,
+        companion: '悦心',
+        lastMessage: '感受到您今天的情绪有所改善，继续保持这种积极的心态。',
+        timestamp: '昨天',
+        avatar: 'https://i.postimg.cc/bY0jPVn3/2.png',
+        unread: 0
+      },
+      {
+        id: 7,
+        companion: '思瑶',
+        lastMessage: '这个知识点确实比较复杂，我们可以从基础概念开始重新理解。',
+        timestamp: '2天前',
+        avatar: 'https://i.postimg.cc/CLmTBZm8/4.png',
         unread: 1
       }
     ]);
@@ -53,26 +85,82 @@ const Dashboard = () => {
       {
         id: 1,
         name: '洛可 LoCo',
-        type: '职业导师',
-        avatar: 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg',
+        type: '温暖阳光伙伴',
+        avatar: 'https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face',
         rating: 4.9,
-        specialties: ['领导力', '技术职业', '工作生活平衡']
+        specialties: ['情感支持', '生活陪伴', '积极鼓励']
       },
       {
         id: 2,
         name: '千奈',
-        type: '健康向导',
-        avatar: 'https://images.pexels.com/photos/32225457/pexels-photo-32225457.jpeg',
+        type: '温柔体贴伙伴',
+        avatar: 'https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face',
         rating: 4.8,
-        specialties: ['正念', '压力管理', '健身']
+        specialties: ['心灵慰藉', '情感疏导', '温暖陪伴']
       },
       {
         id: 3,
         name: 'Suki 苏奇',
-        type: '创意催化剂',
-        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7',
+        type: '活泼开朗伙伴',
+        avatar: 'https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face',
         rating: 4.9,
-        specialties: ['艺术指导', '创新', '设计思维']
+        specialties: ['创意激发', '趣味对话', '活力分享']
+      },
+      {
+        id: 4,
+        name: '陆迪',
+        type: '优雅知性伙伴',
+        avatar: 'https://i.postimg.cc/XvKgq5gS/Ludi.jpg',
+        rating: 4.7,
+        specialties: ['智慧分享', '深度分析', '理性建议']
+      },
+      {
+        id: 5,
+        name: '林成卿',
+        type: '成熟稳重伙伴',
+        avatar: 'https://i.postimg.cc/nrxb7By4/4.png',
+        rating: 4.8,
+        specialties: ['职业指导', '学习规划', '目标管理']
+      },
+      {
+        id: 6,
+        name: '悦心',
+        type: '心灵治愈师',
+        avatar: 'https://i.postimg.cc/bY0jPVn3/2.png',
+        rating: 4.9,
+        specialties: ['情感疏导', '心理支持', '内心治愈']
+      },
+      {
+        id: 7,
+        name: '思瑶',
+        type: '智慧导师',
+        avatar: 'https://i.postimg.cc/CLmTBZm8/4.png',
+        rating: 4.6,
+        specialties: ['知识传授', '学习指导', '思维训练']
+      },
+      {
+        id: 8,
+        name: '乔安',
+        type: '生活伙伴',
+        avatar: 'https://i.postimg.cc/P5VjcLDH/2.jpg',
+        rating: 4.7,
+        specialties: ['日常陪伴', '生活分享', '贴心服务']
+      },
+      {
+        id: 9,
+        name: 'Chloe',
+        type: '国际化伙伴',
+        avatar: 'https://i.postimg.cc/90HbQB6h/E-n-VIP8-W6-J0-En-JC5p8hm8.png',
+        rating: 4.8,
+        specialties: ['多元文化', '语言学习', '国际视野']
+      },
+      {
+        id: 10,
+        name: '宛宁 Ely',
+        type: '活力伙伴',
+        avatar: 'https://i.postimg.cc/k4bwCHhs/Vibranos.jpg',
+        rating: 4.9,
+        specialties: ['积极正能量', '活力分享', '快乐传递']
       }
     ]);
   }, []);
