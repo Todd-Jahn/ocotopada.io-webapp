@@ -108,6 +108,12 @@ function App() {
               element={<MultiModalChat />} 
             />
             
+            {/* Feature Demo */}
+            <Route 
+              path="/demo" 
+              element={<FeatureDemo />} 
+            />
+            
             {/* Protected Routes */}
             <Route 
               path="/dashboard" 
