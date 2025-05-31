@@ -8,20 +8,22 @@ const RelationshipPage = () => {
   const navigate = useNavigate();
   const [playingVoice, setPlayingVoice] = useState(null);
 
-  // Character data organized by relationship type
+  // Character data organized by relationship type - synced from carousel and dashboard
   const relationshipCharacters = {
     '他': [
       {
-        id: 6,
+        id: 4,
         name: "陆迪",
         age: 28,
         personality: "优雅知性伙伴",
         expertise: "智慧分析师",
-        description: "陆迪拥有深邃的思维和优雅的气质，她善于分析复杂问题，用理性和感性的完美结合为你提供人生指导。",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-        voiceText: "你好，我是陆迪，让我用智慧和温情陪伴你的每一个重要时刻。",
-        rating: 4.9,
-        tags: ["深度思考", "人生规划", "情感分析"]
+        description: "陆迪拥有深邃的思维和优雅的气质，他善于分析复杂问题，用理性和感性的完美结合为你提供人生指导。",
+        avatar: "https://i.postimg.cc/XvKgq5gS/Ludi.jpg",
+        voiceText: "您好，我是陆迪，优雅知性的AI助手，期待与您的深度交流。",
+        rating: 4.7,
+        tags: ["智慧分享", "深度分析", "理性建议"],
+        type: "优雅知性伙伴",
+        specialties: ["智慧分享", "深度分析", "理性建议"]
       },
       {
         id: 8,
@@ -29,23 +31,27 @@ const RelationshipPage = () => {
         age: 26,
         personality: "生活伙伴",
         expertise: "日常陪伴者",
-        description: "乔安是你的贴心生活伙伴，她关注生活中的每一个细节，用温馨的陪伴让你的日常生活充满温暖和乐趣。",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-        voiceText: "嗨！我是乔安，让我成为你生活中最温暖的陪伴。",
-        rating: 4.8,
-        tags: ["生活分享", "日常陪伴", "温馨互动"]
+        description: "乔安是你的贴心生活伙伴，他关注生活中的每一个细节，用温馨的陪伴让你的日常生活充满温暖和乐趣。",
+        avatar: "https://i.postimg.cc/P5VjcLDH/2.jpg",
+        voiceText: "Hi，我是乔安，你的贴心生活伙伴，随时为你服务！",
+        rating: 4.7,
+        tags: ["日常陪伴", "生活分享", "贴心服务"],
+        type: "生活伙伴",
+        specialties: ["日常陪伴", "生活分享", "贴心服务"]
       },
       {
-        id: 7,
+        id: 5,
         name: "林成卿",
         age: 30,
         personality: "成熟稳重伙伴",
         expertise: "职业规划师",
         description: "林成卿是一位成熟稳重的伙伴，他在职场打拼多年，擅长职业规划和人生指导，是你事业路上的最佳导师。",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-        voiceText: "你好，我是林成卿，让我和你一起规划美好的未来。",
-        rating: 4.9,
-        tags: ["职业规划", "人生导师", "成熟建议"]
+        avatar: "https://i.postimg.cc/nrxb7By4/4.png",
+        voiceText: "你好，我是林成卿，成熟稳重是我的特点，让我们一起成长吧。",
+        rating: 4.8,
+        tags: ["职业指导", "学习规划", "目标管理"],
+        type: "成熟稳重伙伴",
+        specialties: ["职业指导", "学习规划", "目标管理"]
       }
     ],
     '她': [
@@ -56,10 +62,12 @@ const RelationshipPage = () => {
         personality: "温暖阳光伙伴",
         expertise: "情感支持专家",
         description: "洛可是一个充满活力的女孩，她总是能用最温暖的话语和最灿烂的笑容感染每一个人，让你感受到被爱的温暖。",
-        avatar: "https://images.unsplash.com/photo-1494790108755-2616c22db413",
+        avatar: "https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face",
         voiceText: "你好！我是洛可，一个温暖阳光的女孩儿，很高兴认识你！",
         rating: 4.9,
-        tags: ["情感支持", "阳光治愈", "温暖陪伴"]
+        tags: ["情感支持", "生活陪伴", "积极鼓励"],
+        type: "温暖阳光伙伴",
+        specialties: ["情感支持", "生活陪伴", "积极鼓励"]
       },
       {
         id: 2,
@@ -68,10 +76,12 @@ const RelationshipPage = () => {
         personality: "温柔体贴伙伴",
         expertise: "心灵慰藉师",
         description: "千奈拥有极其温柔的性格，她善于倾听和理解，总能在你需要的时候给予最贴心的安慰和支持。",
-        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-        voiceText: "我是千奈，愿意成为你心灵的港湾，用温柔守护你的每一份情感。",
+        avatar: "https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face",
+        voiceText: "嗨，我是千奈，愿意成为你温柔体贴的AI伙伴～",
         rating: 4.8,
-        tags: ["温柔体贴", "心灵慰藉", "情感理解"]
+        tags: ["心灵慰藉", "情感疏导", "温暖陪伴"],
+        type: "温柔体贴伙伴",
+        specialties: ["心灵慰藉", "情感疏导", "温暖陪伴"]
       },
       {
         id: 3,
@@ -80,22 +90,26 @@ const RelationshipPage = () => {
         personality: "活泼开朗伙伴",
         expertise: "创意激发师",
         description: "Suki是个充满创意和活力的女孩，她用独特的视角看世界，总能为你的生活带来新鲜的灵感和快乐。",
-        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
-        voiceText: "嗨！我是Suki，让我们一起探索这个充满可能性的世界吧！",
-        rating: 4.7,
-        tags: ["活泼开朗", "创意思维", "生活灵感"]
+        avatar: "https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face",
+        voiceText: "Hi！我是Suki苏奇，活泼开朗就是我的标签！",
+        rating: 4.9,
+        tags: ["创意激发", "趣味对话", "活力分享"],
+        type: "活泼开朗伙伴",
+        specialties: ["创意激发", "趣味对话", "活力分享"]
       },
       {
-        id: 5,
+        id: 6,
         name: "悦心",
         age: 25,
         personality: "心灵治愈师",
         expertise: "情感支持专家",
         description: "悦心专注于心灵治愈和情感支持，她用专业的心理学知识和温暖的人格魅力，帮助你找到内心的平静和力量。",
-        avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128",
-        voiceText: "我是悦心，让我陪伴你走过每一个需要治愈的时刻。",
+        avatar: "https://i.postimg.cc/bY0jPVn3/2.png",
+        voiceText: "嗨～我是悦心，专业的心灵治愈师，愿意倾听你的心声。",
         rating: 4.9,
-        tags: ["心灵治愈", "情感支持", "内心平静"]
+        tags: ["情感疏导", "心理支持", "内心治愈"],
+        type: "心灵治愈师",
+        specialties: ["情感疏导", "心理支持", "内心治愈"]
       }
     ],
     '懂': [
@@ -106,27 +120,46 @@ const RelationshipPage = () => {
         personality: "国际化伙伴",
         expertise: "多元文化专家",
         description: "Chloe具有国际化的视野和丰富的文化背景，她能够从不同角度理解问题，提供独特而深刻的见解。",
-        avatar: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb",
-        voiceText: "Hello! I'm Chloe, ready to understand and support you with global perspectives.",
+        avatar: "https://i.postimg.cc/90HbQB6h/E-n-VIP8-W6-J0-En-JC5p8hm8.png",
+        voiceText: "Hello! I'm Chloe, your international AI companion. Nice to meet you!",
         rating: 4.8,
-        tags: ["国际视野", "文化理解", "深刻见解"]
+        tags: ["多元文化", "语言学习", "国际视野"],
+        type: "国际化伙伴",
+        specialties: ["多元文化", "语言学习", "国际视野"]
       }
     ],
     '学': [
       {
-        id: 4,
+        id: 7,
         name: "思瑶",
         age: 26,
         personality: "智慧导师",
         expertise: "学习指导师",
         description: "思瑶是一位博学的导师，她热爱知识传播和学习指导，能够用最易懂的方式帮助你掌握各种知识和技能。",
-        avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
-        voiceText: "你好，我是思瑶，让我们一起在知识的海洋中探索和成长。",
-        rating: 4.9,
-        tags: ["学习指导", "知识传播", "智慧启发"]
+        avatar: "https://i.postimg.cc/CLmTBZm8/4.png",
+        voiceText: "你好，我是思瑶，智慧导师，让我们一起探索知识的海洋。",
+        rating: 4.6,
+        tags: ["知识传授", "学习指导", "思维训练"],
+        type: "智慧导师",
+        specialties: ["知识传授", "学习指导", "思维训练"]
       }
     ],
-    '问': [],
+    '问': [
+      {
+        id: 10,
+        name: "宛宁 Ely",
+        age: 23,
+        personality: "活力伙伴",
+        expertise: "万能答疑助手",
+        description: "宛宁充满活力和好奇心，她喜欢探索各种问题的答案，用积极正能量和丰富知识为你解答生活中的各种疑问。",
+        avatar: "https://i.postimg.cc/k4bwCHhs/Vibranos.jpg",
+        voiceText: "嗨！我是宛宁Ely，充满活力的AI伙伴，让我们一起开心聊天吧！",
+        rating: 4.9,
+        tags: ["积极正能量", "活力分享", "快乐传递"],
+        type: "活力伙伴",
+        specialties: ["积极正能量", "活力分享", "快乐传递"]
+      }
+    ],
     '笑': []
   };
 
