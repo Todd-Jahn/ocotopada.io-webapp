@@ -328,10 +328,16 @@ def test_send_gift():
         return
     
     params = {
-        "gift_id": test_data["gift_id"]
+        "gift_id": test_data["gift_id"],
+        "relationship_id": test_data["relationship_id"]
     }
     
+    # Try with params first (query parameters)
     response = make_request("post", f"/gifts/send", params=params, auth=True)
+    
+    # If that fails, try with JSON body
+    if response.status_code != 200:
+        response = make_request("post", f"/gifts/send", data=params, auth=True)
     
     if response.status_code == 200 and response.json().get("gift_sent"):
         log_test_result("Send Gift", True, response)
