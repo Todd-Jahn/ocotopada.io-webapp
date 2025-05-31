@@ -574,7 +574,7 @@ const LandingPage = () => {
               <div className="px-6 py-4 space-y-4">
                 {[
                   { name: '最佳伴侣', id: 'character-carousel' },
-                  { name: '选择类型', id: '选择类型' },
+                  { name: '期待关系', id: '期待关系' },
                   { name: '共创同行', id: '共创同行' },
                   { name: 'HubZone', id: 'HubZone' },
                   { name: '订阅计划', id: '订阅计划' },
