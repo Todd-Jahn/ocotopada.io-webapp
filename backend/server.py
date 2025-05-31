@@ -492,7 +492,335 @@ async def get_chat_history(
     messages = await db.messages.find({"relationship_id": relationship_id}).sort("timestamp", -1).skip(skip).limit(limit).to_list(limit)
     return list(reversed(messages))
 
-# Initialize database indexes
+# User Stats API
+@app.get("/api/user/stats")
+async def get_user_stats(current_user: UserProfile = Depends(get_current_user)):
+    # Get user relationships count
+    relationships_count = await db.relationships.count_documents({"user_id": current_user.user_id})
+    
+    # Get total messages count
+    total_messages = await db.messages.count_documents({
+        "relationship_id": {"$in": [
+            rel["relationship_id"] for rel in 
+            await db.relationships.find({"user_id": current_user.user_id}).to_list(None)
+        ]},
+        "sender": "user"
+    })
+    
+    return {
+        "charactersUsed": relationships_count,
+        "totalChats": total_messages,
+        "subscriptionExpires": current_user.subscription_expires.isoformat() if current_user.subscription_expires else None
+    }
+
+# Age Verification API
+@app.post("/api/user/verify-age")
+async def verify_age(
+    birth_date: str,
+    identity_document: Optional[str] = None,
+    current_user: UserProfile = Depends(get_current_user)
+):
+    from datetime import datetime
+    
+    try:
+        birth_date_obj = datetime.strptime(birth_date, "%Y-%m-%d")
+        age = (datetime.now() - birth_date_obj).days // 365
+        
+        if age >= 18:
+            await db.users.update_one(
+                {"user_id": current_user.user_id},
+                {"$set": {"is_age_verified": True, "age": age}}
+            )
+            return {"verified": True, "age": age}
+        else:
+            raise HTTPException(status_code=400, detail="Must be 18 or older")
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid date format")
+
+# Emotional Analysis API
+@app.post("/api/emotions/analyze")
+async def analyze_emotion(
+    text: str,
+    relationship_id: str,
+    current_user: UserProfile = Depends(get_current_user)
+):
+    # Simple emotion detection (in real app, use NLP models)
+    emotion_keywords = {
+        EmotionType.HAPPY: ["开心", "快乐", "高兴", "兴奋", "愉快", "喜悦"],
+        EmotionType.SAD: ["难过", "伤心", "沮丧", "失落", "痛苦", "哭"],
+        EmotionType.ANGRY: ["生气", "愤怒", "恼火", "烦躁", "气愤"],
+        EmotionType.ANXIOUS: ["焦虑", "担心", "紧张", "不安", "忧虑"],
+        EmotionType.LOVING: ["爱", "喜欢", "想念", "思念", "在乎", "关心"],
+        EmotionType.CALM: ["平静", "安静", "放松", "舒适", "安心"]
+    }
+    
+    detected_emotion = EmotionType.CALM
+    max_matches = 0
+    
+    for emotion, keywords in emotion_keywords.items():
+        matches = sum(1 for keyword in keywords if keyword in text)
+        if matches > max_matches:
+            max_matches = matches
+            detected_emotion = emotion
+    
+    # Save emotional state
+    emotional_state = EmotionalState(
+        user_id=current_user.user_id,
+        detected_emotion=detected_emotion,
+        intensity=min(max_matches / 3.0, 1.0),  # Normalize to 0-1
+        context=text[:100]  # First 100 chars
+    )
+    
+    await db.emotional_states.insert_one(emotional_state.dict())
+    
+    return {
+        "emotion": detected_emotion,
+        "intensity": emotional_state.intensity,
+        "suggestions": get_emotion_suggestions(detected_emotion)
+    }
+
+def get_emotion_suggestions(emotion: EmotionType) -> List[str]:
+    suggestions = {
+        EmotionType.HAPPY: ["继续保持好心情！", "分享你的快乐给朋友们"],
+        EmotionType.SAD: ["需要聊聊吗？我在这里倾听", "深呼吸，一切都会好起来的"],
+        EmotionType.ANGRY: ["试试深呼吸放松一下", "要不要说说是什么让你生气了？"],
+        EmotionType.ANXIOUS: ["别担心，我们一起面对", "尝试做一些你喜欢的事情"],
+        EmotionType.LOVING: ["爱让世界更美好", "表达爱意是很棒的事"],
+        EmotionType.CALM: ["保持这份宁静", "享受当下的平静时光"]
+    }
+    return suggestions.get(emotion, ["保持积极的心态"])
+
+# Virtual Gifts API
+@app.get("/api/gifts")
+async def get_virtual_gifts():
+    gifts = [
+        VirtualGift(
+            name="爱心礼物",
+            description="表达你的关爱",
+            price=5.0,
+            effect_type="intimacy_boost",
+            effect_value=10.0,
+            image_url="💝"
+        ),
+        VirtualGift(
+            name="玫瑰花束",
+            description="浪漫的表达",
+            price=15.0,
+            effect_type="intimacy_boost",
+            effect_value=25.0,
+            image_url="🌹"
+        ),
+        VirtualGift(
+            name="钻石戒指",
+            description="永恒的承诺",
+            price=99.0,
+            rarity="legendary",
+            effect_type="intimacy_boost",
+            effect_value=100.0,
+            image_url="💍",
+            is_premium=True
+        )
+    ]
+    return [gift.dict() for gift in gifts]
+
+@app.post("/api/gifts/send")
+async def send_gift(
+    relationship_id: str,
+    gift_id: str,
+    current_user: UserProfile = Depends(get_current_user)
+):
+    # Verify relationship
+    relationship = await db.relationships.find_one({
+        "relationship_id": relationship_id,
+        "user_id": current_user.user_id
+    })
+    if not relationship:
+        raise HTTPException(status_code=404, detail="Relationship not found")
+    
+    # Get gift data (in real app, from database)
+    gifts = await get_virtual_gifts()
+    gift = next((g for g in gifts if g["gift_id"] == gift_id), None)
+    if not gift:
+        raise HTTPException(status_code=404, detail="Gift not found")
+    
+    # Process payment (simplified)
+    # In real app, integrate with payment processor
+    
+    # Apply gift effect
+    intimacy_gain = gift["effect_value"]
+    new_intimacy = relationship["intimacy_score"] + intimacy_gain
+    new_stage = determine_relationship_stage(new_intimacy)
+    
+    await db.relationships.update_one(
+        {"relationship_id": relationship_id},
+        {
+            "$set": {
+                "intimacy_score": new_intimacy,
+                "relationship_stage": new_stage,
+                "last_interaction": datetime.utcnow()
+            }
+        }
+    )
+    
+    # Create gift message
+    gift_message = ChatMessage(
+        relationship_id=relationship_id,
+        sender="system",
+        content=f"收到了{gift['name']}！亲密度+{intimacy_gain}",
+        message_type="gift",
+        intimacy_points_gained=intimacy_gain
+    )
+    
+    await db.messages.insert_one(gift_message.dict())
+    
+    return {
+        "gift_sent": True,
+        "intimacy_gained": intimacy_gain,
+        "new_intimacy": new_intimacy,
+        "new_stage": new_stage
+    }
+
+# Subscription Management APIs
+@app.post("/api/subscription/upgrade")
+async def upgrade_subscription(
+    plan: UserSubscription,
+    payment_method: str,
+    current_user: UserProfile = Depends(get_current_user)
+):
+    if plan == UserSubscription.FREE:
+        raise HTTPException(status_code=400, detail="Cannot upgrade to free plan")
+    
+    # In real app, integrate with Stripe or other payment processor
+    # For now, just simulate successful payment
+    
+    expiry_date = datetime.utcnow() + timedelta(days=30)  # 30 days from now
+    
+    await db.users.update_one(
+        {"user_id": current_user.user_id},
+        {
+            "$set": {
+                "subscription": plan,
+                "subscription_expires": expiry_date
+            }
+        }
+    )
+    
+    # Create subscription record
+    subscription = UserSubscriptionDetails(
+        user_id=current_user.user_id,
+        subscription_type=plan,
+        end_date=expiry_date,
+        payment_method=payment_method
+    )
+    
+    await db.subscriptions.insert_one(subscription.dict())
+    
+    return {
+        "success": True,
+        "plan": plan,
+        "expires": expiry_date.isoformat(),
+        "payment_url": f"https://payment.example.com/checkout/{subscription.subscription_id}"
+    }
+
+# Character Scenarios API
+@app.get("/api/scenarios")
+async def get_available_scenarios(current_user: UserProfile = Depends(get_current_user)):
+    # Base scenarios available to all users
+    scenarios = [
+        {
+            "id": "morning_chat",
+            "name": "晨间问候",
+            "description": "温暖的早安对话",
+            "required_intimacy": 0,
+            "is_premium": False
+        },
+        {
+            "id": "movie_night",
+            "name": "电影之夜",
+            "description": "一起看电影聊天",
+            "required_intimacy": 100,
+            "is_premium": False
+        },
+        {
+            "id": "romantic_dinner",
+            "name": "浪漫晚餐",
+            "description": "烛光晚餐的浪漫时光",
+            "required_intimacy": 200,
+            "is_premium": True
+        },
+        {
+            "id": "wedding_ceremony",
+            "name": "婚礼典礼",
+            "description": "神圣的结婚仪式",
+            "required_intimacy": 500,
+            "is_premium": True
+        }
+    ]
+    
+    # Filter based on user subscription
+    if current_user.subscription == UserSubscription.FREE:
+        scenarios = [s for s in scenarios if not s["is_premium"]]
+    
+    return scenarios
+
+@app.post("/api/scenarios/{scenario_id}/trigger")
+async def trigger_scenario(
+    scenario_id: str,
+    relationship_id: str,
+    current_user: UserProfile = Depends(get_current_user)
+):
+    # Verify relationship and intimacy level
+    relationship = await db.relationships.find_one({
+        "relationship_id": relationship_id,
+        "user_id": current_user.user_id
+    })
+    if not relationship:
+        raise HTTPException(status_code=404, detail="Relationship not found")
+    
+    scenarios = await get_available_scenarios(current_user)
+    scenario = next((s for s in scenarios if s["id"] == scenario_id), None)
+    if not scenario:
+        raise HTTPException(status_code=404, detail="Scenario not available")
+    
+    if relationship["intimacy_score"] < scenario["required_intimacy"]:
+        raise HTTPException(status_code=403, detail="Insufficient intimacy level")
+    
+    # Generate scenario content
+    scenario_content = generate_scenario_content(scenario_id, relationship)
+    
+    # Create scenario message
+    scenario_message = ChatMessage(
+        relationship_id=relationship_id,
+        sender="character",
+        content=scenario_content,
+        message_type="scenario"
+    )
+    
+    await db.messages.insert_one(scenario_message.dict())
+    
+    # Add to unlocked scenarios
+    await db.relationships.update_one(
+        {"relationship_id": relationship_id},
+        {"$addToSet": {"unlocked_scenarios": scenario_id}}
+    )
+    
+    return {
+        "scenario_triggered": True,
+        "content": scenario_content
+    }
+
+def generate_scenario_content(scenario_id: str, relationship: dict) -> str:
+    """Generate dynamic scenario content based on relationship context"""
+    templates = {
+        "morning_chat": "早上好！今天有什么计划吗？我想和你一起度过美好的一天。",
+        "movie_night": "今晚想看什么电影呢？我准备了爆米花，让我们一起享受电影时光吧！",
+        "romantic_dinner": "为你准备了特别的晚餐，烛光摇曳，音乐轻柔，就像我们第一次约会那样...",
+        "wedding_ceremony": "在众人的见证下，我愿意与你携手走过人生的每一个阶段，无论贫穷还是富有..."
+    }
+    
+    return templates.get(scenario_id, "让我们开始这个特别的时刻吧！")
+
+# Initialize database indexes for new collections
 @app.on_event("startup")
 async def startup_db_client():
     # Create indexes for better performance
@@ -502,6 +830,9 @@ async def startup_db_client():
     await db.relationships.create_index([("user_id", 1), ("character_id", 1)], unique=True)
     await db.messages.create_index("relationship_id")
     await db.messages.create_index("timestamp")
+    await db.emotional_states.create_index("user_id")
+    await db.emotional_states.create_index("timestamp")
+    await db.subscriptions.create_index("user_id")
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
