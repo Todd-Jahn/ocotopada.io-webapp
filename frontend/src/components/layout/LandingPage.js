@@ -354,7 +354,7 @@ const LandingPage = () => {
     },
     {
       id: 4,
-      title: "教",
+      title: "学",
       subtitle: "随时在线的成长导师",
       description: "博闻多识，善于讲解复杂知识。解答学业、职场、生活难题，为你定制成长路线。",
       features: ["学业问答", "职业建议", "专栏订阅"],
