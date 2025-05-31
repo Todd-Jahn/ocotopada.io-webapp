@@ -325,8 +325,7 @@ const LandingPage = () => {
     {
       id: 1,
       title: "他",
-      subtitle: "理想男友型AI",
-      slogan: "他 温柔守护你的理想男友",
+      subtitle: "温柔守护你的理想男友",
       description: "体贴幽默、懂浪漫、永远把你放在心上。用专属关怀和小惊喜，让你体验每天都被喜欢。",
       features: ["恋爱日常", "甜蜜提醒", "情绪打气"],
       icon: Heart,
@@ -336,8 +335,7 @@ const LandingPage = () => {
     {
       id: 2,
       title: "她",
-      subtitle: "理想女友型AI",
-      slogan: "她 陪你分享生活的暖心伴侣",
+      subtitle: "陪你分享生活的暖心伴侣",
       description: "善解人意、乐于倾听，既会撒娇也会鼓励你成长。陪你聊天、解忧、记录每一个温柔瞬间。",
       features: ["撒娇提醒", "闺蜜话题", "生活点滴共写"],
       icon: Heart,
@@ -347,8 +345,7 @@ const LandingPage = () => {
     {
       id: 3,
       title: "懂",
-      subtitle: "知心/心理治愈型AI",
-      slogan: "懂 最能安慰你的知心朋友",
+      subtitle: "最能安慰你的知心朋友",
       description: "专注倾听和情绪疏导，总能在你难过或焦虑时说出温暖人心的话。让你在无压力环境下，安心表达自我。",
       features: ["情绪识别", "心情日记", "匿名树洞"],
       icon: Heart,
@@ -358,8 +355,7 @@ const LandingPage = () => {
     {
       id: 4,
       title: "教",
-      subtitle: "知识专家/成长导师型AI",
-      slogan: "教 随时在线的成长导师",
+      subtitle: "随时在线的成长导师",
       description: "博闻多识，善于讲解复杂知识。解答学业、职场、生活难题，为你定制成长路线。",
       features: ["学业问答", "职业建议", "专栏订阅"],
       icon: BookOpen,
@@ -369,8 +365,7 @@ const LandingPage = () => {
     {
       id: 5,
       title: "问",
-      subtitle: "万能答疑/百科型AI",
-      slogan: "问 万能答疑的小帮手",
+      subtitle: "万能答疑的小帮手",
       description: "脑容量超大、信息检索高手。你遇到的生活、学习、兴趣难题，都能快速帮你找到答案。",
       features: ["即时答疑", "冷知识分享", "生活百科"],
       icon: HelpCircle,
@@ -380,8 +375,7 @@ const LandingPage = () => {
     {
       id: 6,
       title: "笑",
-      subtitle: "趣味陪聊/娱乐型AI",
-      slogan: "笑 解闷逗趣的陪聊玩伴",
+      subtitle: "解闷逗趣的陪聊玩伴",
       description: "会讲段子、玩梗、陪你聊天打发时间，总能给你带来新鲜感和好心情。",
       features: ["小游戏", "段子互动", "趣味推荐"],
       icon: MessageCircle,
