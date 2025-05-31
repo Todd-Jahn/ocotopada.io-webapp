@@ -169,7 +169,9 @@ const SubscriptionManager = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${getCurrentPlanData().color} flex items-center justify-center`}>
-                {React.createElement(getCurrentPlanData().icon, { className: "w-6 h-6 text-white" })}
+                <div className="w-6 h-6 text-white flex items-center justify-center">
+                  {getCurrentPlanData().name.charAt(0)}
+                </div>
               </div>
               <div>
                 <h3 className="text-white font-semibold text-lg">{getCurrentPlanData().name}</h3>
