@@ -101,3 +101,141 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "测试Octopoda.io AI虚拟伴侣平台的核心玩法系统后端API。请重点测试以下功能：用户认证系统、角色管理系统、关系管理系统、聊天系统、虚拟礼物系统、情感分析、订阅系统、场景系统。"
+
+backend:
+  - task: "User Authentication System"
+    implemented: true
+    working: false
+    file: "/app/backend/server.py"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "User registration works, but login fails with 500 Internal Server Error. The error is related to MongoDB ObjectId serialization."
+
+  - task: "Character Management System"
+    implemented: true
+    working: false
+    file: "/app/backend/server.py"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "Getting public characters works, creating custom characters works, but getting character details fails with 500 Internal Server Error due to MongoDB ObjectId serialization issues."
+
+  - task: "Relationship Management System"
+    implemented: true
+    working: false
+    file: "/app/backend/server.py"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "Creating relationships works, updating relationships works, but getting relationships list fails with 500 Internal Server Error due to MongoDB ObjectId serialization issues."
+
+  - task: "Chat System"
+    implemented: true
+    working: false
+    file: "/app/backend/server.py"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "Sending messages works, but getting chat history fails with 500 Internal Server Error due to MongoDB ObjectId serialization issues."
+
+  - task: "Virtual Gift System"
+    implemented: true
+    working: false
+    file: "/app/backend/server.py"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "Getting gift list works, but sending gifts fails with 404 Not Found or 422 Unprocessable Entity. The API requires a relationship_id parameter that was missing in the original test."
+
+  - task: "Emotion Analysis"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Emotion analysis API works correctly."
+
+  - task: "Subscription System"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Subscription upgrade API works correctly."
+
+  - task: "Scenario System"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Getting scenarios and triggering scenarios work correctly."
+
+frontend:
+  - task: "User Interface"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Frontend testing not performed as per instructions."
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "User Authentication System"
+    - "Character Management System"
+    - "Relationship Management System"
+    - "Chat System"
+    - "Virtual Gift System"
+  stuck_tasks:
+    - "User Authentication System"
+    - "Character Management System"
+    - "Relationship Management System"
+    - "Chat System"
+    - "Virtual Gift System"
+  test_all: true
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "testing"
+    message: "Completed backend API testing. Found critical issues with MongoDB ObjectId serialization in several endpoints. The main issue is that MongoDB ObjectId objects are not directly JSON serializable, and the backend is not properly converting them to strings before returning them in the API responses. This affects login, character details, relationships list, chat history, and gift sending. The error in the logs shows: ValueError: [TypeError(\"'ObjectId' object is not iterable\"), TypeError('vars() argument must have __dict__ attribute')]"
