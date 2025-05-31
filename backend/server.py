@@ -418,9 +418,9 @@ async def get_user_relationships(current_user: UserProfile = Depends(get_current
     for rel in relationships:
         character = await db.characters.find_one({"character_id": rel["character_id"]})
         if character:
-            rel["character"] = character
+            rel["character"] = serialize_doc(character)
     
-    return relationships
+    return serialize_doc(relationships)
 
 @app.patch("/api/relationships/{relationship_id}")
 async def update_relationship(
