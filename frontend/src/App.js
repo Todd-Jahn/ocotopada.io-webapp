@@ -80,6 +80,12 @@ function App() {
               element={<TeamStoryPage />} 
             />
             
+            {/* Relationship Type Pages */}
+            <Route 
+              path="/relationship/:type" 
+              element={<RelationshipPage />} 
+            />
+            
             {/* Protected Routes */}
             <Route 
               path="/dashboard" 
