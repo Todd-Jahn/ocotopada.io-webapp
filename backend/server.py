@@ -1,11 +1,13 @@
 from fastapi import FastAPI, HTTPException, Depends, Security
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.encoders import jsonable_encoder
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 from datetime import datetime, timedelta
 from enum import Enum
+from bson import ObjectId
 import os
 import uuid
 import hashlib
@@ -13,6 +15,41 @@ import jwt
 from passlib.context import CryptContext
 import asyncio
 import json
+
+# Custom JSON encoder for MongoDB ObjectId
+class PyObjectId(ObjectId):
+    @classmethod
+    def __get_validators__(cls):
+        yield cls.validate
+
+    @classmethod
+    def validate(cls, v):
+        if not ObjectId.is_valid(v):
+            raise ValueError("Invalid ObjectId")
+        return ObjectId(v)
+
+    @classmethod
+    def __modify_schema__(cls, field_schema):
+        field_schema.update(type="string")
+
+# Helper function to convert ObjectId to string in documents
+def serialize_doc(doc):
+    """Convert MongoDB document ObjectIds to strings"""
+    if doc is None:
+        return None
+    if isinstance(doc, list):
+        return [serialize_doc(item) for item in doc]
+    if isinstance(doc, dict):
+        result = {}
+        for key, value in doc.items():
+            if isinstance(value, ObjectId):
+                result[key] = str(value)
+            elif isinstance(value, (dict, list)):
+                result[key] = serialize_doc(value)
+            else:
+                result[key] = value
+        return result
+    return doc
 
 # FastAPI app instance
 app = FastAPI(title="Octopoda.io AI Companion Platform", version="2.0.0")
