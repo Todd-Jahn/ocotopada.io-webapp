@@ -125,7 +125,9 @@ const RelationshipPage = () => {
         rating: 4.9,
         tags: ["学习指导", "知识传播", "智慧启发"]
       }
-    ]
+    ],
+    '问': [],
+    '笑': []
   };
 
   const typeInfo = {
