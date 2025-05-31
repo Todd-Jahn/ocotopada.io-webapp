@@ -765,6 +765,81 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Companion Types Matrix - Moved right after carousel */}
+      <section id="期待关系" className="py-20 px-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              期待关系
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              每种都有独特的个性和专业领域，提供最个性化的伙伴体验
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {companionTypes.map((companion, index) => (
+              <motion.div
+                key={companion.id}
+                className="group relative backdrop-blur-sm bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 overflow-hidden"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.02 }}
+              >
+                <div className="relative h-48 mb-6 rounded-2xl overflow-hidden">
+                  <img 
+                    src={companion.image}
+                    alt={companion.subtitle}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${companion.color} opacity-60`}></div>
+                  <div className="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl">
+                    <companion.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <h3 className="text-2xl font-bold text-white">{companion.title}</h3>
+                    <span className="text-sm text-purple-300 bg-purple-500/20 px-2 py-1 rounded-full">
+                      {companion.subtitle}
+                    </span>
+                  </div>
+                  <p className="text-lg font-semibold text-purple-300 mb-4">{companion.slogan}</p>
+                  <p className="text-white/70 leading-relaxed mb-6">{companion.description}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {companion.features.map((feature, featureIndex) => (
+                      <span key={featureIndex} className="text-xs bg-white/10 text-purple-300 px-3 py-1 rounded-full">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link to="/auth">
+                    <motion.button 
+                      className="w-full py-3 bg-gradient-to-r from-purple-500/80 to-pink-500/80 text-white font-semibold rounded-xl hover:from-purple-500 hover:to-pink-500 transition-all"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      选择这个类型
+                    </motion.button>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 重新定义AI伙伴 Section - Now moved down */}
       <section id="最佳伙伴" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
