@@ -233,7 +233,12 @@ def test_create_relationship():
         "relationship_type": "lover"
     }
     
+    # Try with params first (query parameters)
     response = make_request("post", "/relationships", params=params, auth=True)
+    
+    # If that fails, try with JSON body
+    if response.status_code != 200:
+        response = make_request("post", "/relationships", data=params, auth=True)
     
     if response.status_code == 200 and "relationship_id" in response.json():
         test_data["relationship_id"] = response.json()["relationship_id"]
