@@ -353,7 +353,7 @@ async def login_user(email: str, password: str):
         {"$set": {"last_active": datetime.utcnow()}}
     )
     
-    return {"access_token": access_token, "token_type": "bearer", "user": user}
+    return {"access_token": access_token, "token_type": "bearer", "user": serialize_doc(user)}
 
 # Character Management APIs
 @app.get("/api/characters")
