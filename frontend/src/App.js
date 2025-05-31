@@ -89,6 +89,24 @@ function App() {
               element={<RelationshipPage />} 
             />
             
+            {/* Character Creator */}
+            <Route 
+              path="/create-character" 
+              element={<CharacterCreator />} 
+            />
+            
+            {/* Subscription Manager */}
+            <Route 
+              path="/subscription" 
+              element={<SubscriptionManager />} 
+            />
+            
+            {/* Multi-Modal Chat */}
+            <Route 
+              path="/chat-advanced/:relationshipId" 
+              element={<MultiModalChat />} 
+            />
+            
             {/* Protected Routes */}
             <Route 
               path="/dashboard" 
