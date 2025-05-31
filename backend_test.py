@@ -130,10 +130,18 @@ def test_user_registration():
 
 def test_user_login():
     """Test user login API"""
+    # Try with params first (query parameters)
     response = make_request("post", "/auth/login", params={
         "email": TEST_USER["email"],
         "password": TEST_USER["password"]
     })
+    
+    # If that fails, try with JSON body
+    if response.status_code != 200:
+        response = make_request("post", "/auth/login", data={
+            "email": TEST_USER["email"],
+            "password": TEST_USER["password"]
+        })
     
     if response.status_code == 200 and "access_token" in response.json():
         test_data["access_token"] = response.json()["access_token"]
