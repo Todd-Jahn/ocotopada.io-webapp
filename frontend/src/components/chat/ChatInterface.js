@@ -33,52 +33,102 @@ const ChatInterface = () => {
     {
       id: 1,
       name: '洛可 LoCo',
-      type: '职业导师',
-      avatar: 'https://images.pexels.com/photos/32207012/pexels-photo-32207012.jpeg',
+      type: '温暖阳光伙伴',
+      avatar: 'https://images.unsplash.com/photo-1748436826061-a84fbf7c40ff?w=800&h=800&fit=crop&crop=face',
       status: 'online',
-      description: '温暖阳光的伙伴，专注于职业发展和专业成长策略',
-      expertise: ['领导力', '技术职业', '工作生活平衡'],
-      personality: '阳光、专业、鼓励'
+      description: '温暖阳光的女孩儿，擅长倾听和鼓励，陪伴你度过人生的每个重要时刻',
+      expertise: ['情感支持', '生活陪伴', '积极鼓励'],
+      personality: '温暖、阳光、积极向上'
     },
     {
       id: 2,
       name: '千奈',
-      type: '健康向导',
-      avatar: 'https://images.pexels.com/photos/32225457/pexels-photo-32225457.jpeg',
+      type: '温柔体贴伙伴',
+      avatar: 'https://images.unsplash.com/photo-1748436889517-bc4b8e0c5eb3?w=800&h=800&fit=crop&crop=face',
       status: 'online',
-      description: '温柔体贴的伙伴，专注于心理健康、压力管理和情感健康',
-      expertise: ['正念', '压力管理', '健身'],
-      personality: '冷静、智慧、富有同情心'
+      description: '温柔体贴的女性伙伴，善解人意，用细腻的情感为你带来心灵的慰藉',
+      expertise: ['心灵慰藉', '情感疏导', '温暖陪伴'],
+      personality: '温柔、体贴、善解人意'
     },
     {
       id: 3,
       name: 'Suki 苏奇',
-      type: '创意催化剂',
-      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7',
+      type: '活泼开朗伙伴',
+      avatar: 'https://images.unsplash.com/photo-1748436826195-8b4e78b9de8f?w=800&h=800&fit=crop&crop=face',
       status: 'online',
-      description: '活泼开朗的伙伴，激发个人和专业项目的创造力和创新',
-      expertise: ['艺术指导', '创新', '设计思维'],
-      personality: '充满活力、鼓舞人心、有远见'
+      description: '活泼开朗的伙伴，充满创意和想象力，让每次对话都充满惊喜',
+      expertise: ['创意激发', '趣味对话', '活力分享'],
+      personality: '活泼、开朗、充满创意'
     },
     {
       id: 4,
-      name: '黎绮',
-      type: '科技创新者',
-      avatar: 'https://images.unsplash.com/photo-1556157382-97eda2d62296',
+      name: '陆迪',
+      type: '优雅知性伙伴',
+      avatar: 'https://i.postimg.cc/XvKgq5gS/Ludi.jpg',
       status: 'online',
-      description: '优雅知性的伙伴，帮助数字化转型和创新的技术专家',
-      expertise: ['AI与机器学习', '创业策略', '产品开发'],
-      personality: '分析性、前瞻性、实用'
+      description: '优雅知性的伙伴，拥有丰富的人生阅历，为你提供智慧的建议',
+      expertise: ['智慧分享', '深度分析', '理性建议'],
+      personality: '优雅、知性、智慧深邃'
     },
     {
       id: 5,
       name: '林成卿',
-      type: '生活教练',
-      avatar: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf',
+      type: '成熟稳重伙伴',
+      avatar: 'https://i.postimg.cc/nrxb7By4/4.png',
       status: 'online',
-      description: '成熟稳重的伙伴，支持生活平衡和目标实现的个人发展教练',
-      expertise: ['目标设定', '个人成长', '关系建设'],
-      personality: '温暖、积极、有洞察力'
+      description: '成熟稳重的伙伴，具备专业的知识背景，助力你的成长和发展',
+      expertise: ['职业指导', '学习规划', '目标管理'],
+      personality: '成熟、稳重、专业可靠'
+    },
+    {
+      id: 6,
+      name: '悦心',
+      type: '心灵治愈师',
+      avatar: 'https://i.postimg.cc/bY0jPVn3/2.png',
+      status: 'online',
+      description: '心灵治愈师，专注于情感陪伴和心理支持，让你感受到被理解的温暖',
+      expertise: ['情感疏导', '心理支持', '内心治愈'],
+      personality: '温暖、专业、治愈系'
+    },
+    {
+      id: 7,
+      name: '思瑶',
+      type: '智慧导师',
+      avatar: 'https://i.postimg.cc/CLmTBZm8/4.png',
+      status: 'online',
+      description: '智慧导师，擅长解答各种问题，为你的学习和成长提供专业指导',
+      expertise: ['知识传授', '学习指导', '思维训练'],
+      personality: '智慧、耐心、博学多才'
+    },
+    {
+      id: 8,
+      name: '乔安',
+      type: '生活伙伴',
+      avatar: 'https://i.postimg.cc/P5VjcLDH/2.jpg',
+      status: 'online',
+      description: '生活伙伴，陪伴你度过日常的点点滴滴，分享生活中的喜怒哀乐',
+      expertise: ['日常陪伴', '生活分享', '贴心服务'],
+      personality: '贴心、细致、生活智慧'
+    },
+    {
+      id: 9,
+      name: 'Chloe',
+      type: '国际化伙伴',
+      avatar: 'https://i.postimg.cc/90HbQB6h/E-n-VIP8-W6-J0-En-JC5p8hm8.png',
+      status: 'online',
+      description: '国际化伙伴，具备多元文化背景，为你打开更广阔的视野',
+      expertise: ['多元文化', '语言学习', '国际视野'],
+      personality: '开放、包容、国际化视野'
+    },
+    {
+      id: 10,
+      name: '宛宁 Ely',
+      type: '活力伙伴',
+      avatar: 'https://i.postimg.cc/k4bwCHhs/Vibranos.jpg',
+      status: 'online',
+      description: '充满活力的伙伴，带来积极正能量，与你分享生活的美好瞬间',
+      expertise: ['积极正能量', '活力分享', '快乐传递'],
+      personality: '活力四射、积极乐观、感染力强'
     }
   ];
 
