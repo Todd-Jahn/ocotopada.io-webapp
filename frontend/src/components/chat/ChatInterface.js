@@ -349,11 +349,13 @@ const ChatInterface = () => {
     // Simulate AI response
     setTimeout(() => {
       const responses = [
-        "That's a really thoughtful perspective. I can see you've been putting a lot of consideration into this.",
-        "Your growth mindset really shines through in what you've shared. Let's explore this further.",
-        "I appreciate you opening up about this. It takes courage to reflect on these aspects of life.",
-        "What you're describing resonates with many people's experiences. You're not alone in feeling this way.",
-        "That's an excellent observation. How do you think we could build on this insight?"
+        "这真是一个很有深度的想法，我能感受到你的用心思考。让我们继续深入探讨这个话题。",
+        "你的成长心态真的很棒，从你的话语中我能看到你的进步。我们可以进一步拓展这个想法。",
+        "很感谢你愿意和我分享这些，能够这样开放地表达自己需要很大的勇气。",
+        "你描述的情况确实会引起很多人的共鸣，你并不孤单。我们一起来寻找更好的解决方案。",
+        "这是一个非常好的观察！你觉得我们可以如何在这个洞察的基础上继续发展呢？",
+        "我能理解你的感受，每个人都会遇到这样的时刻。重要的是我们如何一起面对和成长。",
+        "你提到的这个点很有意思，这让我想到了一些相关的方法，也许会对你有帮助。"
       ];
 
       const companionMessage = {
