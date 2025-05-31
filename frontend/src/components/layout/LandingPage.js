@@ -807,7 +807,6 @@ const LandingPage = () => {
                       {companion.subtitle}
                     </span>
                   </div>
-                  <p className="text-lg font-semibold text-purple-300 mb-4">{companion.slogan}</p>
                   <p className="text-white/70 leading-relaxed mb-6">{companion.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
