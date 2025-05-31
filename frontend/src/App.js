@@ -13,6 +13,9 @@ import ProfilePage from './components/profile/ProfilePage';
 import LoadingScreen from './components/common/LoadingScreen';
 import TeamStoryPage from './components/layout/TeamStoryPage';
 import RelationshipPage from './components/relationship/RelationshipPage';
+import CharacterCreator from './components/character/CharacterCreator';
+import SubscriptionManager from './components/subscription/SubscriptionManager';
+import MultiModalChat from './components/chat/MultiModalChat';
 
 // Context for global state
 export const AppContext = React.createContext();
