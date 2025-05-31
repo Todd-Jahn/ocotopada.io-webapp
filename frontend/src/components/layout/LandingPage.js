@@ -823,7 +823,13 @@ const LandingPage = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      开始交往
+                      {companion.title === "他" ? "开始交往" :
+                       companion.title === "她" ? "开始交往" :
+                       companion.title === "懂" ? "让我陪你倾诉" :
+                       companion.title === "学" ? "马上启发成长" :
+                       companion.title === "问" ? "立刻提问" :
+                       companion.title === "笑" ? "来点新鲜的快乐！" :
+                       "开始交往"}
                     </motion.button>
                   </Link>
                 </div>
