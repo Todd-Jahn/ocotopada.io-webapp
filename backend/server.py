@@ -359,7 +359,7 @@ async def login_user(email: str, password: str):
 @app.get("/api/characters")
 async def get_public_characters(skip: int = 0, limit: int = 20):
     characters = await db.characters.find({"is_public": True}).skip(skip).limit(limit).to_list(limit)
-    return characters
+    return serialize_doc(characters)
 
 @app.post("/api/characters")
 async def create_character(character_data: AICharacter, current_user: UserProfile = Depends(get_current_user)):
@@ -372,7 +372,7 @@ async def get_character(character_id: str):
     character = await db.characters.find_one({"character_id": character_id})
     if not character:
         raise HTTPException(status_code=404, detail="Character not found")
-    return character
+    return serialize_doc(character)
 
 # Relationship Management APIs
 @app.post("/api/relationships")
