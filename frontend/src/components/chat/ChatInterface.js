@@ -472,12 +472,12 @@ const ChatInterface = () => {
       <header className="bg-white/10 backdrop-blur-lg border-b border-white/20 px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <button
-              onClick={() => setShowCompanionList(true)}
+            <Link
+              to="/dashboard"
               className="text-purple-300 hover:text-white"
             >
               <ArrowLeft className="h-6 w-6" />
-            </button>
+            </Link>
             
             <div className="flex items-center space-x-3">
               <div className="relative">
