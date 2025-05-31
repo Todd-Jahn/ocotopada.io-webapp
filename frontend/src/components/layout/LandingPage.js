@@ -819,17 +819,19 @@ const LandingPage = () => {
                   
                   <Link to="/auth">
                     <motion.button 
-                      className="w-full py-3 bg-gradient-to-r from-purple-500/80 to-pink-500/80 text-white font-semibold rounded-xl hover:from-purple-500 hover:to-pink-500 transition-all"
+                      className="w-full h-12 px-4 bg-gradient-to-r from-purple-500/80 to-pink-500/80 text-white font-semibold rounded-xl hover:from-purple-500 hover:to-pink-500 transition-all flex items-center justify-center text-center"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      {companion.title === "他" ? "开始交往" :
-                       companion.title === "她" ? "开始交往" :
-                       companion.title === "懂" ? "让我陪你倾诉" :
-                       companion.title === "学" ? "马上启发成长" :
-                       companion.title === "问" ? "立刻提问" :
-                       companion.title === "笑" ? "来点新鲜的快乐！" :
-                       "开始交往"}
+                      <span className="leading-tight">
+                        {companion.title === "他" ? "开始交往" :
+                         companion.title === "她" ? "开始交往" :
+                         companion.title === "懂" ? "让我陪你倾诉" :
+                         companion.title === "学" ? "马上启发成长" :
+                         companion.title === "问" ? "立刻提问" :
+                         companion.title === "笑" ? "来点新鲜的快乐！" :
+                         "开始交往"}
+                      </span>
                     </motion.button>
                   </Link>
                 </div>
