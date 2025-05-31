@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
-import { Eye, EyeOff, Mail, Lock, User, Smartphone } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Smartphone, ArrowLeft, Home } from 'lucide-react';
 import { AppContext } from '../../App';
 import { Link } from 'react-router-dom';
 
