@@ -823,7 +823,7 @@ const LandingPage = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      选择这个类型
+                      开始交往
                     </motion.button>
                   </Link>
                 </div>
