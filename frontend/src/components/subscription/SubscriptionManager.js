@@ -229,7 +229,9 @@ const SubscriptionManager = () => {
 
                   <div className="text-center mb-6">
                     <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${plan.color} flex items-center justify-center`}>
-                      <PlanIcon className="w-8 h-8 text-white" />
+                      <div className="w-8 h-8 text-white flex items-center justify-center text-2xl font-bold">
+                        {plan.name.charAt(0)}
+                      </div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-3xl font-bold text-white mb-1">
